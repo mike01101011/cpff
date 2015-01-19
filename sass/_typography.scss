@@ -1,0 +1,93 @@
+// Variables - start
+	// font family - start
+		$main: 'Montserrat', sans-serif;
+	// font family - end
+	
+	// font color - start
+		$link: mediumseagreen;
+		$hover: gold;
+	// font color - end
+// Variables - end
+
+
+//mixins - start
+	@mixin navbar {
+		font-family: $main;
+		font-weight: 700;
+	}
+
+	@mixin page-headline {
+		color: lighten( $main-green, 2.5% );
+		font-family: $main;
+		text-transform: uppercase;
+		font-size: 2.2rem;
+	}
+
+//mixins - end
+
+
+// Main Typography for entire document - start
+	body {
+		font-size: 62.5%;
+		
+	}
+
+	h1,h2,h3,h4,h5,h6,p {
+		margin: 0;
+		padding: 0;
+	}
+
+	h2 {
+		@include page-headline;
+	}
+
+	// For all anchor-tags - start
+		a,a:visited {
+			text-decoration: none;
+		}
+	// For all anchor-tags - end
+// Main Typography for entire document - start
+
+
+// Typography for NavBar Menu- start
+	.menu-container{
+		@include navbar;
+		a {
+			font-size: 1.6rem;
+			color: white;
+		}
+		a:hover {
+			color: $hover;
+		}
+	}
+// Typography for NavBar - end
+
+
+// Typography for Old + New posts - start
+	.alignleft, .alignright {
+		font-family: $main;
+		font-weight: 400;
+		text-transform: uppercase;
+		font-size: 1rem;
+		a {
+			color: $link;
+		}
+		a:hover {
+			color: darken( $hover, 10% );
+		}
+	}
+
+	.entry-content {
+		font-size: 1rem;
+		font-family: 'Open Sans', sans-serif;
+	}
+// Typography for Old + New posts - end
+
+
+// Footer Style - start
+	footer {
+		color: darken( $main-green, 5%);
+		text-align: center;
+		padding: 10px;
+	}
+// Footer Style - end

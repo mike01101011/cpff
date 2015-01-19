@@ -1,0 +1,76 @@
+// Variables - Start
+	$main-green: darken(darkgreen, 5% );
+// Variables - End
+
+
+// Wordpress Bar - start
+	#wpadminbar {
+		display: none;
+	}
+// Wordpress Bar - end
+
+
+// Nav Bar - start
+	nav {
+		width: 100%;
+		position: fixed;
+	}
+// Nav Bar - end
+
+
+		.menu-button, .exit-button {
+			float: right;
+			width: 65px;
+			fill: gold;
+			transition: all 0.3s;
+			// display: none;
+			&:hover {
+				fill: lighten($main-green, 25%);
+				cursor: pointer;
+			}
+		}
+
+		.menu-button {
+			margin-top: 10px;
+		}
+
+		.exit-button {
+			float: right;
+		}
+
+
+// Off-Screen Menu - start
+	section#site-menu{
+		width:50%;
+		height: 100%;
+		position: fixed;
+		right: 0;
+		background: $main-green;
+		z-index: 100;
+		display: none;
+		.menu-container {
+			width:80%;
+			margin: 0 auto;
+			padding-top: 20px;
+			.menu-items {
+				float: left;
+			}
+			.home {
+				margin-bottom: 20px;
+				text-align: left;
+				display: block;
+			}
+			ul {
+				list-style-type: none;
+			}
+			ul > li {
+				margin-bottom: 20px;
+			}
+		}
+	}		
+
+	#menu-main-menu {
+		padding: 0;
+		margin: 0;
+	}
+// Off-Screen Menu - end

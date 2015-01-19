@@ -1,0 +1,31 @@
+//News Entry - start
+	article {
+		margin-bottom: 30px;
+	}
+
+	// Old + New Entries - start
+		.alignleft {
+			float: left;
+		}
+
+		.alignright {
+			float: right;
+		}
+
+		.alignleft, .alignright {
+			margin-top: 20px;
+		}
+	// Old + New Entries - end
+
+
+	// News Footer - start
+	article > footer {
+		display: none;
+	}
+	// News Footer - end
+
+//News Entry - end
+
+
+
+
