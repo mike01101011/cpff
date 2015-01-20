@@ -19,23 +19,28 @@
 
 
 		.menu-button, .exit-button {
-			float: right;
 			width: 65px;
-			fill: gold;
+			float: right;
 			transition: all 0.3s;
 			// display: none;
 			&:hover {
-				fill: lighten($main-green, 25%);
 				cursor: pointer;
 			}
 		}
 
 		.menu-button {
 			margin-top: 10px;
+			fill: lighten($main-green, 5%);
+			&:hover {
+				fill: lighten($main-green, 25%);
+			}
 		}
 
 		.exit-button {
-			float: right;
+			fill: white;
+			&:hover {
+				fill: gold;
+			}
 		}
 
 
@@ -44,10 +49,12 @@
 		width:50%;
 		height: 100%;
 		position: fixed;
-		right: 0;
+		right: -50%;
 		background: $main-green;
 		z-index: 100;
-		display: none;
+		display: block;
+		transition: all 0.75s;
+		
 		.menu-container {
 			width:80%;
 			margin: 0 auto;
@@ -74,3 +81,41 @@
 		margin: 0;
 	}
 // Off-Screen Menu - end
+
+// Tablet View - start
+	@media all and (max-width: 790px) {
+		section#site-menu {
+			width: 75%;
+			right: -75%;
+		}
+	}
+// Tablet View - end
+
+// Mobile View - start
+	@media all and (max-width: 515px) {
+		section#site-menu {
+			width: 100%;
+			right: -100%;
+			.menu-container {
+				width:85%;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	@media all and (max-height: 414px) {
+		
+		section#site-menu{
+			overflow: scroll;
+			.menu-container {
+				padding-top: 12.5px;
+				.home {
+					margin-bottom: 12.5px;
+				}
+				ul > li {
+					margin-bottom: 12.5px;
+				}
+			}
+		}
+	}
+// Mobile View - end
