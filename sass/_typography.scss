@@ -4,7 +4,7 @@
 	// font family - end
 	
 	// font color - start
-		$link: mediumseagreen;
+		$link: darken(mediumseagreen, 10%);
 		$hover: gold;
 	// font color - end
 // Variables - end
@@ -54,10 +54,10 @@
 		@include navbar;
 		a {
 			font-size: 1.6rem;
-			color: white;
+			color: $link;
 			transition: all 0.3s;
 			&:hover {
-				color: $hover;
+				color: white;
 			}
 		}
 	}

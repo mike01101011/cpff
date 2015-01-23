@@ -30,16 +30,16 @@
 
 		.menu-button {
 			margin-top: 10px;
-			fill: lighten($main-green, 5%);
+			fill: gold;
 			&:hover {
-				fill: lighten($main-green, 25%);
+				fill: darken(mediumseagreen, 10%);
 			}
 		}
 
 		.exit-button {
-			fill: white;
+			fill: darken(mediumseagreen, 10%);
 			&:hover {
-				fill: gold;
+				fill: white;
 			}
 		}
 
@@ -50,7 +50,7 @@
 		height: 100%;
 		position: fixed;
 		right: -50%;
-		background: $main-green;
+		background: gold;
 		z-index: 100;
 		display: block;
 		transition: all 0.75s;
