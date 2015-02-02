@@ -1,7 +1,7 @@
 <?php //index.php is the last resort template, if no other templates match ?>
 <?php get_header(); ?>
 
-<div class="main">
+<main>
   <div class="container">
 
     <div class="content clearfix">
@@ -11,6 +11,6 @@
     <?php get_sidebar(); ?>
 
   </div> <!-- /.container -->
-</div> <!-- /.main -->
+</main> <!-- /.main -->
 
 <?php get_footer(); ?>

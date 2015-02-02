@@ -17,31 +17,36 @@
 	}
 // Nav Bar - end
 
+	.overlay {
+		background-color: rgba(0,0,0,0.75);
+		z-index: 100	;
+		transition: all 0.75s;
+	}
 
-		.menu-button, .exit-button {
-			width: 65px;
-			float: right;
-			transition: all 0.3s;
-			// display: none;
-			&:hover {
-				cursor: pointer;
-			}
+	.menu-button, .exit-button {
+		width: 65px;
+		float: right;
+		transition: all 0.3s;
+		// display: none;
+		&:hover {
+			cursor: pointer;
 		}
+	}
 
-		.menu-button {
-			margin-top: 10px;
-			fill: gold;
-			&:hover {
-				fill: darken(mediumseagreen, 10%);
-			}
-		}
-
-		.exit-button {
+	.menu-button {
+		margin-top: 10px;
+		fill: gold;
+		&:hover {
 			fill: darken(mediumseagreen, 10%);
-			&:hover {
-				fill: white;
-			}
 		}
+	}
+
+	.exit-button {
+		fill: darken(mediumseagreen, 10%);
+		&:hover {
+			fill: white;
+		}
+	}
 
 
 // Off-Screen Menu - start
@@ -51,13 +56,13 @@
 		position: fixed;
 		right: -50%;
 		background: gold;
-		z-index: 100;
+		z-index: 1000;
 		display: block;
 		transition: all 0.75s;
 		
 		.menu-container {
-			width:80%;
-			margin: 0 auto;
+			width: 62.5%;
+			margin-left: 50px;
 			padding-top: 20px;
 			.menu-items {
 				float: left;
@@ -74,7 +79,7 @@
 				margin-bottom: 20px;
 			}
 		}
-	}		
+	}
 
 	#menu-main-menu {
 		padding: 0;
@@ -82,11 +87,37 @@
 	}
 // Off-Screen Menu - end
 
+
+// Large Screens - start
+	@media all and (min-width: 1600px) {
+		section#site-menu {
+			.menu-container {
+				width: 400px;
+				margin-left: 50px;
+			}
+		}
+	}
+// Large Screens - end
+
+// Closer Exit - start
+	@media all and (max-width: 1080px) {
+		section#site-menu {
+			.menu-container {
+				width: 80%;
+			}
+		}
+	}
+// Closer Exit - end
+
 // Tablet View - start
 	@media all and (max-width: 790px) {
 		section#site-menu {
 			width: 75%;
 			right: -75%;
+			.menu-container {
+				width: 80%;
+				margin: 0 auto;
+			}
 		}
 	}
 // Tablet View - end

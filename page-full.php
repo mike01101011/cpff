@@ -6,7 +6,7 @@
 
 get_header();  ?>
 
-<div class="main">
+<main>
   <div class="container">
 
     <?php // Start the loop ?>
@@ -17,6 +17,6 @@ get_header();  ?>
 
     <?php endwhile; // end the loop?>
   </div> <!-- /.container -->
-</div> <!-- /.main -->
+</main> <!-- /.main -->
 
 <?php get_footer(); ?>

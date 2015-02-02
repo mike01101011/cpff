@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="main">
+<main>
   <div class="container">
 
     <h1>Not Found</h1>
@@ -8,6 +8,6 @@
     <?php get_search_form(); ?>
 
   </div> <!-- /.container -->
-</div> <!-- /.main -->
+</main> <!-- /.main -->
 
 <?php get_footer(); ?>
