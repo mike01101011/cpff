@@ -5,6 +5,10 @@
 */
 
 get_header();  ?>
+<!-- Navigation - start -->
+	<? include("navigation.php"); ?>
+<!-- Navigation - end -->
+
 
 <main>
   <div class="container">

@@ -18,13 +18,28 @@
 // Nav Bar - end
 
 	.overlay {
-		background-color: rgba(0,0,0,0.75);
+		background: rgba(0,0,0,0.75);
 		z-index: 100	;
 		transition: all 0.75s;
 	}
 
+	.menu-top {
+		border-bottom: 1px solid #2f8d59;
+		margin-bottom: 20px;
+		padding-bottom: 10px;
+	}
+
+	.menu-title {
+		float: left;
+		h1 {
+			font-size: 2.2rem;
+			color: #2f8d59;
+			margin-top: 15px;
+		}
+	}
+
 	.menu-button, .exit-button {
-		width: 65px;
+		width: 55px;
 		float: right;
 		transition: all 0.3s;
 		// display: none;
@@ -46,6 +61,10 @@
 		&:hover {
 			fill: white;
 		}
+	}
+
+	.menu-items {
+		clear: both;
 	}
 
 
@@ -87,7 +106,6 @@
 	}
 // Off-Screen Menu - end
 
-
 // Large Screens - start
 	@media all and (min-width: 1600px) {
 		section#site-menu {
@@ -127,6 +145,7 @@
 		section#site-menu {
 			width: 100%;
 			right: -100%;
+			overflow: scroll;
 			.menu-container {
 				width:85%;
 				margin: 0 auto;

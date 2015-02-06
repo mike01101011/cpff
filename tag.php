@@ -1,4 +1,7 @@
 <?php get_header(); ?>
+<!-- Navigation - start -->
+	<? include("navigation.php"); ?>
+<!-- Navigation - end -->
 
 <div class="main">
   <div class="container">
