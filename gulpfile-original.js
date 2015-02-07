@@ -3,21 +3,12 @@ var gulp = require('gulp'),
 
 // Required Gulp Plugins
 	sass = require('gulp-sass'),
-	// livereload = require('gulp-livereload'),
-	browserSync = require('browser-sync'),
-	reload = browserSync.reload,
+	livereload = require('gulp-livereload'),
 	autoprefixer = require('gulp-autoprefixer'),
 	// sourcemaps = require('gulp-sourcemaps'),
 	minifyCSS = require('gulp-minify-css'),
 	imagemin = require('gulp-imagemin'),
 	plumber = require('gulp-plumber');
-
-// Static Server
-gulp.task('browser-sync', function() {
-	browserSync({
-		proxy: "localhost:8888/cpff/"
-	});
-});
 
 // Styles
 // Compiles SASS to CSS
@@ -32,7 +23,7 @@ gulp.task('styles', function(){
 		// .pipe(sourcemaps.write('./sass/maps'))
 		.pipe(minifyCSS())
 		.pipe(gulp.dest('./'))
-		.pipe(reload({stream:true}));
+		.pipe(livereload());
 });
 
 gulp.task('images', function() {
@@ -43,7 +34,13 @@ gulp.task('images', function() {
 		.pipe(gulp.dest('./img/'))
 });
 
-// Default
-gulp.task('default', ['styles', 'images', 'browser-sync'], function () {
+// Watch Task
+// Watch SASS
+gulp.task('watch', function() {
+	livereload.listen();
 	gulp.watch('./sass/*.scss', ['styles']);
+	gulp.watch('./img/*.*', ['images']);
 });
+
+// Default
+gulp.task('default', ['styles', 'images', 'watch']);
