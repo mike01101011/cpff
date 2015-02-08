@@ -12,6 +12,7 @@
 
   <?php // Load our CSS ?>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+  <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
 
   <?php wp_head(); ?>
 </head>

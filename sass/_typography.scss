@@ -1,34 +1,7 @@
-// Variables - start
-	// font family - start
-		$main: 'Montserrat', sans-serif;
-	// font family - end
-	
-	// font color - start
-		$link: darken(mediumseagreen, 10%);
-		$hover: gold;
-	// font color - end
-// Variables - end
-
-
-//mixins - start
-	@mixin navbar {
-		font-family: $main;
-		font-weight: 700;
-	}
-
-	@mixin page-headline {
-		color: lighten( $main-green, 2.5% );
-		font-family: $main;
-		text-transform: uppercase;
-		font-size: 2.2rem;
-	}
-
-//mixins - end
-
-
 // Main Typography for entire document - start
 	body {
 		font-size: 62.5%;
+		color: #333;
 		
 	}
 

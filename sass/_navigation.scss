@@ -1,8 +1,3 @@
-// Variables - Start
-	$main-green: darken(darkgreen, 5% );
-// Variables - End
-
-
 // Wordpress Bar - start
 	#wpadminbar {
 		display: none;
@@ -40,7 +35,7 @@
 	}
 
 	.menu-button, .exit-button {
-		width: 60px;
+		width: 50px;
 		float: right;
 		transition: all 0.3s;
 		// display: none;
@@ -95,7 +90,7 @@
 		transition: all 0.75s;
 		
 		.menu-container {
-			width: 62.5%;
+			width: 65%;
 			margin-left: 50px;
 			padding-top: 20px;
 			.menu-items {

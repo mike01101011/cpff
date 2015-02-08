@@ -9,21 +9,23 @@
 
 <script src="<?php bloginfo('template_url'); ?>/js/scripts.js"></script>
 
-<!-- Owl Carousel - start -->
-<script src="<?php bloginfo('template_url'); ?>/js/owl.carousel.min.js"></script>
 
+<!-- Slick Carousel - start -->
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
 <script>
-	$(".owl-carousel").owlCarousel({
-		navigation : false, // Show next and prev buttons
-		      slideSpeed : 300,
-		      paginationSpeed : 400,
-		      singleItem:true,
-		      autoPlay: 5000,
-		      paginationSpeed: 1000,
-		      pagination: false
+	$(".carousel").slick({
+		autoplay: true,
+		fade: true,
+		dots: false,
+		infinite: true,
+		speed: 1000,
+		slidesToShow: 1,
+		arrows: false,
+		centerMode: true
+		
 	});
 </script>
-<!-- Owl Carousel - end -->
+<!-- Slick Carousel - end -->
 
 
 <script>
