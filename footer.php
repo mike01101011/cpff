@@ -6,7 +6,24 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="<?php bloginfo('template_url') ?>/js/scripts.js"></script>
+
+<script src="<?php bloginfo('template_url'); ?>/js/scripts.js"></script>
+
+<!-- Owl Carousel - start -->
+<script src="<?php bloginfo('template_url'); ?>/js/owl.carousel.min.js"></script>
+
+<script>
+	$(".owl-carousel").owlCarousel({
+		navigation : false, // Show next and prev buttons
+		      slideSpeed : 300,
+		      paginationSpeed : 400,
+		      singleItem:true,
+		      autoPlay: 5000,
+		      paginationSpeed: 1000,
+		      pagination: false
+	});
+</script>
+<!-- Owl Carousel - end -->
 
 
 <script>

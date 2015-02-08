@@ -1,10 +1,9 @@
 <?php get_header(); ?>
-<!-- Navigation - start -->
-  <? include("navigation.php"); ?>
-<!-- Navigation - end -->
 
-<main>
-  <div class="container">
+
+<!-- carousel - start -->
+  <? include("carousel.php"); ?>
+<!-- carousel - end -->  <div class="container">
 
     <div class="content">
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>

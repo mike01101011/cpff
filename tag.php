@@ -1,9 +1,8 @@
 <?php get_header(); ?>
-<!-- Navigation - start -->
-	<? include("navigation.php"); ?>
-<!-- Navigation - end -->
 
-<div class="main">
+<!-- carousel - start -->
+	<? include("carousel.php"); ?>
+<!-- carousel - end -->
   <div class="container">
 
     <div class="content">
