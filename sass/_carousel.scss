@@ -1,6 +1,11 @@
 .carousel {
 	margin-bottom: 10px;
+	transition: all 0.75s;
 	img {
 		max-width: 100%;
 	}
+}
+
+.overlay-carousel {
+	background: black;
 }

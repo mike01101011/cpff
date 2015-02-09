@@ -13,12 +13,6 @@
 	}
 // Nav Bar - end
 
-	.overlay {
-		background: rgba(0,0,0,0.75);
-		z-index: 100;
-		transition: all 0.75s;
-	}
-
 	.menu-top {
 		border-bottom: 2px solid #2f8d59;
 		margin-bottom: 20px;
@@ -90,9 +84,10 @@
 		transition: all 0.75s;
 		
 		.menu-container {
-			width: 65%;
+			width: 60%;
 			margin-left: 50px;
 			padding-top: 20px;
+			transition: all 0.75s;
 			.menu-items {
 				float: left;
 			}
@@ -129,7 +124,7 @@
 // Large Screens - end
 
 // Closer Exit - start
-	@media all and (max-width: 1080px) {
+	@media all and (max-width: 1200px) {
 		section#site-menu {
 			.menu-container {
 				width: 80%;
@@ -144,7 +139,7 @@
 			width: 75%;
 			right: -75%;
 			.menu-container {
-				width: 80%;
+				width: 90%;
 				margin: 0 auto;
 			}
 		}
@@ -157,10 +152,6 @@
 			width: 100%;
 			right: -100%;
 			overflow: scroll;
-			.menu-container {
-				width:85%;
-				margin: 0 auto;
-			}
 		}
 	}
 

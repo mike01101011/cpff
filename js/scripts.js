@@ -3,16 +3,31 @@ $(function(){
 	
 	$('.menu-button').click(function (){
 		$('#site-menu').css('right', '0');
-		$('main').addClass('overlay');
-		$('footer').addClass('overlay');
-		$('.carousel-overlay').css('display', 'block');
-		
+		$('main').css({
+			'background':'rgba(0,0,0,0.75)',
+			'z-index':'100',
+			'transition':'all 0.75s'
+		});
+		$('footer').css({
+			'background':'rgba(0,0,0,0.75)',
+			'z-index':'100',
+			'transition':'all 0.75s'
+		});
+		$('.carousel').css('opacity', '.25');
 	});
 	$('.exit-button').click(function (){
 		$('#site-menu').css('right', '-100%');
-		$('main').removeClass('overlay');
-		$('footer').removeClass('overlay');
-		$('.carousel-overlay').css('display', 'none');
+		$('main').css({
+			'background':'white',
+			'z-index':'0',
+			'transition':'all 0.75s'
+		});
+		$('footer').css({
+			'background':'white',
+			'z-index':'0',
+			'transition':'all 0.75s'
+		});
+		$('.carousel').css('opacity', '1');
 	});
 	
 });
