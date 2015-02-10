@@ -57,9 +57,6 @@
 		}
 	}
 
-
-
-
 	.exit-button {
 		fill: darken(mediumseagreen, 10%);
 		&:hover {
@@ -86,7 +83,7 @@
 		.menu-container {
 			width: 60%;
 			margin-left: 50px;
-			padding-top: 20px;
+			padding-top: 10px;
 			transition: all 0.75s;
 			.menu-items {
 				float: left;
@@ -124,13 +121,14 @@
 // Large Screens - end
 
 // Closer Exit - start
-	@media all and (max-width: 1200px) {
+	@media all and (max-width: 1320px) {
 		section#site-menu {
 			.menu-container {
-				width: 80%;
+				width: 70%;
 			}
 		}
 	}
+
 // Closer Exit - end
 
 // Tablet View - start
@@ -155,12 +153,11 @@
 		}
 	}
 
-	@media all and (max-height: 414px) {
+	@media all and (max-height: 575px) {
 		
 		section#site-menu{
 			overflow: scroll;
 			.menu-container {
-				padding-top: 12.5px;
 				.home {
 					margin-bottom: 12.5px;
 				}
