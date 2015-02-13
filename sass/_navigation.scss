@@ -125,15 +125,7 @@
 // Off-Screen Menu - end
 
 // Large Screens - start
-	// @media all and (min-width: 1600px) {
-	// 	section#site-menu {
-	// 		.menu-container {
-	// 		}
-	// 	}
-	// }
-// Large Screens - end
-
-// Closer Exit - start
+	
 	@media all and (min-width: 1500px) {
 		section#site-menu {
 			.menu-container {
@@ -152,6 +144,14 @@
 		}
 	}
 
+	@media all and (max-width: 1200px) {
+		section#site-menu {
+			.menu-container {
+				width: 75%;
+			}
+		}
+	}
+
 	@media all and (max-width: 1079px) {
 		section#site-menu {
 			.menu-container {
@@ -160,8 +160,8 @@
 			}
 		}
 	}
+// Large Screens - end
 
-// Closer Exit - end
 
 // Tablet View - start
 	@media all and (max-width: 790px) {
