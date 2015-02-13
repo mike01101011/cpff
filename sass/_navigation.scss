@@ -125,21 +125,21 @@
 // Off-Screen Menu - end
 
 // Large Screens - start
-	@media all and (min-width: 1600px) {
-		section#site-menu {
-			.menu-container {
-				width: 400px;
-				margin-left: 50px;
-			}
-		}
-	}
+	// @media all and (min-width: 1600px) {
+	// 	section#site-menu {
+	// 		.menu-container {
+	// 		}
+	// 	}
+	// }
 // Large Screens - end
 
 // Closer Exit - start
-	@media all and (min-width: 1321px) {
+	@media all and (min-width: 1500px) {
 		section#site-menu {
 			.menu-container {
-				width: 60%;
+				// width: 52.5%;
+				width: 400px;
+				margin-left: 50px;
 			}
 		}
 	}
@@ -147,7 +147,7 @@
 	@media all and (max-width: 1320px) {
 		section#site-menu {
 			.menu-container {
-				width: 72.5%;
+				width: 67.5%;
 			}
 		}
 	}
