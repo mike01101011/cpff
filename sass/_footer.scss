@@ -19,3 +19,12 @@
 		background: white;
 	}
 // footer - end
+
+// Footer font - start
+	footer {
+		color: darken( $main-green, 5%);
+		text-align: center;
+		padding: 1rem;
+		font-size: 1.0rem;
+	}
+// Footer font - end

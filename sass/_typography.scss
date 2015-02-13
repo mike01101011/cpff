@@ -24,22 +24,6 @@
 // Main Typography for entire document - start
 
 
-// Typography for NavBar Menu- start
-	.menu-items{
-		@include navbar;
-		a {
-			font-size: 2.6rem;
-			color: $link;
-			transition: all 0.3s;
-			&:hover {
-				color: white;
-			}
-		}
-	}
-
-// Typography for NavBar - end
-
-
 // Typography for Old + New posts - start
 	.alignleft, .alignright {
 		font-family: $main;
@@ -60,13 +44,3 @@
 		font-family: 'Open Sans', sans-serif;
 	}
 // Typography for Old + New posts - end
-
-
-// Footer Style - start
-	footer {
-		color: darken( $main-green, 5%);
-		text-align: center;
-		padding: 1rem;
-		font-size: 1.0rem;
-	}
-// Footer Style - end
