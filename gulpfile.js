@@ -2,7 +2,6 @@
 var gulp = require('gulp'),
 
 // Required Gulp Plugins
-	plumber = require('gulp-plumber'),
 	sass = require('gulp-sass'),
 	browserSync = require('browser-sync'),
 	reload = browserSync.reload,
@@ -20,8 +19,7 @@ gulp.task('browser-sync', function() {
 // Styles - Compiles SASS to CSS
 gulp.task('styles', function(){
 	return gulp.src('./sass/*.scss')
-		.pipe(plumber())
-		.pipe(sass())
+		.pipe(sass({errLogToConsole: true}))
 		.pipe(autoprefixer({
 			browsers: ['last 5 version']
 		}))
