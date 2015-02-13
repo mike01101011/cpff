@@ -22,7 +22,7 @@
 	.menu-title {
 		float: left;
 		h1 {
-			font-size: 2.2rem;
+			font-size: 3.2rem;
 			color: #2f8d59;
 			margin-top: 15px;
 		}
@@ -121,10 +121,27 @@
 // Large Screens - end
 
 // Closer Exit - start
+	@media all and (min-width: 1321px) {
+		section#site-menu {
+			.menu-container {
+				width: 60%;
+			}
+		}
+	}
+
 	@media all and (max-width: 1320px) {
 		section#site-menu {
 			.menu-container {
-				width: 70%;
+				width: 72.5%;
+			}
+		}
+	}
+
+	@media all and (max-width: 1079px) {
+		section#site-menu {
+			.menu-container {
+				width: 82.5%;
+				margin: 0 auto;
 			}
 		}
 	}
@@ -138,7 +155,6 @@
 			right: -75%;
 			.menu-container {
 				width: 90%;
-				margin: 0 auto;
 			}
 		}
 	}
