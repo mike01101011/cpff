@@ -5,18 +5,17 @@
 	<? include("carousel.php"); ?>
 <!-- carousel - end -->
 
+	<div class="container">
 
-  <div class="container">
+		<div class="content clearfix">
+				<?php get_template_part( 'loop', 'index' );	?>
+		</div> <!--/.content -->
 
-    <div class="content clearfix">
-    		<?php get_template_part( 'loop', 'index' );	?>
-    </div> <!--/.content -->
+		<!-- sidebar - start -->
+		    <?php /*get_sidebar(); */?>
+		<!-- sidebar - end -->
 
-	<!-- sidebar - start -->
-	    <?php /*get_sidebar(); */?>
-	<!-- sidebar - end -->
-
-  </div> <!-- /.container -->
+	</div> <!-- /.container -->
 </main> <!-- /.main -->
 
 <?php get_footer(); ?>

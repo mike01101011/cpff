@@ -5,30 +5,71 @@
 // Wordpress Bar - end
 
 
-// CPFF Identity - start
-	.identity {
-		width: 176px;
-		position: fixed;
-		z-index: 1001;
-		margin-top: 5px;
-	}
-// CPFF Identity - end
-
-
-// Nav Bar - start
-	nav {
+// Nav Menu - start
+	.main-navigation {
 		width: 100%;
-		position: fixed;
+		height: 100%;
 		z-index: 100;
+		top: 0;
+		right: 0;
+		position: fixed;
+		background: rgba(255,215,0,.95);
+		// display: none;
+		transform: translateX(100%);
+		transition: transform 0.75s ease;
+		
+		.menu-container {
+			display: block;
+			width: 50%;
+			margin: 0 auto;
+			transition: all 0.3s ease;
+		}
+
+		.menu-top {
+			border-bottom: 2px solid #2f8d59;
+			margin-bottom: 20px;
+			padding-bottom: 15px;
+		}
+
+		.menu-title {
+			float: left;
+			h1 {
+				font-size: 3.2rem;
+				color: #2f8d59;
+				margin-top: 25px;
+			}
+		}
+
+		.menu-items {
+			clear: both;
+			text-align: center;
+			
+			ul {
+				padding: 0;
+				li:first-child {
+					margin-top:20px;
+				}
+				li {
+					padding: 0;
+					margin-bottom: 20px;
+					list-style-type: none;
+				}
+			}
+		}
 	}
-// Nav Bar - end
+
+
+	nav.open {
+		transform: translateX(0%);
+	}
+// Nav Menu - end
 
 
 // Nav Menu Fonts - start
 	.menu-items{
 		@include navbar;
 		a {
-			font-size: 2.6rem;
+			font-size: 3.8rem;
 			color: $link;
 			transition: all 0.3s;
 			&:hover {
@@ -38,33 +79,25 @@
 	}
 // Nav Menu Fonts - end
 
-	.menu-top {
-		border-bottom: 2px solid #2f8d59;
-		margin-bottom: 20px;
-		padding-bottom: 15px;
-	}
-
-	.menu-title {
-		float: left;
-		h1 {
-			font-size: 3.2rem;
-			color: #2f8d59;
-			margin-top: 15px;
-		}
-	}
 
 	.menu-button, .exit-button {
 		width: 50px;
 		float: right;
 		transition: all 0.3s;
-		// display: none;
 		&:hover {
 			cursor: pointer;
 		}
 	}
 
-	.menu-button {
+	.exit-button {
 		margin-top: 10px;
+	}
+
+	.menu-button {
+		position: fixed;
+		top: 10px;
+		right: 5%;
+		z-index: 100;
 		.circle {
 			fill: gold;
 		}
@@ -89,97 +122,53 @@
 		}
 	}
 
-	.menu-items {
-		clear: both;
-	}
-
-
-// Off-Screen Menu - start
-	section#site-menu{
-		width:50%;
-		height: 100%;
-		position: fixed;
-		right: -50%;
-		background: gold;
-		z-index: 1000;
-		display: block;
-		transition: all 0.75s;
-		
-		.menu-container {
-			width: 60%;
-			margin-left: 50px;
-			padding-top: 10px;
-			transition: all 0.75s;
-			.menu-items {
-				float: left;
-			}
-			.home {
-				margin-bottom: 20px;
-				text-align: left;
-				display: block;
-			}
-			ul {
-				list-style-type: none;
-			}
-			ul > li {
-				margin-bottom: 20px;
-			}
-		}
-	}
-
-	#menu-main-menu {
-		padding: 0;
-		margin: 0;
-	}
-
-// Off-Screen Menu - end
 
 // Large Screens - start
 	
-	@media all and (min-width: 1500px) {
-		section#site-menu {
-			.menu-container {
-				// width: 52.5%;
-				width: 400px;
-				margin-left: 50px;
-			}
-		}
-	}
+	// @media all and (min-width: 1500px) {
+	// 	section#site-menu {
+	// 		.menu-container {
+	// 			// width: 52.5%;
+	// 			width: 400px;
+	// 			margin-left: 50px;
+	// 		}
+	// 	}
+	// }
 
-	@media all and (max-width: 1320px) {
-		section#site-menu {
-			.menu-container {
-				width: 67.5%;
-			}
-		}
-	}
+	// @media all and (max-width: 1320px) {
+	// 	section#site-menu {
+	// 		.menu-container {
+	// 			width: 67.5%;
+	// 		}
+	// 	}
+	// }
 
-	@media all and (max-width: 1200px) {
-		section#site-menu {
-			.menu-container {
-				width: 75%;
-			}
-		}
-	}
+	// @media all and (max-width: 1200px) {
+	// 	section#site-menu {
+	// 		.menu-container {
+	// 			width: 75%;
+	// 		}
+	// 	}
+	// }
 
-	@media all and (max-width: 1079px) {
-		section#site-menu {
-			.menu-container {
-				width: 82.5%;
-				margin: 0 auto;
-			}
-		}
-	}
+	// @media all and (max-width: 1079px) {
+	// 	section#site-menu {
+	// 		.menu-container {
+	// 			width: 82.5%;
+	// 			margin: 0 auto;
+	// 		}
+	// 	}
+	// }
 // Large Screens - end
 
 
 // Tablet View - start
 	@media all and (max-width: 790px) {
-		section#site-menu {
-			width: 75%;
-			right: -75%;
+		.main-navigation {
+			transition: all 0.3s ease;
 			.menu-container {
-				width: 90%;
+				width: 80%;
+				margin: 0 auto;
 			}
 		}
 	}
@@ -187,16 +176,17 @@
 
 // Mobile View - start
 	@media all and (max-width: 515px) {
-		section#site-menu {
-			width: 100%;
-			right: -100%;
+		.main-navigation {
 			overflow: scroll;
+			.menu-container {
+				width: 90%;
+			}
 		}
 	}
 
 	@media all and (max-height: 575px) {
 		
-		section#site-menu{
+		.main-navigation {
 			overflow: scroll;
 			.menu-container {
 				.home {
