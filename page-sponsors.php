@@ -1,18 +1,15 @@
 <?php //index.php is the last resort template, if no other templates match ?>
 <?php get_header(); ?>
 
-<!-- large background - start -->
-	<section class="lrg-bg">
-		
-	</section><!-- /.lrg-bg -->
-<!-- large background - end -->
+<!-- carousel - start -->
+	<? include("carousel.php"); ?>
+<!-- carousel - end -->
 
 	<div class="container">
 
 		<div class="content clearfix">
-				<?php get_template_part( 'loop', 'index' );	?>
+			<h2><?php echo get_the_title( $ID ); ?></h2>
 		</div> <!--/.content -->
-
 	</div> <!-- /.container -->
 </main> <!-- /.main -->
 
