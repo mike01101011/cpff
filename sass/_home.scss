@@ -29,12 +29,21 @@
 
 // Website Opening - start
 	.lrg-bg {
-		background: salmon;
+		background: linen;
 		width: 100%;
 		height: 100vh;
-		margin-bottom: 1.0rem;
-		
+		margin-bottom: 20px;
 	}
 // Website Opening - end
 
+//CPFF logo - start
+	.cpff-logo {
+		max-width: 75%;
+		height: auto;
+		position: absolute;
+		top:50%;
+		left:50%;
+		transform: translate(-50%, -50%)
+	}
+//CPFF logo - end
 

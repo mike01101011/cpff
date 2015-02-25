@@ -128,13 +128,30 @@
 			.menu-items {
 				ul {
 					li:first-child {
-						margin-top:5%;
+						margin-top: 3.5%;
 					}
 					li {
-						margin-bottom: 5%;
+						margin-bottom: 3.5%;
 					}
 				}
 			}
 		}
 	}
 // Tablet View - end
+
+// Landscape View (mobile) - start
+	@media all and (max-height: 450px) {
+		.main-navigation {
+			.menu-items {
+				ul {
+					li:first-child {
+						margin-top: 1%;
+					}
+					li {
+						margin-bottom: 1%;
+					}
+				}
+			}
+		}
+	}
+// Landscape View (mobile) - end
