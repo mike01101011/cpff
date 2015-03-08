@@ -6,7 +6,7 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js"></script>	
 <script src="<?php bloginfo('template_url'); ?>/js/scripts.js"></script>
 
 
