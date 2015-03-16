@@ -28,6 +28,8 @@ gulp.task('styles', function(){
 		.pipe(reload({stream:true}));
 });
 
+
+// Minify images
 gulp.task('images', function() {
 	return gulp.src('./img/*.*')
 		.pipe(imagemin({

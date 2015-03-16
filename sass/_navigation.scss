@@ -25,6 +25,7 @@
 			padding-bottom: 1%;
 		}
 
+		// Menu Typography - start
 		.menu-title {
 			float: left;
 			h1 {
@@ -37,19 +38,29 @@
 		.menu-items {
 			clear: both;
 			text-align: center;
-			
+			@include navbar;
+			a {
+				font-size: 3.2rem;
+				color: $link;
+				transition: all 0.3s;
+				&:hover {
+					color: white;
+				}
+			}
 			ul {
 				padding: 0;
 				li:first-child {
-					margin-top:2.5%;
+					margin-top:2%;
 				}
 				li {
 					padding: 0;
-					margin-bottom: 2.5%;
+					margin-bottom: 2%;
 					list-style-type: none;
 				}
 			}
 		}
+		// Menu Typography - end
+
 	}
 
 
@@ -57,21 +68,6 @@
 		transform: translateX(0%);
 	}
 // Nav Menu - end
-
-
-// Nav Menu Fonts - start
-	.menu-items{
-		@include navbar;
-		a {
-			font-size: 3.8rem;
-			color: $link;
-			transition: all 0.3s;
-			&:hover {
-				color: white;
-			}
-		}
-	}
-// Nav Menu Fonts - end
 
 // Buttons - start
 	.wrapper {
@@ -122,22 +118,29 @@
 // Buttons - end
 
 
-// Tablet View - start
-	@media all and (max-width: 790px) {
+// mobile View (portrait) - start
+	@media all and (max-width: 420px) {
+		
 		.main-navigation {
-			.menu-items {
-				ul {
-					li:first-child {
-						margin-top: 3.5%;
-					}
-					li {
-						margin-bottom: 3.5%;
-					}
+			.menu-title {
+				h1 {
+					font-size: 2.4rem;
+				}
+			}
+			.menu-items{
+				@include navbar;
+				a {
+					font-size: 2.4rem;
 				}
 			}
 		}
+
+		.menu-button, .exit-button {
+			width: 40px;
+		}
 	}
-// Tablet View - end
+// mobile View (portrait) - end
+
 
 // Landscape View (mobile) - start
 	@media all and (max-height: 450px) {
