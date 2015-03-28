@@ -57,3 +57,17 @@
 	}
 //CPFF logo - end
 
+//Down Arrow - start
+	.arrow {
+	  width: 5%;
+	  fill: white;
+	  position: absolute;
+	  top:99%;
+	  left:50%;
+	  transform: translate(-50%, -99%)
+	}
+
+	.big {
+	  fill: darkgreen;
+	}
+//Down Arrow - end

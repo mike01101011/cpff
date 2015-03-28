@@ -22,9 +22,17 @@
 
 // Footer font - start
 	footer {
-		color: darken( $main-green, 5%);
+		color: #999;
 		text-align: center;
 		padding: 1rem;
 		font-size: 1.0rem;
 	}
 // Footer font - end
+
+// footer-reel - start
+	.footer-reel {
+		width: 20px;
+		fill:#999;
+		margin-bottom: 2px;
+	}
+// footer-reel - end

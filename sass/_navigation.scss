@@ -20,18 +20,20 @@
 		overflow: scroll;
 
 		.menu-top {
-			border-bottom: 2px solid #2f8d59;
-			margin-bottom: 1%;
-			padding-bottom: 1%;
+			border-bottom: 2px solid #1E582C;
+			margin-bottom: .75%;
+			padding-bottom: .75%;
 		}
 
 		// Menu Typography - start
 		.menu-title {
 			float: left;
+			margin-top: 5px;
 			h1 {
 				font-size: 3.2rem;
 				color: #2f8d59;
-				margin-top: 25px;
+				margin-top: 20px;
+				float: left;
 			}
 		}
 
@@ -43,24 +45,57 @@
 				font-size: 3.2rem;
 				color: $link;
 				transition: all 0.3s;
+				position: relative;
+				text-decoration: none;
+				//Animate underline effect
+				&:before {
+					content: "";
+					position: absolute;
+					width: 100%;
+					height: .2rem;
+					top: 105%;
+					left: 0;
+					background-color: $hover;
+					visibility: hidden;
+					-webkit-transform: scaleX(0);
+		  			transform: scaleX(0);
+		 			-webkit-transition: all 0.3s ease-in-out 0s;
+		  			transition: all 0.3s ease-in-out 0s;
+				}
 				&:hover {
-					color: white;
+					color: $hover;
+				}
+				//Animate underline effect
+				&:hover:before {
+					visibility: visible;
+					-webkit-transform: scaleX(1);
+				    transform: scaleX(1);
 				}
 			}
+
 			ul {
 				padding: 0;
 				li:first-child {
-					margin-top:2%;
+					margin-top:1.75%;
 				}
 				li {
 					padding: 0;
-					margin-bottom: 2%;
+					margin-bottom: 1.75%;
 					list-style-type: none;
 				}
 			}
 		}
 		// Menu Typography - end
 
+	}
+
+	//reel in menu
+	.menu-reel {
+	  fill: #1E582C;
+	  width: 50px;
+	  margin-top: 10px;
+	  margin-left: 5px;
+	  
 	}
 
 
@@ -78,7 +113,7 @@
 	}
 
 	.menu-button, .exit-button {
-		width: 50px;
+		width: 60px;
 		float: right;
 		transition: all 0.3s;
 		&:hover {
@@ -92,66 +127,109 @@
 
 	.menu-button {
 		
-		.circle {
+		.menu {
 			fill: gold;
-		}
-
-		.rectangle {
-			fill: rgba(47,141,89,0.8);
-		}
-		&:hover {
-			.circle {
-				fill: darken(mediumseagreen, 10%);
-			}
-			.rectangle {
-				fill: rgba(255,215,0,0.8)
+			-webkit-filter: drop-shadow(0px 3px 3px rgba(0,0,0,0.35));
+			filter: drop-shadow(0px 3px 3px rgba(0,0,0,0.35));
+			&:hover {
+				fill: $hover;
+				transition: all 0.3s;
 			}
 		}
 	}
 
 	.exit-button {
-		fill: darken(mediumseagreen, 10%);
-		&:hover {
-			fill: white;
+		.close {
+			
+			fill: darken(mediumseagreen, 10%);
+			&:hover {
+				fill: #1E582C;
+				transition: all 0.3s;
+			}
 		}
 	}
 // Buttons - end
 
 
 // mobile View (portrait) - start
-	@media all and (max-width: 420px) {
-		
+	@media all and (max-width: 768px) {
 		.main-navigation {
 			.menu-title {
 				h1 {
-					font-size: 2.4rem;
+					font-size: 2.8em;
 				}
 			}
-			.menu-items{
-				@include navbar;
+			.menu-items {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
 				a {
-					font-size: 2.4rem;
+					font-size: 2.6rem;
+				}
+				ul {
+					li:first-child {
+						margin-top: 3%;
+					}
+					li {
+						margin-bottom: 3%;
+					}
 				}
 			}
 		}
 
 		.menu-button, .exit-button {
+			width: 50px;
+		}
+
+		.menu-reel {
 			width: 40px;
 		}
 	}
+
+	@media all and (max-width: 430px) {
+		
+		.main-navigation {
+
+			.menu-items{
+				// position: static;
+				// top: 0;
+				// left: 0;
+				// transform: translate(0);
+				@include navbar;
+				a {
+					font-size: 1.8rem;
+				}
+				ul {
+					li:first-child {
+						margin-top: 7.5%;
+					}
+					li {
+						margin-bottom: 7.5%;
+					}
+				}
+			}
+		}
+	}
+
+	
 // mobile View (portrait) - end
 
 
 // Landscape View (mobile) - start
-	@media all and (max-height: 450px) {
+	@media all and (max-height: 480px) {
 		.main-navigation {
 			.menu-items {
+				position: static;
+				top: 0;
+				left: 0;
+				transform: translate(0);
 				ul {
 					li:first-child {
-						margin-top: 1%;
+						margin-top: 4%;
 					}
 					li {
-						margin-bottom: 1%;
+						margin-bottom: 4%;
 					}
 				}
 			}
