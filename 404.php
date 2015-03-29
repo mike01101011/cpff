@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+<?php include("navigation.php"); ?>
+
 <!-- carousel - start -->
 	<? include("carousel.php"); ?>
 <!-- carousel - end -->
