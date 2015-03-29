@@ -1,4 +1,5 @@
 <?php get_header();  ?>
+<?php include("navigation.php"); ?>
 
 
 <!-- carousel - start -->

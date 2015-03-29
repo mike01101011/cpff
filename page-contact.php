@@ -1,5 +1,6 @@
 <?php //index.php is the last resort template, if no other templates match ?>
 <?php get_header(); ?>
+<?php include("navigation.php"); ?>
 
 <!-- carousel - start -->
 	<? include("carousel.php"); ?>

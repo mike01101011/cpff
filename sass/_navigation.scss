@@ -20,7 +20,7 @@
 		overflow: scroll;
 
 		.menu-top {
-			border-bottom: 2px solid #1E582C;
+			border-bottom: .2rem solid #1E582C;
 			margin-bottom: .75%;
 			padding-bottom: .75%;
 		}
@@ -28,11 +28,11 @@
 		// Menu Typography - start
 		.menu-title {
 			float: left;
-			margin-top: 5px;
+			margin-top: .5rem;
 			h1 {
 				font-size: 3.2rem;
 				color: #2f8d59;
-				margin-top: 20px;
+				margin-top: 2rem;
 				float: left;
 			}
 		}
@@ -86,15 +86,14 @@
 			}
 		}
 		// Menu Typography - end
-
 	}
 
 	//reel in menu
 	.menu-reel {
 	  fill: #1E582C;
-	  width: 50px;
-	  margin-top: 10px;
-	  margin-left: 5px;
+	  width: 5rem;
+	  margin-top: 1rem;
+	  margin-left: .5rem;
 	  
 	}
 
@@ -107,13 +106,13 @@
 // Buttons - start
 	.wrapper {
 		position: fixed;
-		top: 10px;
+		top: 1rem;
 		z-index: 100;
 		width: 100%;
 	}
 
 	.menu-button, .exit-button {
-		width: 60px;
+		width: 6rem;
 		float: right;
 		transition: all 0.3s;
 		&:hover {
@@ -122,7 +121,7 @@
 	}
 
 	.exit-button {
-		margin-top: 10px;
+		margin-top: 1rem;
 	}
 
 	.menu-button {
@@ -131,9 +130,9 @@
 			fill: gold;
 			-webkit-filter: drop-shadow(0px 3px 3px rgba(0,0,0,0.35));
 			filter: drop-shadow(0px 3px 3px rgba(0,0,0,0.35));
+			transition: all 0.3s;
 			&:hover {
 				fill: $hover;
-				transition: all 0.3s;
 			}
 		}
 	}
@@ -142,97 +141,94 @@
 		.close {
 			
 			fill: darken(mediumseagreen, 10%);
+			transition: all 0.3s;
 			&:hover {
 				fill: #1E582C;
-				transition: all 0.3s;
 			}
 		}
 	}
 // Buttons - end
 
 
-// mobile View (portrait) - start
+// tablet view - start
 	@media all and (max-width: 768px) {
 		.main-navigation {
-			.menu-title {
-				h1 {
-					font-size: 2.8em;
-				}
+			.menu-top {
+				margin-bottom: 2.75%;
+				padding-bottom: .75%;
 			}
 			.menu-items {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				a {
-					font-size: 2.6rem;
-				}
 				ul {
 					li:first-child {
-						margin-top: 3%;
+						margin-top: 2.5%;
 					}
 					li {
-						margin-bottom: 3%;
+						margin-bottom: 2.5%;
 					}
 				}
 			}
 		}
 
 		.menu-button, .exit-button {
-			width: 50px;
+			width: 5rem;
 		}
 
 		.menu-reel {
-			width: 40px;
+			width: 4rem;
 		}
 	}
+// tablet view - end
 
-	@media all and (max-width: 430px) {
+// mobile view - start
+	@media all and (max-width: 420px) {
 		
 		.main-navigation {
-
+			.menu-title {
+				h1 {
+					font-size: 2.2rem;
+				}
+			}
 			.menu-items{
-				// position: static;
-				// top: 0;
-				// left: 0;
-				// transform: translate(0);
+				@include navbar;
+				a {
+					font-size: 2.2rem;
+				}
+				ul {
+					li:first-child {
+						margin-top: 5%;
+					}
+					li {
+						margin-bottom: 5%;
+					}
+				}
+			}
+		}
+	}
+// mobile view - end
+
+
+// old mobile device view - start
+	@media all and (max-height: 480px) {
+		.main-navigation {
+			.menu-title {
+				h1 {
+					font-size: 1.8rem;
+				}
+			}
+			.menu-items{
 				@include navbar;
 				a {
 					font-size: 1.8rem;
 				}
 				ul {
 					li:first-child {
-						margin-top: 7.5%;
+						margin-top: 4.75%;
 					}
 					li {
-						margin-bottom: 7.5%;
+						margin-bottom: 4.75%;
 					}
 				}
 			}
 		}
 	}
-
-	
-// mobile View (portrait) - end
-
-
-// Landscape View (mobile) - start
-	@media all and (max-height: 480px) {
-		.main-navigation {
-			.menu-items {
-				position: static;
-				top: 0;
-				left: 0;
-				transform: translate(0);
-				ul {
-					li:first-child {
-						margin-top: 4%;
-					}
-					li {
-						margin-bottom: 4%;
-					}
-				}
-			}
-		}
-	}
-// Landscape View (mobile) - end
+// old mobile device view - end
