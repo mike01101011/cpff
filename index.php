@@ -2,7 +2,8 @@
 <?php get_header(); ?>
 <?php include("navigation.php"); ?>
 
-<!-- large background - start -->
+<main>
+  <!-- large background - start -->
 	<section class="lrg-bg">
       <svg class="cpff-logo" viewBox="0 0 1028.25 354.869">
         <g class="text">
@@ -20,15 +21,16 @@
       </svg>
       <!-- Down Arrow - end -->
 	</section><!-- /.lrg-bg -->
-<!-- large background - end -->
+  <!-- large background - end -->
 
-	<div class="container">
+  <section class="blog">
+  	<div class="container">
 
-		<div class="content clearfix">
-				<?php get_template_part( 'loop', 'index' );	?>
-		</div> <!--/.content -->
-
-	</div> <!-- /.container -->
+  		<div class="content clearfix">
+  				<?php get_template_part( 'loop', 'index' );	?>
+  		</div> <!--/.content -->
+  	</div> <!-- /.container -->
+  </section><!-- /.blog -->
 </main> <!-- /.main -->
 
 <?php get_footer(); ?>

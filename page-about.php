@@ -1,17 +1,61 @@
-<?php //index.php is the last resort template, if no other templates match ?>
+<!-- website header - start -->
 <?php get_header(); ?>
+<!-- website header - end -->
+
+
+<!-- website navigation - start -->
 <?php include("navigation.php"); ?>
+<!-- website navigation - end -->
+
 
 <!-- carousel - start -->
-	<? include("carousel.php"); ?>
+<? include("carousel.php"); ?>
 <!-- carousel - end -->
 
+
+<!-- website main content - start -->
+<main class="clearfix">
 	<div class="container">
+		<h2><?php the_title(); ?></h2>
+		
+		<?php
+			$onePageQuery = new WP_Query(
+				array(
+					'posts_per_page' => -1,
+					'post_type' => 'about',
+					'order' => 'DSC'
+				)
+			);
+		?>
+		 <!-- start loop -->
+		<?php if ( $onePageQuery->have_posts() ) : ?>
+			<?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
+				<section id="festival_bio">
+					<p><?php the_field( 'festival_history' ); ?></p>
+				</section> <!-- #festial_bio -->
+				
+				<section id="staff_members">
+					<h2>Festival Staff Members</h2>
+				</section><!-- /#staff_members -->
 
-		<div class="content clearfix">
-			<h2><?php echo get_the_title( $ID ); ?></h2>
-		</div> <!--/.content -->
+				<section id="board_members">
+					<h2>Festival Board Members</h2>
+					<?php while ( has_sub_field('board_members') ): ?>
+						<ul>
+							<li><?php the_sub_field('board_member'); ?></li>
+						</ul>
+					<?php endwhile; ?>
+				</section> <!-- /#board_members -->
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+			<?php else: ?>
+		<?php endif; ?>
+		<!-- end loop -->
 	</div> <!-- /.container -->
-</main> <!-- /.main -->
+</main> <!-- /.clearfix -->
+<!-- website main content - end -->
 
+
+<!-- website footer - start -->
 <?php get_footer(); ?>
+<!-- website footer - end

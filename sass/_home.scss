@@ -1,6 +1,6 @@
 //News Entry - start
 	article {
-		margin-bottom: 3.0rem;
+		margin-bottom: 2.0rem;
 	}
 
 	// Old + New Entries - start
@@ -17,7 +17,23 @@
 		}
 	// Old + New Entries - end
 
+	// blog-post horizontal rule - start
+		hr.blog {
+			border: 0;
+			height: 0;
+			border-top: 1px dashed rgba(0, 0, 0, 0.2);
+			border-bottom: 1px dashed rgba(255, 255, 255, 0.7);
+		}
+	// blog-post horizontal rule - end
 
+
+	// blog post content - start
+		.entry-content > p{
+			margin-top: 1%;
+			margin-bottom: 2.5%;	
+		}
+	// blog post content - end
+	
 	// News Footer - start
 	article > footer {
 		display: none;
@@ -59,7 +75,7 @@
 
 //Down Arrow - start
 	.arrow {
-	  width: 5%;
+	  width: 50px;
 	  fill: white;
 	  position: absolute;
 	  top:99%;
@@ -71,3 +87,4 @@
 	  fill: darkgreen;
 	}
 //Down Arrow - end
+

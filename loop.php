@@ -18,23 +18,38 @@
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<h2 class="entry-title">
-        <!-- <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"> -->
+     <!--    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"> -->
           <?php the_title(); ?>
-        </a>
+        <!-- </a> -->
       </h2>
 
 			<section class="entry-content">
-				<?php the_content('Continue reading <span class="meta-nav">&rarr;</span>'); ?>
+				<p><?php the_content('Continue reading <span class="meta-nav">&rarr;</span>'); ?></p>
 				<?php wp_link_pages( array(
           'before' => '<div class="page-link"> Pages:',
           'after' => '</div>'
         )); ?>
 			</section><!-- .entry-content -->
 
-			<footer>
-				<p><?php the_tags('Tags: ', ', ', '<br>'); ?> Posted in <?php the_category(', '); ?></p>
-        <p><?php comments_popup_link('Respond to this post &raquo;', '1 Response &raquo;', '% Responses &raquo;'); ?></p>
-        <p><?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?></p>
+			<hr>
+
+			<footer class="post-footer clearfix">
+				<p><?php the_tags('Tags: ', ', ', '<br>'); ?> Subject(s): <?php
+						$categories = get_the_category();
+						$total = count ($categories);
+						$i=1;
+						foreach($categories as $category) {
+						if ($i < $total) {
+							echo $category->cat_name . ', ';
+						} else {
+							echo $category->cat_name;
+						}
+						$i++;
+						}
+				?></p>
+				<p>Posted on <?php the_date(); ?></p>
+		        <!-- <p><?php comments_popup_link('Respond to this post &raquo;', '1 Response &raquo;', '% Responses &raquo;'); ?></p> -->
+		        <!-- <p><?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?></p> -->
 			</footer>
 
 		</article><!-- #post-## -->
@@ -46,6 +61,6 @@
 
 <?php // Display navigation to next/previous pages when applicable ?>
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
-  <p class="alignleft"><?php next_posts_link('&laquo; Older Entries'); ?></p>
-  <p class="alignright"><?php previous_posts_link('Newer Entries &raquo;'); ?></p>
+  <p class="alignleft"><?php next_posts_link('<i class="fa fa-angle-double-left"></i> Older Entries'); ?></p>
+  <p class="alignright"><?php previous_posts_link('Newer Entries <i class="fa fa-angle-double-right"></i>'); ?></p>
 <?php endif; ?>

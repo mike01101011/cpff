@@ -16,6 +16,10 @@
 		@include page-headline;
 	}
 
+	p {
+		@include page-paragraph;
+	}
+
 	// For all anchor-tags - start
 		a,a:visited {
 			text-decoration: none;

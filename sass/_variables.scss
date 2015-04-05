@@ -3,6 +3,7 @@
 	
 	// font family - start
 		$main: 'Montserrat', sans-serif;
+		$para: 'Open Sans', sans-serif;
 	// font family - end
 	
 	// font color - start
@@ -24,6 +25,12 @@
 		text-transform: uppercase;
 		font-size: 4.2rem;
 		text-align: center;
+	}
+
+	@mixin page-paragraph {
+		color: #333;
+		font-family: $para;
+		font-size: 1.6rem;
 	}
 
 //mixins - end

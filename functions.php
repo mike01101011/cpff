@@ -22,7 +22,7 @@ function theme_setup() {
 	* You can allow clients to create multiple menus by
   * adding additional menus to the array. */
 	register_nav_menus( array(
-		'primary' => 'Primary Navigation',
+		'primary' => 'Primary Navigation'
 	) );
 
 	/*
@@ -267,8 +267,4 @@ function get_post_parent($post) {
 	}
 }
 
-// Remove admin bar
-add_action('get_header', 'remove_admin_login_header');
-function remove_admin_login_header() {
-	remove_action('wp_head', '_admin_bar_bump_cb');
-}
+show_admin_bar(false);
