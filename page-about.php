@@ -16,8 +16,13 @@
 <!-- website main content - start -->
 <main class="clearfix">
 	<div class="container">
+
+
+		<!-- page title - start -->
 		<h2><?php the_title(); ?></h2>
+		<!-- page title - end -->
 		
+
 		<?php
 			$onePageQuery = new WP_Query(
 				array(
@@ -36,6 +41,25 @@
 				
 				<section id="staff_members">
 					<h2>Festival Staff Members</h2>
+
+					<div class="staff">
+						<?php while ( has_sub_field('staff_members') ): ?>
+							
+							<div class="staff-image">
+								<?php $image = get_sub_field('staff_image'); ?>
+		                        <img src="<?php echo $image['sizes']['medium'] ?>">
+							</div> <!-- /.staff-image -->
+		                    
+		                    <div class="staff-name">
+								<h3><?php the_sub_field('staff_name'); ?></h3>
+		                    </div> <!-- /.staff-name -->
+
+							<div class="staff-title">
+								<h4><?php the_sub_field('staff_title'); ?></h4>
+							</div> <!-- /.staff-title -->
+						<?php endwhile; ?>
+					</div> <!-- /.staff -->
+
 				</section><!-- /#staff_members -->
 
 				<section id="board_members">
