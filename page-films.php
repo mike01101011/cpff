@@ -22,7 +22,6 @@
 		<h2><?php the_title(); ?></h2>
 		<!-- page title - end -->
 		
-		
 		<?php
 			$onePageQuery = new WP_Query(
 				array(

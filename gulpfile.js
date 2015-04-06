@@ -39,6 +39,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('watch', function() {
+	gulp.watch("*.php").on("change", browserSync.reload);
 	gulp.watch('./sass/*.scss', ['styles']);
 	gulp.watch('./img/*.*', ['images']);
 
