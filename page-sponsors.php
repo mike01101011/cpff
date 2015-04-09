@@ -15,8 +15,7 @@
 
 <!-- website main content - start -->
 <main class="clearfix">
-	<div class="container">
-		
+	<div class="container">	
 	
 		<!-- page title - start -->
 		<h2><?php the_title(); ?></h2>
