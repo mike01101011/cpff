@@ -10,12 +10,13 @@ Author URI: http://nikin.net
 // base style - start
   @import 'default';
   @import 'variables';
+  @import 'typography';
   @import 'navigation';
   @import 'footer';
   @import 'home';
   @import 'about';
+  @import 'films';
   @import 'carousel';
-  @import 'typography';
 // base style - end
 
 /* Global Classes / Wordpress Specific */
