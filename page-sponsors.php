@@ -32,13 +32,7 @@
 			);
 		?>
 		 <!-- start loop -->
-		<?php if ( $onePageQuery->have_posts() ) : ?>
-			<?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
-				
-			<?php endwhile; ?>
-			<?php wp_reset_postdata(); ?>
-			<?php else: ?>
-		<?php endif; ?>
+		
 		<!-- end loop -->
 	</div> <!-- /.container -->
 </main> <!-- /.clearfix -->

@@ -66,10 +66,14 @@
 							</div> <!-- /.shorts -->
 
 							<div class="presenting-sponsors">
-								<?php if( get_field('presenting_sponsor')):?>
-									<?php $presentingsponsor = get_field('presenting_sponsor'); ?>
-									<p>presenting sponsor</p>
-									<img src="<?php echo $presentingsponsor['sizes']['medium']; ?>">
+								<?php if( have_rows('co-presenting_sponsors') ): ?>
+									<p>presenting sponsor(s)</p>
+									<?php while( have_rows('presenting_sponsors') ): the_row();
+										$presenterlink = get_sub_field('presenter_link');
+										$presenter = get_sub_field('presenter_logo'); 
+									?>
+										<a href="<?php echo $presenterlink ?>" target="_blank"><img src="<?php echo $presenter['sizes']['medium'] ?>" alt="<?php echo $presenter['alt'] ?>"></a>
+									<?php endwhile; ?>
 								<?php endif; ?>
 							</div> <!-- /.presenting-sponsors -->
 						</section> <!-- /.visible -->
@@ -79,9 +83,10 @@
 								<?php if( have_rows('co-presenting_sponsors') ): ?>
 									<p>co-presenting sponsor(s)</p>
 									<?php while( have_rows('co-presenting_sponsors') ): the_row();
+										$copresenterlink = get_sub_field('co-presenting_sponsor_link');
 										$copresenter = get_sub_field('co-presenting_sponsor'); 
 									?>
-										<img src="<?php echo $copresenter['sizes']['medium'] ?>">
+										<a href="<?php echo $copresenterlink ?>" target="_blank"><img src="<?php echo $copresenter['sizes']['thumbnail'] ?>" alt="<?php echo $copresenter['alt'] ?>"></a>
 									<?php endwhile; ?>
 								<?php endif; ?>
 							</div> <!-- /.co-presenting-sponsors -->
@@ -91,9 +96,10 @@
 								<?php if( have_rows('food_vendors') ): ?>
 									<p>food vendor(s)</p>
 									<?php while( have_rows('food_vendors') ): the_row();
+										$foodlink = get_sub_field('food_vendor_link');
 										$food = get_sub_field('food_vendor'); 
 									?>
-										<img src="<?php echo $food['sizes']['medium'] ?>">
+										<a href="<?php echo $foodlink ?>" target="_blank"><img src="<?php echo $food['sizes']['thumbnail'] ?>" alt="<?php echo $food['alt'] ?>"></a>
 									<?php endwhile; ?>
 								<?php endif; ?>
 								

@@ -267,4 +267,10 @@ function get_post_parent($post) {
 	}
 }
 
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
 show_admin_bar(false);

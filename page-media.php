@@ -35,20 +35,20 @@
 		 <!-- start loop -->
 		<?php if ( $onePageQuery->have_posts() ) : ?>
 			<?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
-					<?php while ( has_sub_field('media_posting') ): ?>
-						<section id="year">
-							<h3><?php the_sub_field('year'); ?></h3>
-		                    <?php while ( has_sub_field('news_article') ): ?>
-		                    <ul>
-		                    	<li>
-		                    		<a href="<?php the_sub_field('article_link'); ?>" target="_blank">
-		                    			<?php the_sub_field('article_title'); ?>
-		                    		</a>
-		                    	</li>
-		                    </ul>
-			                <?php endwhile; ?>
-						</section><!-- /#year -->
-					<?php endwhile; ?>
+					
+				<section id="year">
+                    <h3><?php the_field( 'media_year' ); ?></h3>
+                    <?php while ( has_sub_field('news_article') ): ?>
+                    <ul>
+                    	<li>
+                    		<a href="<?php the_sub_field('article_link'); ?>" target="_blank">
+                    			<?php the_sub_field('article_title'); ?>
+                    		</a>
+                    	</li>
+                    </ul>
+	                <?php endwhile; ?>
+				</section><!-- /#year -->
+					
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
 			<?php else: ?>
