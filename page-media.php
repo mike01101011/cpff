@@ -42,7 +42,7 @@
                     <ul>
                     	<li>
                     		<a href="<?php the_sub_field('article_link'); ?>" target="_blank">
-                    			<?php the_sub_field('article_title'); ?>
+                    			<span><?php the_sub_field('article_publisher');?></span> - <?php the_sub_field('article_title'); ?>
                     		</a>
                     	</li>
                     </ul>

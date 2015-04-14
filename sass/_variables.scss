@@ -22,7 +22,7 @@
 	@mixin page-headline {
 		color: #333;
 		font-family: $main;
-		text-transform: uppercase;
+		text-transform: capitalize;
 		font-size: 4.2rem;
 		text-align: center;
 	}
