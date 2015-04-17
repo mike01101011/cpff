@@ -31,8 +31,6 @@
         )); ?>
 			</section><!-- .entry-content -->
 
-			<hr>
-
 			<footer class="post-footer clearfix">
 				<p><?php the_tags('Tags: ', ', ', '<br>'); ?> Subject(s): <?php
 						$categories = get_the_category();

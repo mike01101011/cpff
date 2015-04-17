@@ -7,7 +7,7 @@
   <title><?php  wp_title('|', true, 'right'); ?></title>
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-  <link href='http://fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans:400italic,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans:400italic,400,700italic,700' rel='stylesheet' type='text/css'>
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
   <?php // Load our CSS ?>
