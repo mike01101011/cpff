@@ -17,9 +17,16 @@
 <main class="clearfix">
 	<div class="container">	
 		
-		<!-- page title - start -->
-		<h2><?php the_title(); ?></h2>
-		<!-- page title - end -->
+		<!-- page title + page details - start -->
+		<div class="static-content">
+		  <?php // Start the loop ?>
+		  <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+
+		    <h2><?php the_title(); ?></h2>
+		    <p><?php the_content(); ?></p>
+		  <?php endwhile; // end the loop?>
+		</div> <!-- .static-content -->
+		<!-- page title  + page details - end -->
 		
 		<!-- /.sponsor - start -->
 		<section class="sponsor">
@@ -40,7 +47,7 @@
 					<!-- .title-sponsor - start -->
 					<section class="title-sponsor">
 						<?php if( have_rows('title') ): ?>
-							<h3>title sponsor</h3>
+							<h3>lead sponsor</h3>
 							<?php while( have_rows('title') ): the_row();
 								$titleimage = get_sub_field('title_sponsor_image');
 								$titlelink = get_sub_field('title_sponsor_link');
