@@ -1,0 +1,8 @@
+.staff-member {
+	@include column(4);
+}
+
+.staff-image > img {
+	width: 100%;
+	border-radius: 50%;
+}

@@ -43,19 +43,20 @@
 
 					<div class="staff">
 						<?php while ( has_sub_field('staff_members') ): ?>
-							
-							<div class="staff-image">
-								<?php $image = get_sub_field('staff_image'); ?>
-		                        <img src="<?php echo $image['sizes']['medium'] ?>">
-							</div> <!-- /.staff-image -->
-		                    
-		                    <div class="staff-name">
-								<h3><?php the_sub_field('staff_name'); ?></h3>
-		                    </div> <!-- /.staff-name -->
+							<div class="staff-member">
+								<div class="staff-image">
+									<?php $image = get_sub_field('staff_image'); ?>
+			                        <img src="<?php echo $image['sizes']['medium'] ?>">
+								</div> <!-- /.staff-image -->
+			                    
+			                    <div class="staff-name">
+									<h3><?php the_sub_field('staff_name'); ?></h3>
+			                    </div> <!-- /.staff-name -->
 
-							<div class="staff-title">
-								<h4><?php the_sub_field('staff_title'); ?></h4>
-							</div> <!-- /.staff-title -->
+								<div class="staff-title">
+									<h4><?php the_sub_field('staff_title'); ?></h4>
+								</div> <!-- /.staff-title -->
+							</div> <!-- /.staff-member -->
 						<?php endwhile; ?>
 					</div> <!-- /.staff -->
 

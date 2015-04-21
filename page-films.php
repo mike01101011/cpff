@@ -58,7 +58,10 @@
 									<?php while( have_rows('short_films') ): the_row();
 										$short = get_sub_field('short_film');
 									?>
+									<div class="short-film">
 										<h4><?php echo $short; ?></h4>
+									</div>
+									<!-- /.short-film -->
 									<?php endwhile; ?>
 								<?php endif; ?>
 								
