@@ -28,11 +28,149 @@
 // Main Typography for entire document - start
 
 
+// Typography for Film page - start
+	.feature > h3 {
+		@include feature-title;
+	}
+
+	.short-film > h3 {
+		@include short-title;
+	}
+
+	.date > h4 {
+		@include date;
+	}
+
+	.shorts > p, .presenting-sponsors > p, .co-presenting-sponsors > p, .food-vendors > p {
+		font-size: 2.4rem;
+		text-align: center;
+		text-transform: uppercase;
+		margin: 0;
+		margin-bottom: 10px;
+		font-weight: 700;
+	}
+
+	.show-hide > button {
+		text-align: center;
+		margin: 0 auto;
+		display: block;
+		border-radius: 1rem;
+		border: 5px solid black;
+		background: transparent;
+		outline: none;
+		font-size: 3.2rem;
+		font-family: $short;
+		text-transform: uppercase;
+		padding: 1rem;
+	}
+
+	.show-hide > button:hover {
+		background: black;
+		color: white;
+	}
+
+	.facebook-event {
+		@include event;
+	}
+// Typography for Film page - end
+
+
+// Typography for About page - start
+	.staff-info {
+		margin-top: 2%;
+	}
+
+	.staff-name > h3 {
+		font-size: 2rem;
+		line-height: 26px;
+		text-transform: capitalize;
+		font-family: $main;
+		font-weight: 700;
+	}
+
+	.staff-title > h4 {
+		color: pink;
+		text-transform: capitalize;
+		font-family: $para;
+		font-weight: 400;
+		font-size: 1.8rem;
+		margin-top: .1%;
+	}
+
+	.members {
+		margin-top: 2.5%;
+		> ul {
+			// padding: 0;
+			@include row(12);
+		}
+
+		li.board_member {
+			@include column (4, 12);
+			display: list-item;
+			font-size: 2.8rem;
+			// border: 1px solid pink;
+			font-family: $para;
+			font-weight: 400;
+			line-height: 25px;
+		}
+	}
+
+	@media all and (max-width: 768px) {
+		.staff-name > h3 {
+			font-size: 3.8rem;
+		}
+		.staff-title > h4 {
+			font-size: 2.8rem;
+			margin-top: .5%;
+		}
+	}
+// Typography for About page - end
+
+
+// Typography for Media page - start
+	#year {
+		h3 {
+			@include year;
+		}
+
+		ul {
+			li {
+				margin-bottom: 20px;
+				padding: 0;
+				@include news;
+				.name {
+					@include news-source;
+				}
+				a {
+					color: #333;
+					&:hover {
+						color: white;
+					}
+				}	
+			}
+			li:last-child {
+				margin-bottom: 0;
+			}
+
+		}
+	}
+
+	@media all and (max-width: 768px) {
+		#year {
+			h3 {
+				text-align: center;
+			}
+		}
+	}
+
+// Typography for Media page - end
+
+
 // Typography for Old + New posts - start
 	.alignleft, .alignright {
 		font-family: $main;
 		font-weight: 400;
-		text-transform: uppercase;
+		text-transform: capitalize;
 		font-size: 1.2rem;
 		a {
 			color: $link;

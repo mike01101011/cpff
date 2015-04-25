@@ -1,8 +1,61 @@
-.staff-member {
-	@include column(4);
+#festival_bio {
+	background: #ccc;
+	padding: 2.5% 0;
+	
+}
+
+#staff_members {
+	background: #999;
+	padding: 2.5% 0;
+	.staff-member {
+		margin-top: 2.5%;
+	}
+}
+
+#board_members {
+	background: #ccc;
+	padding: 2.5% 0;
+}
+
+
+.staff-name, .staff-title {
+	text-align: center;
 }
 
 .staff-image > img {
 	width: 100%;
 	border-radius: 50%;
+}
+
+
+
+
+@media all and (max-width: 768px) {
+	.staff-image > img {
+		width: 75%;
+		margin: 0 auto;
+		display: block;
+	}
+
+	#staff_members {
+		.staff-member {
+			margin-top: 5%;
+		}
+	}
+
+	.members {
+		ul {
+			padding: 0;
+		}
+
+		li.board_member {
+			text-align: center;
+			@include column(12);
+			margin-bottom: 10px;
+		}
+
+		li.board_member:last-child {
+			margin-bottom: 0;
+		}
+	}
 }

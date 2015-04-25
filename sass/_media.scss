@@ -1,0 +1,15 @@
+#year {
+	padding: 2.5% 0;
+	&:nth-child(even){
+		background: #ccc;
+	}
+	&:nth-child(odd){
+		background: #999;
+	}
+
+	ul {
+		padding: 0;
+		padding-left: 20px;
+
+	}
+}

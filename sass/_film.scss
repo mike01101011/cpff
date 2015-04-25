@@ -1,0 +1,59 @@
+.film {
+	padding: 2.5% 0;
+	&:nth-child(odd) {
+		background: #ccc;
+	}
+	&:nth-child(even) {
+		background: #999;
+	}
+	&:first-child {
+		padding-top: 0;
+	}
+}
+
+
+.date, .feature, .shorts, .presenting-sponsors, .co-presenting-sponsors, .food-vendors, .trailer, .show-hide, .facebook-event {
+	padding: 20px 0;
+}
+
+
+.short-film, .co-presenter-logo, .food-vendor-logo {
+	// @include column(6); //test purpose
+	
+}
+
+
+
+.presenter-logo, .co-presenter-logo, .food-vendor-logo  {
+	text-align: center;
+}
+
+
+//Facebook event link - start
+.facebook-event {
+	text-align: center;
+	font-size: 4rem;
+}
+
+.facebook-event > a:hover {
+	color: red;
+}
+//Facebook event link - end
+
+
+//Responsive Trailer - start
+.trailer { 
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+}
+.trailer iframe, .trailer object, .trailer embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+//Responsive Trailer - end

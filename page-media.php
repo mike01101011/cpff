@@ -15,7 +15,7 @@
 
 <!-- website main content - start -->
 <main class="clearfix">
-	<div class="container">
+	
 		
 	
 		<!-- page title - start -->
@@ -37,16 +37,18 @@
 			<?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
 					
 				<section id="year">
-                    <h3><?php the_field( 'media_year' ); ?></h3>
-                    <?php while ( has_sub_field('news_article') ): ?>
-                    <ul>
-                    	<li>
-                    		<a href="<?php the_sub_field('article_link'); ?>" target="_blank">
-                    			<span><?php the_sub_field('article_publisher');?></span> - <?php the_sub_field('article_title'); ?>
-                    		</a>
-                    	</li>
-                    </ul>
-	                <?php endwhile; ?>
+					<div class="container">
+	                    <h3><?php the_field( 'media_year' ); ?></h3>
+	                    <ul>
+	                    <?php while ( has_sub_field('news_article') ): ?>
+	                    	<li>
+	                    		<a href="<?php the_sub_field('article_link'); ?>" target="_blank">
+	                    			<span class="name"><?php the_sub_field('article_publisher');?>: </span> <em><?php the_sub_field('article_title'); ?></em>
+	                    		</a>
+	                    	</li>
+		                <?php endwhile; ?>
+	                    </ul>
+	                </div> <!-- /.container -->
 				</section><!-- /#year -->
 					
 			<?php endwhile; ?>
@@ -54,7 +56,7 @@
 			<?php else: ?>
 		<?php endif; ?>
 		<!-- end loop -->
-	</div> <!-- /.container -->
+	
 </main> <!-- /.clearfix -->
 <!-- website main content - end -->
 

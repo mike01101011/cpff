@@ -14,8 +14,8 @@
 
 		.menu-top {
 			border-bottom: .2rem solid #1E582C;
-			margin-bottom: .75%;
-			padding-bottom: .75%;
+			margin-bottom: 7.5px;
+			padding-bottom: 7.5px;
 		}
 
 		// Menu Typography - start
@@ -84,7 +84,7 @@
 	//reel in menu
 	.menu-reel {
 	  fill: #1E582C;
-	  width: 5rem;
+	  width:50px;
 	  margin-top: 1rem;
 	  margin-left: .5rem;
 	  
@@ -105,7 +105,7 @@
 	}
 
 	.menu-button, .exit-button {
-		width: 6rem;
+		width: 60px;
 		float: right;
 		transition: all 0.3s;
 		&:hover {
@@ -146,45 +146,41 @@
 // tablet view - start
 	@media all and (max-width: 768px) {
 		.main-navigation {
-			.menu-top {
-				margin-bottom: 2.75%;
-				padding-bottom: .75%;
-			}
 			.menu-items {
 				ul {
 					li:first-child {
-						margin-top: 4%;
+						margin-top: 2.75%;
 					}
 					li {
-						margin-bottom: 4%;
+						margin-bottom: 2.75%;
 					}
 				}
 			}
 		}
 
 		.menu-button, .exit-button {
-			width: 5rem;
+			// width: 5rem;
 		}
 
 		.menu-reel {
-			width: 4rem;
+			// width: 4rem;
 		}
 	}
 // tablet view - end
 
 // mobile view - start
-	@media all and (max-width: 420px) {
+	@media all and (max-width: 480px) {
 		
 		.main-navigation {
 			.menu-title {
 				h1 {
-					font-size: 2.2rem;
+					font-size: 2.6rem;
 				}
 			}
 			.menu-items{
 				@include navbar;
 				a {
-					font-size: 2rem;
+					font-size: 2.4rem;
 				}
 				ul {
 					li:first-child {
@@ -195,6 +191,18 @@
 					}
 				}
 			}
+
+			.exit-button {
+				width: 50px;
+			}
+
+			.menu-reel {
+				width: 40px;
+			}
+		}
+
+		.menu-button {
+			width: 50px;
 		}
 	}
 // mobile view - end

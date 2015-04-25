@@ -4,6 +4,8 @@
 	// font family - start
 		$main: 'Montserrat', sans-serif;
 		$para: 'Open Sans', sans-serif;
+		$feature: 'Voltaire', sans-serif;
+		$short: 'Rajdhani', sans-serif;
 	// font family - end
 	
 	// font color - start
@@ -24,6 +26,7 @@
 		font-family: $main;
 		text-transform: capitalize;
 		font-size: 4.2rem;
+		line-height: 38px;
 		text-align: center;
 	}
 
@@ -31,7 +34,63 @@
 		color: #333;
 		font-family: $para;
 		font-size: 1.6rem;
-		margin-bottom: 1rem;
+		margin-bottom: 10px;
+	}
+
+	@mixin feature-title {
+		color: #333;
+		font-family: $feature;
+		font-size: 9rem;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 2.5px;
+		line-height: 75px;
+	}
+
+	@mixin short-title {
+		font-family: $short;
+		font-size: 5rem;
+		text-transform: uppercase;
+		text-align: center;
+		letter-spacing: 1px;
+		font-weight: 700;
+		line-height: 37.5px;
+	}
+
+	@mixin date {
+		font-family: $short;
+		font-size: 3rem;
+		text-transform: uppercase;
+		text-align: center;
+		letter-spacing: 1px;
+		font-weight: 600;
+		line-height: 25px;
+	}
+
+	@mixin event {
+		font-family: $short;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	@mixin year {
+		font-family: $main;
+		font-size: 3.7rem;
+		font-weight: 700;	
+	}
+
+	@mixin news-source {
+		font-family: $para;
+		font-size: 2.1rem;
+		line-height: 21px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	@mixin news {
+		font-family: $para;
+		font-size: 1.9rem;
+		line-height: 21px;
 	}
 
 //mixins - end
