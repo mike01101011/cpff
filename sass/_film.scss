@@ -1,31 +1,50 @@
-.film {
-	padding: 2.5% 0;
-	&:nth-child(odd) {
-		background: #ccc;
-	}
-	&:nth-child(even) {
-		background: #999;
-	}
-	&:first-child {
-		padding-top: 0;
-	}
-}
+// .film {
+// 	padding: 2.5% 0;
+// 	&:nth-child(odd) {
+// 		background: #ccc;
+// 	}
+// 	&:nth-child(even) {
+// 		background: #999;
+// 	}
+// 	&:first-child {
+// 		padding-top: 0;
+// 	}
+// }
 
 
-.date, .feature, .shorts, .presenting-sponsors, .co-presenting-sponsors, .food-vendors, .trailer, .show-hide, .facebook-event {
+.date, .event-info, .feature, .live-music, .shorts, .presenting-sponsors, .co-presenters, .food-vendors, .trailer, .show-hide, .facebook-event {
 	padding: 20px 0;
 }
 
+.date {
+	padding-top: 0;
+}
 
-.short-film, .co-presenter-logo, .food-vendor-logo {
-	// @include column(6); //test purpose
-	
+.event-info {
+	padding-bottom: 0;
+}
+
+.live-music {
+	padding-top: 0;
 }
 
 
 
 .presenter-logo, .co-presenter-logo, .food-vendor-logo  {
 	text-align: center;
+}
+
+.short-films, .co-presenter, .food-vendor {
+	display: flex;
+	flex-flow: row wrap;
+}
+.short-film, .co-presenter-logo, .food-vendor-logo {
+	flex: 1 0 250px;
+	padding-bottom: 2.5%;
+	// border: 1px solid yellow;
+	&:last-child {
+		padding-bottom: 0;	
+	}
 }
 
 

@@ -1,0 +1,21 @@
+.sponsors {
+	padding-top: 1%;
+	h2 {
+		margin-top: 0;
+	}
+	.sponsor {
+		border-bottom: 1px solid purple;
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+}
+
+.partners {
+	h2 {
+		margin-top: 0;
+	}
+	.government {
+		border-bottom: 1px solid purple;
+	}
+}

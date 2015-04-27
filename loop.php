@@ -23,33 +23,13 @@
         <!-- </a> -->
       </h2>
 
-			<section class="entry-content">
+			<div class="entry-content">
 				<p><?php the_content('Continue reading <span class="meta-nav">&rarr;</span>'); ?></p>
 				<?php wp_link_pages( array(
           'before' => '<div class="page-link"> Pages:',
           'after' => '</div>'
         )); ?>
-			</section><!-- .entry-content -->
-
-			<footer class="post-footer clearfix">
-				<p><?php the_tags('Tags: ', ', ', '<br>'); ?> Subject(s): <?php
-						$categories = get_the_category();
-						$total = count ($categories);
-						$i=1;
-						foreach($categories as $category) {
-						if ($i < $total) {
-							echo $category->cat_name . ', ';
-						} else {
-							echo $category->cat_name;
-						}
-						$i++;
-						}
-				?></p>
-				<p>Posted on <?php the_date(); ?></p>
-		        <!-- <p><?php comments_popup_link('Respond to this post &raquo;', '1 Response &raquo;', '% Responses &raquo;'); ?></p> -->
-		        <!-- <p><?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?></p> -->
-			</footer>
-
+			</div><!-- .entry-content -->
 		</article><!-- #post-## -->
 
 		<?php comments_template( '', true ); ?>

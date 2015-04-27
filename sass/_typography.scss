@@ -3,6 +3,12 @@
 		font-size: 62.5%;
 	}
 
+	@media all and (max-width: 480px) {
+		html {
+			font-size: 50%;
+		}
+	}
+
 	body {
 		color: #333;
 	}
@@ -29,24 +35,56 @@
 
 
 // Typography for Film page - start
+	.event-info > h4, .live-music > h4 {
+		text-align: center;
+		font-family: $short;
+		text-transform: uppercase;
+		font-size: 2.6rem;
+		line-height: 25px;
+	}
+
+	.live-music {
+		h3 {
+			font-family: $feature;
+			font-size: 7.5rem;
+			text-transform: uppercase;
+			text-align: center;
+			margin: -10px 0;
+		}
+		a {
+			color: pink;
+			&:hover {
+				color: blue;
+			}
+		}
+	}
+
 	.feature > h3 {
 		@include feature-title;
 	}
 
-	.short-film > h3 {
-		@include short-title;
+	.short-film {
+		h3{
+			@include short-title;
+		}
+		h4 {
+			text-align: center;
+			font-family: Rajdhani,sans-serif;
+			text-transform: uppercase;
+			font-size: 2.6rem;
+			margin-top: 2px;
+		}
 	}
 
 	.date > h4 {
 		@include date;
 	}
 
-	.shorts > p, .presenting-sponsors > p, .co-presenting-sponsors > p, .food-vendors > p {
+	.shorts > p, .presenting-sponsors > p, .co-presenters > p, .food-vendors > p {
 		font-size: 2.4rem;
 		text-align: center;
 		text-transform: uppercase;
 		margin: 0;
-		margin-bottom: 10px;
 		font-weight: 700;
 	}
 
@@ -72,6 +110,33 @@
 	.facebook-event {
 		@include event;
 	}
+
+	.additional-notes {
+		p {
+			@include page-paragraph;
+			font-size: 2rem;
+			font-weight: 400;
+			// line-height: 40px;
+			text-align: center;
+		}
+		button {
+			width: 100%;
+			font-size: 2.2rem;
+			background: transparent;
+			border: 5px solid black;
+			padding: 10px;
+			border-radius: 10px;
+			text-transform: uppercase;
+			font-weight: 700;
+			margin-top: 2.5%;
+			&:hover {
+				background: black;
+				color: white;
+			}
+		}
+	}
+
+
 // Typography for Film page - end
 
 
@@ -81,49 +146,30 @@
 	}
 
 	.staff-name > h3 {
-		font-size: 2rem;
-		line-height: 26px;
+		font-size: 2.5rem;
+		line-height: 23px;
 		text-transform: capitalize;
 		font-family: $main;
 		font-weight: 700;
 	}
 
 	.staff-title > h4 {
-		color: pink;
 		text-transform: capitalize;
 		font-family: $para;
 		font-weight: 400;
-		font-size: 1.8rem;
-		margin-top: .1%;
+		font-size: 2rem;
+		margin-top: 5px;
+		line-height: 20px;
 	}
 
-	.members {
-		margin-top: 2.5%;
-		> ul {
-			// padding: 0;
-			@include row(12);
-		}
-
-		li.board_member {
-			@include column (4, 12);
-			display: list-item;
-			font-size: 2.8rem;
-			// border: 1px solid pink;
-			font-family: $para;
-			font-weight: 400;
-			line-height: 25px;
-		}
+	li.board_member {
+		display: list-item;
+		font-size: 2.0rem;
+		font-family: $para;
+		font-weight: 600;
+		text-transform: uppercase;
 	}
-
-	@media all and (max-width: 768px) {
-		.staff-name > h3 {
-			font-size: 3.8rem;
-		}
-		.staff-title > h4 {
-			font-size: 2.8rem;
-			margin-top: .5%;
-		}
-	}
+	
 // Typography for About page - end
 
 

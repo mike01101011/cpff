@@ -21,8 +21,8 @@ $(function(){
 		$('nav').removeClass('open');
 		$('body').css('overflow','visible');
 	});
-});
 
+});
 
 
 // Greensock Animation:

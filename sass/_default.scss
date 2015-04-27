@@ -38,7 +38,29 @@
 	.container {
 		margin: 0 auto; 
 		max-width: 1000px;
-		padding: 0 1.5%;
+		padding: 0 2.5%;
 	}
 // container - end
+
+
+section {
+	padding: 1.5% 0;
+	&:nth-child(odd) {
+		background: #ccc;
+	}
+	&:nth-child(even) {
+		background: #999;
+	}
+}
+
+section.carousel {
+	padding: 0;
+}
+
+article {
+	border-bottom: 1px solid purple;
+	&:last-child {
+		border-bottom: 0;
+	}
+}
 

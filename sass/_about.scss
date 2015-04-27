@@ -1,22 +1,33 @@
 #festival_bio {
-	background: #ccc;
-	padding: 2.5% 0;
-	
-}
-
-#staff_members {
-	background: #999;
-	padding: 2.5% 0;
-	.staff-member {
-		margin-top: 2.5%;
+	p {
+		margin-bottom: 1rem;
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 }
 
-#board_members {
-	background: #ccc;
-	padding: 2.5% 0;
+.staff {
+	display: flex;
+	flex-flow: row wrap;
 }
 
+.staff-member {
+	flex: 1 0 33.33%;
+	padding: 2.5%;
+	padding-bottom: 0;
+}
+
+@media all and (max-width: 480px) {
+	.staff-member {
+		flex: 1 0 100%;
+		padding: 2.5%;
+		// border: 1px solid yellow;
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+}
 
 .staff-name, .staff-title {
 	text-align: center;
@@ -28,34 +39,19 @@
 }
 
 
+ul.members {
+	display: flex;
+	flex-flow: row wrap;
+	padding: 0;
+	margin:0;
+}
 
-
-@media all and (max-width: 768px) {
-	.staff-image > img {
-		width: 75%;
-		margin: 0 auto;
-		display: block;
-	}
-
-	#staff_members {
-		.staff-member {
-			margin-top: 5%;
-		}
-	}
-
-	.members {
-		ul {
-			padding: 0;
-		}
-
-		li.board_member {
-			text-align: center;
-			@include column(12);
-			margin-bottom: 10px;
-		}
-
-		li.board_member:last-child {
-			margin-bottom: 0;
-		}
+.board_member {
+	flex: 1 0 200px;
+	padding: 2.5%;
+	list-style-type: none;
+	text-align: center;
+	&:last-child {
+		padding-bottom: 0;
 	}
 }

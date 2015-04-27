@@ -24,13 +24,8 @@
   <!-- large background - end -->
 
   <section class="blog">
-  	<div class="container">
-
-  		<div class="content clearfix">
-  				<?php get_template_part( 'loop', 'index' );	?>
-  		</div> <!--/.content -->
-  	</div> <!-- /.container -->
-  </section><!-- /.blog -->
+  	
+  </section> <!-- /.blog -->
 </main> <!-- /.main -->
 
 <?php get_footer(); ?>

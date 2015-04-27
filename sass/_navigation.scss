@@ -172,16 +172,8 @@
 	@media all and (max-width: 480px) {
 		
 		.main-navigation {
-			.menu-title {
-				h1 {
-					font-size: 2.6rem;
-				}
-			}
 			.menu-items{
 				@include navbar;
-				a {
-					font-size: 2.4rem;
-				}
 				ul {
 					li:first-child {
 						margin-top: 3%;
@@ -206,30 +198,3 @@
 		}
 	}
 // mobile view - end
-
-
-// old mobile device view - start
-	// @media all and (max-height: 480px) {
-	// 	.main-navigation {
-	// 		.menu-title {
-	// 			h1 {
-	// 				font-size: 1.8rem;
-	// 			}
-	// 		}
-	// 		.menu-items{
-	// 			@include navbar;
-	// 			a {
-	// 				font-size: 1.8rem;
-	// 			}
-	// 			ul {
-	// 				li:first-child {
-	// 					margin-top: 4.75%;
-	// 				}
-	// 				li {
-	// 					margin-bottom: 4.75%;
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-	// }
-// old mobile device view - end
