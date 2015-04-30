@@ -27,20 +27,46 @@
 			$onePageQuery = new WP_Query(
 				array(
 					'posts_per_page' => -1,
-					'post_type' => 'about',
+					'post_type' => 'gallery',
 					'order' => 'DSC'
 				)
 			);
 		?>
-		 <!-- start loop -->
+	
+		<div class="slider-for">
 		<?php if ( $onePageQuery->have_posts() ) : ?>
 			<?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
-				
+				<?php if( have_rows('designs') ): ?>
+					<?php while( have_rows('designs') ): the_row();
+					$images = get_sub_field('design')?>
+							<div><img src="<?php echo $images['sizes']['medium'] ?>" alt="<?php echo $images['alt'] ?>"></div>
+							
+						
+					<?php endwhile; ?>
+				<?php endif; ?>
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
 			<?php else: ?>
 		<?php endif; ?>
-		<!-- end loop -->
+		</div>
+
+		<div class="slider-nav">
+		<?php if ( $onePageQuery->have_posts() ) : ?>
+			<?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
+				<?php if( have_rows('designs') ): ?>
+					<?php while( have_rows('designs') ): the_row();
+					$images = get_sub_field('design')?>
+							<div><img src="<?php echo $images['sizes']['thumbnail'] ?>" alt="<?php echo $images['alt'] ?>"></div>
+
+						
+					<?php endwhile; ?>
+				<?php endif; ?>
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+			<?php else: ?>
+		<?php endif; ?>
+		</div>
+
 	</div> <!-- /.container -->
 </main> <!-- /.clearfix -->
 <!-- website main content - end -->

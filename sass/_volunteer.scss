@@ -1,0 +1,62 @@
+// Post-Submit Message - start
+	#volunteer-thank {
+		display:none;
+	}
+// Post-Submit Message - end
+
+
+
+.volunteer-radio {
+	list-style-type: none;
+	padding: 0;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.volunteer-button {
+	flex: 1 0 100px;
+	text-align: center;
+}
+
+.volunteer-name, .volunteer-communication{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.volunteer-name, .volunteer-communication, .volunteer-multichoice, .volunteer-skill{
+	margin: 2.5% 0;
+}
+
+.first-name, .last-name, .e-mail, .phone {
+	flex: 1 0 384px;
+}
+
+.first-name, .e-mail {
+	padding-right: 1%;
+}
+.last-name, .phone, {
+	padding-left: 1%;
+}
+
+@media all and (max-width: 768px) {
+	.volunteer-question, .volunteer-submit, .volunteer-reset {
+	  margin: 2.5% 0;
+	}
+
+	.volunteer-buttons {
+		button:first-child {
+			margin-top: 2.5%;
+		}
+	}
+
+	.first-name, .e-mail {
+		padding-right: 0;
+	}
+	.last-name, .phone, {
+		padding-left: 0;
+	}
+
+	.volunteer-name, .volunteer-communication, .volunteer-multichoice, .volunteer-skill {
+		margin: 0;
+	}
+}

@@ -22,7 +22,48 @@ $(function(){
 		$('body').css('overflow','visible');
 	});
 
+	$(".carousel").slick({
+		autoplay: true,
+		fade: true,
+		dots: false,
+		cssEase: 'linear',
+		infinite: true,
+		speed: 500,
+		slidesToShow: 1,
+		arrows: false,
+		centerMode: true
+		
+	});
+
+	 $('.slider-for').slick({
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  arrows: false,
+	  fade: true,
+	  asNavFor: '.slider-nav'
+	});
+	$('.slider-nav').slick({
+	  slidesToShow: 8,
+	  slidesToScroll: 1,
+	  asNavFor: '.slider-for',
+	  // dots: true,
+	  // centerMode: true,
+	  focusOnSelect: true
+	});
+
+
 });
+
+
+//Volunteer Submit Button - start
+function myFunction() {
+	document.getElementById("volunteer-submit").style.display = "none";
+	document.getElementById("volunteer-reset").style.display = "none";
+	document.getElementById("volunteer-message").style.display = "none";
+	document.getElementById("volunteer").style.display="none";
+	document.getElementById("volunteer-thank").style.display="block";
+}
+//Volunteer Submit Button - end
 
 
 // Greensock Animation:

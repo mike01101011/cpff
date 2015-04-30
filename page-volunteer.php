@@ -15,36 +15,83 @@
 
 <!-- website main content - start -->
 <main class="clearfix">
-	<div class="container">
 		
 	
 		<!-- page title - start -->
 		<h2><?php the_title(); ?></h2>
 		<!-- page title - end -->
 		
-		
-		<?php
-			$onePageQuery = new WP_Query(
-				array(
-					'posts_per_page' => -1,
-					'post_type' => 'about',
-					'order' => 'DSC'
-				)
-			);
-		?>
-		 <!-- start loop -->
-		<?php if ( $onePageQuery->have_posts() ) : ?>
-			<?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
+	<section class="volunteer-form">
+		<div class="container">
+			<div class="volunteer-message" id="volunteer-message">
+				<p>If you are interested in becoming a volunteer please answer the questions below.</p>
+			</div> <!-- /.volunteer-message -->
+			
+			<form name="volunteer" id="volunteer" onsubmit="myFunction()" action="https://docs.google.com/forms/d/1MrwCVrg1AHzGoH5bCTibXbb8CojcHoGh3GesvtqOLnI/formResponse" method="POST" target="_blank" >
 				
-			<?php endwhile; ?>
-			<?php wp_reset_postdata(); ?>
-			<?php else: ?>
-		<?php endif; ?>
-		<!-- end loop -->
-	</div> <!-- /.container -->
+				<div class= "volunteer-name">
+					<div class="volunteer-question first-name" role="listitem">
+						<label for="entry_946048547">First Name</label>
+						<input type="text" name="entry.946048547" value="" class="volunteer-field" id="entry_946048547" dir="auto" aria-label="First Name  " aria-required="true" required="" title="">
+					</div>
+
+					<div class="volunteer-question last-name" role="listitem">
+						<label for="entry_813629623">Last Name</label>
+						<input type="text" name="entry.813629623" value="" class="volunteer-field" id="entry_813629623" dir="auto" aria-label="Last Name  " aria-required="true" required="" title="">
+					</div>
+				</div> <!-- /.volunteer-name -->
+
+				<div class="volunteer-communication">
+					<div class="volunteer-question e-mail" role="listitem">
+						<label for="entry_204895764">E-mail</label>
+						<input type="email" name="entry.204895764" value="" class="volunteer-field" id="entry_204895764" dir="auto" aria-label="E-mail  " aria-required="true" required="" title="">
+					</div>
+
+					<div class="volunteer-question phone" role="listitem">
+						<label for="entry_1377993044">Phone Number</label>
+						<input type="tel" name="entry.1377993044" value="" class="volunteer-field" id="entry_1377993044" dir="auto" aria-label="Phone Number  " aria-required="true" required="" title="">
+					</div>
+				</div> <!-- /.volunteer-communication -->
+				
+				<div class="volunteer-multichoice">
+					<div class="volunteer-question" role="listitem">
+						<label for="entry_1622962235">Please indicate whether you would be willing to help with postering the neighbourhood.</label>
+						<ul class="volunteer-radio" role="radiogroup" aria-label="Please indicate whether you would be willing to help with postering the neighbourhood.  ">
+							<li class="volunteer-button">
+								<label>
+									<input type="radio" name="entry.270594084" value="Yes" id="group_270594084_1" role="radio" aria-label="Yes" required="" aria-required="true">
+									<span class="volunteer-button-label">Yes</span>
+								</label>
+							</li>
+							<li class="volunteer-button" >
+								<label>
+									<input type="radio" name="entry.270594084" value="No" id="group_270594084_2" role="radio" class="volunteer-button" aria-label="No" required="" aria-required="true">
+									<span class="volunteer-button-label">No</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+				</div> <!-- /.volunteer-multichoice -->
+
+				<div class="volunteer-skill">
+					<div class="volunteer-question" role="listitem">
+						<label for="entry_1698928937">Do you want to volunteer your skills or time for a specific role or project?</label>
+						<input type="text" name="entry.1698928937" value="" class="volunteer-field" id="entry_1698928937" dir="auto" aria-label="Do you want to volunteer your skills or time for a specific role or project?  " title="">
+					</div>
+				</div> <!-- /.volunteer-skill -->
+				
+				<div class="volunteer-buttons">
+					<button type="submit" name="Submit" value="Submit" class="volunteer-submit" id="volunteer-submit">Submit</button>
+
+					<button type="reset" name="Reset" value="Reset" class="volunteer-reset" id="volunteer-reset">Reset</button>
+				</div> <!-- /.volunteer-buttons -->
+			</form>
+
+			<h3 id="volunteer-thank">Thank you for your Support!!!</h3>
+		</div> <!-- /.container -->
+	</section> <!-- /.volunteer-form -->
 </main> <!-- /.clearfix -->
 <!-- website main content - end -->
-
 
 <!-- website footer - start -->
 <?php get_footer(); ?>

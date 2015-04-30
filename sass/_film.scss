@@ -1,17 +1,3 @@
-// .film {
-// 	padding: 2.5% 0;
-// 	&:nth-child(odd) {
-// 		background: #ccc;
-// 	}
-// 	&:nth-child(even) {
-// 		background: #999;
-// 	}
-// 	&:first-child {
-// 		padding-top: 0;
-// 	}
-// }
-
-
 .date, .event-info, .feature, .live-music, .shorts, .presenting-sponsors, .co-presenters, .food-vendors, .trailer, .show-hide, .facebook-event {
 	padding: 20px 0;
 }
@@ -40,7 +26,7 @@
 }
 .short-film, .co-presenter-logo, .food-vendor-logo {
 	flex: 1 0 250px;
-	padding-bottom: 2.5%;
+	padding: 2.5%;
 	// border: 1px solid yellow;
 	&:last-child {
 		padding-bottom: 0;	

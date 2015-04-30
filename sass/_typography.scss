@@ -40,7 +40,7 @@
 		font-family: $short;
 		text-transform: uppercase;
 		font-size: 2.6rem;
-		line-height: 25px;
+		// line-height: 25px;
 	}
 
 	.live-music {
@@ -135,10 +135,8 @@
 			}
 		}
 	}
-
-
 // Typography for Film page - end
-
+	
 
 // Typography for About page - start
 	.staff-info {
@@ -169,7 +167,6 @@
 		font-weight: 600;
 		text-transform: uppercase;
 	}
-	
 // Typography for About page - end
 
 
@@ -208,8 +205,69 @@
 			}
 		}
 	}
-
 // Typography for Media page - end
+
+
+// Typography for Sponsors & Partners page - start
+	.level h3 {
+		@include sponsor-partner;
+	}
+// Typography for Sponsors & Partners page - end
+
+
+// Typography for Volunteer page - start
+	.volunteer-message p {
+		text-align: center;
+	}
+
+	.volunteer-buttons {
+		button {
+			width: 100%;
+			font-size: 2.2rem;
+			background: transparent;
+			border: 5px solid black;
+			padding: 10px;
+			border-radius: 10px;
+			text-transform: uppercase;
+			font-weight: 700;
+			margin-top: 2.5%;
+			&:hover {
+				background: black;
+				color: white;
+			}
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.volunteer-question label{
+		@include page-paragraph;
+		font-weight: 700;
+	}
+
+	input.volunteer-field {
+		display: block;
+		border-radius: 5px;
+		width: 100%;
+		font-size: 1.6rem;
+		padding: 5px;
+		@include page-paragraph;
+		outline: none;
+		border: none;
+		margin-top: .5%;
+		background: lightgreen;
+	}
+
+	#volunteer-thank {
+		text-align: center;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin: 2.5%;
+		font-family: $main;
+		font-size: 3.6rem;
+	}
+// Typography for Volunteer page - end
 
 
 // Typography for Old + New posts - start

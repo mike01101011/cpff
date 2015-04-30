@@ -16,21 +16,7 @@
 
 
 <!-- Slick Carousel - start -->
-<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
-<script>
-	$(".carousel").slick({
-		autoplay: true,
-		fade: true,
-		dots: false,
-		cssEase: 'linear',
-		infinite: true,
-		speed: 1000,
-		slidesToShow: 1,
-		arrows: false,
-		centerMode: true
-		
-	});
-</script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
 <!-- Slick Carousel - end -->
 
 
@@ -42,6 +28,6 @@
  s.parentNode.insertBefore(g,s)}(document,"script"));
 </script>
 
-<?php wp_footer(); ?>
+
 </body>
 </html>

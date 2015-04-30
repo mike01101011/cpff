@@ -56,12 +56,12 @@
 						<?php endif; ?>
 	                    
 						<?php if( have_rows('medium') ): ?>
-							<div class="big-donors clearfix">
+							<div class="medium-donors clearfix">
 								<?php while( have_rows('medium')): the_row();
 									$mediumimage = get_sub_field('medium_image');
 									$mediumlink = get_sub_field('medium_link');
 								?>
-									<div class="big-donor">
+									<div class="medium-donor">
 										<a href="<?php echo $mediumlink; ?>" target="_blank"><img src="<?php echo $mediumimage['sizes']['medium'] ?>" alt="<?php echo $mediumimage['alt'] ?>"></a>
 									</div> <!-- /.big-donor -->
 								<?php endwhile; ?>
@@ -69,12 +69,12 @@
 						<?php endif; ?>
 
 						<?php if( have_rows('small') ): ?>
-							<div class="big-donors clearfix">
+							<div class="small-donors clearfix">
 								<?php while( have_rows('small')): the_row();
 									$smallimage = get_sub_field('small_image');
 									$smalllink = get_sub_field('small_link');
 								?>
-									<div class="big-donor">
+									<div class="small-donor">
 										<a href="<?php echo $smalllink; ?>" target="_blank"><img src="<?php echo $smallimage['sizes']['medium'] ?>" alt="<?php echo $smallimage['alt'] ?>"></a>
 									</div> <!-- /.big-donor -->
 								<?php endwhile; ?>

@@ -14,7 +14,7 @@
 			<?php if( have_rows('carousel') ): ?>
 				<?php while( have_rows('carousel') ): the_row();
 				$images = get_sub_field('image')?>
-					<div> <img src="<?php echo $images['sizes']['carousel'] ?>" alt="<?php echo $images['alt'] ?>"> </div>
+					<div><img src="<?php echo $images['sizes']['carousel'] ?>" alt="<?php echo $images['alt'] ?>"></div>
 				<?php endwhile; ?>
 			<?php endif; ?>
 
