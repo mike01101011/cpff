@@ -1,3 +1,92 @@
-.slider-nav img{
-  width: 100%;
+
+#design {
+	.poster-images {
+		margin: 0 1%;
+	}
+	.slick-slide img {
+	  margin: 0 auto;
+	}
+	ul.slick-dots {
+		position: static;
+		margin-bottom: 0;
+		li.slick-active {
+			button:before {
+				color: green;
+			}
+		}
+	}
+	.slick-dots li button:before {
+		color: white;
+		opacity: 1;
+	}
+	.poster-images {
+		padding-top: 2.5%;
+	}	
 }
+
+#photo {
+	h3 {
+		@include page-subheadline;
+		text-align: center;
+	}
+	.galleries {
+		padding-top: 2.5%;
+		p {
+			@include page-paragraph;
+			// font-weight: 700;
+			text-align: center;
+			.fa-2x {
+				vertical-align: 0;
+				line-height: 0px;
+			}
+			a {
+				color: green;
+				&:hover {
+					color: pink;
+				}
+			}
+		}
+
+		ul {
+			display: flex;
+			flex-flow: row wrap;
+			padding: 0;
+			margin:0;
+			list-style-type: none;
+		}
+	
+		li {
+			flex: 1 0 200px;
+			padding: 2.5%;
+			@include feature-title;
+			font-size: 4.75rem;
+			display: list-item;
+		}
+
+	}
+
+}
+
+@media all and (max-width: 480px) {
+	#photo {
+		.galleries {
+			li {
+				flex: 1 0 100%;
+				padding: 2.5%;
+				&:last-child {
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+// Slick Button customization - start
+.slick-prev:before, .slick-next:before {
+	color: white;
+}
+// Slick Button customization - end
+
+// Vimeo Responsive - start
+	.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+// Vimeo Responsive - end

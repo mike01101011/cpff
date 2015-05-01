@@ -173,7 +173,7 @@
 // Typography for Media page - start
 	#year {
 		h3 {
-			@include year;
+			@include page-subheadline
 		}
 
 		ul {
@@ -268,6 +268,22 @@
 		font-size: 3.6rem;
 	}
 // Typography for Volunteer page - end
+
+
+// Typography for Gallery page - start
+	#design {
+		h3 {
+			@include page-subheadline;
+			text-align: center;
+		}
+		h4 {
+			@include page-subheadline;
+			text-align: center;
+			font-size: 2.4rem;
+			text-transform: uppercase;
+		}
+	}
+// Typography for Gallery page - end
 
 
 // Typography for Old + New posts - start

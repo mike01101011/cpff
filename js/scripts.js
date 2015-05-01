@@ -28,30 +28,44 @@ $(function(){
 		dots: false,
 		cssEase: 'linear',
 		infinite: true,
-		speed: 500,
+		autoplaySpeed: 5000,
 		slidesToShow: 1,
 		arrows: false,
 		centerMode: true
 		
 	});
 
-	 $('.slider-for').slick({
-	  slidesToShow: 1,
-	  slidesToScroll: 1,
-	  arrows: false,
-	  fade: true,
-	  asNavFor: '.slider-nav'
+	$('.poster-images').slick({
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+        dots: true,
+		responsive: [
+		    {
+		      breakpoint: 964,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 2,
+		      }
+		    },
+		    {
+		    	breakpoint: 768,
+		    	settings: {
+		    		slidesToShow: 2,
+			        slidesToScroll: 2,
+		    		arrows: false,
+		    	}
+		    },
+		    {
+		      breakpoint: 630,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1,
+	    		arrows: false,
+		      }
+		    }
+		]
 	});
-	$('.slider-nav').slick({
-	  slidesToShow: 8,
-	  slidesToScroll: 1,
-	  asNavFor: '.slider-for',
-	  // dots: true,
-	  // centerMode: true,
-	  focusOnSelect: true
-	});
-
-
 });
 
 

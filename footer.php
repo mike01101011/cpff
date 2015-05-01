@@ -12,12 +12,8 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js"></script>	
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.1/slick.min.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/scripts.js"></script>
-
-
-<!-- Slick Carousel - start -->
-<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
-<!-- Slick Carousel - end -->
 
 
 <script>

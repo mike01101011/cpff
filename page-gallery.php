@@ -15,7 +15,8 @@
 
 <!-- website main content - start -->
 <main class="clearfix">
-	<div class="container">
+
+	
 		
 	
 		<!-- page title - start -->
@@ -33,41 +34,67 @@
 			);
 		?>
 	
-		<div class="slider-for">
+		
 		<?php if ( $onePageQuery->have_posts() ) : ?>
 			<?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
-				<?php if( have_rows('designs') ): ?>
-					<?php while( have_rows('designs') ): the_row();
-					$images = get_sub_field('design')?>
-							<div><img src="<?php echo $images['sizes']['medium'] ?>" alt="<?php echo $images['alt'] ?>"></div>
-							
-						
+				<section id="design">
+					<div class="container">
+						<h3>Poster Gallery</h3>
+						<div class="poster-images">
+						<?php if( have_rows('poster_designs') ): ?>
+							<?php while( have_rows('poster_designs') ): the_row();
+							$images = get_sub_field('poster')?>
+								<div>
+									<img src="<?php echo $images['sizes']['medium'] ?>" alt="<?php echo $images['alt'] ?>">
+									<h4><?php echo $images['title'] ?></h4>
+								</div>
+							<?php endwhile; ?>
+						<?php endif; ?>
+						</div> <!-- /.poster-images -->
+					</div> <!-- /.container -->
+				</section> <!-- /.design -->
+		
+				<section id="photo">
+					<div class="container">
+						<h3>Photo Gallery</h3>
+							<div class="galleries">
+							<?php if( get_field( "picture_gallery_text" ) ): ?>
+								<p><?php the_field( 'picture_gallery_text' ); ?></p>
+							<?php endif; ?>
+								<ul>
+								<?php if( have_rows('picture_galleries') ): ?>
+									<?php while( have_rows('picture_galleries') ): the_row();
+									$gallery = get_sub_field('picture_gallery');
+									$link = get_sub_field('gallery_link')?>
+										<li><a href="<?php echo $link ?>" target="_blank"><?php echo $gallery ?></a></li>
+									<?php endwhile; ?>
+								<?php endif; ?>
+								</ul>
+							</div> <!-- /.galleries -->
+					</div> <!-- /.container -->
+				</section> <!-- /#photo -->
+
+				<?php if( have_rows('screen_washes') ): ?>
+					<?php while( have_rows('screen_washes')): the_row();
+					$video = get_sub_field('screen_wash')?>
+					<section class="video">
+						<div class="container">
+							<h3>Screen Wash Gallery</h3>
+							<div class='embed-container'>
+								<?php echo $video ?>
+							</div>
+						</div> <!-- /.container -->
+					</section> <!-- /.video -->
 					<?php endwhile; ?>
 				<?php endif; ?>
+			
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
 			<?php else: ?>
 		<?php endif; ?>
-		</div>
+		
 
-		<div class="slider-nav">
-		<?php if ( $onePageQuery->have_posts() ) : ?>
-			<?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
-				<?php if( have_rows('designs') ): ?>
-					<?php while( have_rows('designs') ): the_row();
-					$images = get_sub_field('design')?>
-							<div><img src="<?php echo $images['sizes']['thumbnail'] ?>" alt="<?php echo $images['alt'] ?>"></div>
-
-						
-					<?php endwhile; ?>
-				<?php endif; ?>
-			<?php endwhile; ?>
-			<?php wp_reset_postdata(); ?>
-			<?php else: ?>
-		<?php endif; ?>
-		</div>
-
-	</div> <!-- /.container -->
+	
 </main> <!-- /.clearfix -->
 <!-- website main content - end -->
 
