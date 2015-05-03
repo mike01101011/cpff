@@ -37,7 +37,7 @@
 			text-align: center;
 			.fa-2x {
 				vertical-align: 0;
-				line-height: 0px;
+				// line-height: 0px;
 			}
 			a {
 				color: green;
@@ -62,9 +62,17 @@
 			font-size: 4.75rem;
 			display: list-item;
 		}
-
 	}
+}
 
+#video {
+	h3 {
+		@include page-subheadline;
+		text-align: center;
+	}
+	.screen-video {
+		padding-top: 2.5%;
+	}
 }
 
 @media all and (max-width: 480px) {

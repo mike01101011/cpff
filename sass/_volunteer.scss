@@ -39,6 +39,10 @@
 }
 
 @media all and (max-width: 768px) {
+	.first-name, .last-name, .e-mail, .phone {
+		flex: 1 0 100%;
+	}
+
 	.volunteer-question, .volunteer-submit, .volunteer-reset {
 	  margin: 2.5% 0;
 	}

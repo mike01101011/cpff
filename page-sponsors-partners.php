@@ -49,7 +49,7 @@
 									$largelink = get_sub_field('large_link');
 								?>
 									<div class="big-donor">
-										<a href="<?php echo $largelink; ?>" target="_blank"><img src="<?php echo $largeimage['sizes']['medium'] ?>" alt="<?php echo $largeimage['alt'] ?>"></a>
+										<a href="<?php echo $largelink; ?>" target="_blank"><img src="<?php echo $largeimage['sizes']['large'] ?>" alt="<?php echo $largeimage['alt'] ?>"></a>
 									</div> <!-- /.big-donor -->
 								<?php endwhile; ?>
 							</div> <!-- /.big-donors clearfix -->
@@ -75,7 +75,7 @@
 									$smalllink = get_sub_field('small_link');
 								?>
 									<div class="small-donor">
-										<a href="<?php echo $smalllink; ?>" target="_blank"><img src="<?php echo $smallimage['sizes']['medium'] ?>" alt="<?php echo $smallimage['alt'] ?>"></a>
+										<a href="<?php echo $smalllink; ?>" target="_blank"><img src="<?php echo $smallimage['sizes']['square'] ?>" alt="<?php echo $smallimage['alt'] ?>"></a>
 									</div> <!-- /.big-donor -->
 								<?php endwhile; ?>
 							</div> <!-- /.big-donors clearfix -->

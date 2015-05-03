@@ -1,5 +1,5 @@
 .date, .event-info, .feature, .live-music, .shorts, .presenting-sponsors, .co-presenters, .food-vendors, .trailer, .show-hide, .facebook-event {
-	padding: 20px 0;
+	margin: 20px 0;
 }
 
 .date {
@@ -15,9 +15,27 @@
 }
 
 
-
 .presenter-logo, .co-presenter-logo, .food-vendor-logo  {
 	text-align: center;
+	padding: 2.5%;
+}
+
+.presenter-logo {
+	img {
+		max-width: 100%;
+	}
+}
+
+.co-presenter-logo {
+	img {
+		max-width: 75%;
+	}
+}
+
+.food-vendor-logo {
+	img {
+		max-width: 50%;
+	}
 }
 
 .short-films, .co-presenter, .food-vendor {
@@ -25,13 +43,20 @@
 	flex-flow: row wrap;
 }
 .short-film, .co-presenter-logo, .food-vendor-logo {
-	flex: 1 0 250px;
+	flex: 1 0 393px;
 	padding: 2.5%;
 	// border: 1px solid yellow;
 	&:last-child {
-		padding-bottom: 0;	
+		padding-bottom: 0;
 	}
 }
+
+@media all and (max-width: 480px) {
+	.short-film, .co-presenter-logo, .food-vendor-logo {
+		flex: 1 0 100%;
+	}
+}
+
 
 
 //Facebook event link - start

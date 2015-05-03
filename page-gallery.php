@@ -75,17 +75,19 @@
 				</section> <!-- /#photo -->
 
 				<?php if( have_rows('screen_washes') ): ?>
-					<?php while( have_rows('screen_washes')): the_row();
-					$video = get_sub_field('screen_wash')?>
-					<section class="video">
+					<section id="video">
 						<div class="container">
 							<h3>Screen Wash Gallery</h3>
-							<div class='embed-container'>
-								<?php echo $video ?>
-							</div>
+							<?php while( have_rows('screen_washes')): the_row();
+								$video = get_sub_field('screen_wash')?>
+								<div class="screen-video">
+									<div class='embed-container'>
+										<?php echo $video ?>
+									</div>
+								</div> <!-- /.screen-video -->
+							<?php endwhile; ?>
 						</div> <!-- /.container -->
 					</section> <!-- /.video -->
-					<?php endwhile; ?>
 				<?php endif; ?>
 			
 			<?php endwhile; ?>
