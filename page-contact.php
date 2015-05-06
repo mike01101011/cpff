@@ -22,6 +22,8 @@
 		<h2><?php the_title(); ?></h2>
 		<!-- page title - end -->
 		
+		<p>All screenings will take place at Christie Pits Park, unless otherwise noted:</p>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2886.219979504996!2d-79.41932647221373!3d43.66439460164457!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b348b9fc8fff1%3A0x70a99ed8ba8aaf44!2sChristie+Pits+Park!5e0!3m2!1sen!2sca!4v1430713979383" width="600" height="450" frameborder="0" style="border:0"></iframe>
 		
 		<?php
 			$onePageQuery = new WP_Query(

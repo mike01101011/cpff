@@ -53,6 +53,8 @@
 							<?php if( get_field('feature_film')):?> <!-- start loop -->
 								<div class="feature clearfix">
 									<h3><?php the_field( 'feature_film' ); ?></h3>
+									<h4>Directed by:</h4>
+									<h4 class="director_name"><?php the_field( 'feature_director' ); ?></h4>
 								</div> <!-- /.feature -->
 							<?php endif; ?> <!-- end loop -->
 
@@ -74,7 +76,8 @@
 											
 												<div class="short-film ">
 													<h3><?php echo $short; ?></h3>
-													<a href="<?php echo $twitter; ?>" target="_blank"><h4><?php echo $filmmaker; ?></h4></a>
+													<h4>Directed by:</h4>
+													<a href="<?php echo $twitter; ?>" target="_blank"><h4 class="director_name"><?php echo $filmmaker; ?></h4></a>
 												</div> <!-- /.short-film -->
 											
 										<?php endwhile; ?>
@@ -84,13 +87,13 @@
 
 							<?php if( have_rows('presenting_sponsors') ): ?> <!-- start loop -->
 								<div class="presenting-sponsors clearfix">
-									<p>presenting sponsor</p>
+									<p><?php the_field('presenting_sponsor_title'); ?></p>
 									<?php while( have_rows('presenting_sponsors') ): the_row();
 										$presenterlink = get_sub_field('presenter_link');
 										$presenter = get_sub_field('presenter_logo'); 
 									?>
 										<div class="presenter-logo">
-											<a href="<?php echo $presenterlink ?>" target="_blank"><img src="<?php echo $presenter['sizes']['large'] ?>" alt="<?php echo $presenter['alt'] ?>"></a>
+											<a href="<?php echo $presenterlink ?>" target="_blank"><img src="<?php echo $presenter['sizes']['presenting-sponsor-logo'] ?>" alt="<?php echo $presenter['alt'] ?>"></a>
 										</div> <!-- /.presenter-logo -->
 									<?php endwhile; ?>
 								</div> <!-- /.presenting-sponsors -->
@@ -105,7 +108,7 @@
 											$copresenter = get_sub_field('co-presenting_sponsor'); 
 										?>
 											<div class="co-presenter-logo">
-												<a href="<?php echo $copresenterlink ?>" target="_blank"><img class="logo" src="<?php echo $copresenter['sizes']['medium'] ?>" alt="<?php echo $copresenter['alt'] ?>"></a>
+												<a href="<?php echo $copresenterlink ?>" target="_blank"><img class="logo" src="<?php echo $copresenter['sizes']['copresenter-logo'] ?>" alt="<?php echo $copresenter['alt'] ?>"></a>
 											</div> <!-- /.co-presenter-logo -->
 										<?php endwhile; ?>
 									</div> <!-- /.co-presenter -->
@@ -114,14 +117,14 @@
 
 							<?php if( have_rows('food_vendors') ): ?> <!-- start loop -->
 								<div class="food-vendors clearfix">
-									<p>evening food vendors</p>
+									<p>food vendors</p>
 									<div class="food-vendor">
 										<?php while( have_rows('food_vendors') ): the_row();
 											$foodlink = get_sub_field('food_vendor_link');
 											$food = get_sub_field('food_vendor'); 
 										?>
 											<div class="food-vendor-logo">
-												<a href="<?php echo $foodlink ?>" target="_blank"><img src="<?php echo $food['sizes']['medium'] ?>" alt="<?php echo $food['alt'] ?>"></a>
+												<a href="<?php echo $foodlink ?>" target="_blank"><img src="<?php echo $food['sizes']['food-vendor'] ?>" alt="<?php echo $food['alt'] ?>"></a>
 											</div> <!-- /.food-vendor-logo -->	
 										<?php endwhile; ?>
 									</div> <!-- /.food-vendor -->

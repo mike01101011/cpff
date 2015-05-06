@@ -54,7 +54,22 @@
 								<?php endwhile; ?>
 							</div> <!-- /.big-donors clearfix -->
 						<?php endif; ?>
+
+
+						<?php if( have_rows('second_tier') ): ?>
+							<div class="second-tier-donors clearfix">
+								<?php while( have_rows('second_tier')): the_row();
+									$stimage = get_sub_field('second_tier_image');
+									$stlink = get_sub_field('second_tier_link');
+								?>
+									<div class="second-tier-donor">
+										<a href="<?php echo $stlink; ?>" target="_blank"><img src="<?php echo $stimage['sizes']['copresenter-logo'] ?>" alt="<?php echo $stimage['alt'] ?>"></a>
+									</div> <!-- /.big-donor -->
+								<?php endwhile; ?>
+							</div> <!-- /.big-donors clearfix -->
+						<?php endif; ?>
 	                    
+
 						<?php if( have_rows('medium') ): ?>
 							<div class="medium-donors clearfix">
 								<?php while( have_rows('medium')): the_row();
@@ -75,7 +90,7 @@
 									$smalllink = get_sub_field('small_link');
 								?>
 									<div class="small-donor">
-										<a href="<?php echo $smalllink; ?>" target="_blank"><img src="<?php echo $smallimage['sizes']['square'] ?>" alt="<?php echo $smallimage['alt'] ?>"></a>
+										<a href="<?php echo $smalllink; ?>" target="_blank"><img src="<?php echo $smallimage['sizes']['small-logo'] ?>" alt="<?php echo $smallimage['alt'] ?>"></a>
 									</div> <!-- /.big-donor -->
 								<?php endwhile; ?>
 							</div> <!-- /.big-donors clearfix -->

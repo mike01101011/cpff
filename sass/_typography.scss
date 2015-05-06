@@ -59,8 +59,19 @@
 		}
 	}
 
-	.feature > h3 {
-		@include feature-title;
+	.feature { 
+		h3 {
+			@include feature-title;
+		}
+		h4 {
+			text-align: center;
+			font-family: Rajdhani,sans-serif;
+			text-transform: uppercase;
+			font-size: 2.2rem;
+			&.director_name {
+				font-size: 3.2rem;
+			}
+		}
 	}
 
 	.short-film {
@@ -71,8 +82,10 @@
 			text-align: center;
 			font-family: Rajdhani,sans-serif;
 			text-transform: uppercase;
-			font-size: 2.6rem;
-			margin-top: 2px;
+			font-size: 2.2rem;
+			&.director_name {
+				font-size: 3.2rem;
+			}
 		}
 	}
 
@@ -217,8 +230,19 @@
 
 
 // Typography for Volunteer page - start
-	.volunteer-message p {
+	.volunteer-message p, .newsletter {
 		text-align: center;
+		font-size: 2rem;
+	}
+
+	.newsletter {
+		margin-top: 1.5%;
+		a {
+			font-weight: 800;
+			&:hover {
+				color: green;
+			}
+		}
 	}
 
 	.volunteer-buttons {
@@ -245,6 +269,15 @@
 	.volunteer-question label{
 		@include page-paragraph;
 		font-weight: 700;
+	}
+
+
+	.volunteer-multichoice {
+		.volunteer-question {
+			.sub-heading {
+				font-size: 1.2rem;
+			}
+		}
 	}
 
 	input.volunteer-field {
@@ -280,7 +313,7 @@
 		h4 {
 			@include page-subheadline;
 			text-align: center;
-			font-size: 2.4rem;
+			font-size: 2rem;
 			text-transform: uppercase;
 		}
 	}

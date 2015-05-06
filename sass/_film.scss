@@ -18,6 +18,7 @@
 .presenter-logo, .co-presenter-logo, .food-vendor-logo  {
 	text-align: center;
 	padding: 2.5%;
+	padding-top: 1%;
 }
 
 .presenter-logo {
@@ -28,13 +29,13 @@
 
 .co-presenter-logo {
 	img {
-		max-width: 75%;
+		max-width: 65%;
 	}
 }
 
 .food-vendor-logo {
 	img {
-		max-width: 50%;
+		max-width: 45%;
 	}
 }
 
@@ -45,9 +46,11 @@
 .short-film, .co-presenter-logo, .food-vendor-logo {
 	flex: 1 0 393px;
 	padding: 2.5%;
+	padding-top: 1%;
 	// border: 1px solid yellow;
+	margin: auto;
 	&:last-child {
-		padding-bottom: 0;
+		// padding-bottom: 0;
 	}
 }
 

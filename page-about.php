@@ -38,6 +38,12 @@
 				<section id="festival_bio">
 					<div class="container">
 						<?php the_field( 'festival_history' ); ?>
+						<div class="festival-image">
+							<?php $image = get_field('festival_image');
+							if( !empty($image) ): ?>
+								<a href="<?php the_field( 'festival_link' ); ?>" target="_blank"><img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" /></a>
+							<?php endif; ?>
+						</div> <!-- /.festival-image -->
 					</div> <!-- /.container -->
 				</section> <!-- #festial_bio -->
 				
@@ -70,7 +76,7 @@
 
 				<section id="board_members">
 					<div class="container clearfix">
-						<h2>Festival Board Members</h2>
+						<h2>Board of Directors</h2>
 						<ul class="members">
 							<?php while ( has_sub_field('board_members') ): ?>
 								<li class="board_member"><?php the_sub_field('board_member'); ?></li>

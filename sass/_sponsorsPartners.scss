@@ -1,15 +1,26 @@
 
-.big-donors, .medium-donors, .small-donors {
+.big-donors, .second-tier-donors, .medium-donors, .small-donors {
 	display: flex;
 	flex-flow: row wrap;
 }
 
-.big-donor, .medium-donor, .small-donor {
+.big-donor, .second-tier-donor, .medium-donor {
 	flex: 1 0 350px;
-	padding: 2.5%;
+	padding-top: 2.5%;
 	text-align: center;
+	margin: auto;
 	&:last-child {
-		padding-bottom: 0;	
+		padding-bottom: 2.5%;	
+	}
+}
+
+.small-donor {
+	flex: 1 0 250px;
+	padding-top: 2.5%;
+	text-align: center;
+	margin: auto;
+	&:last-child {
+		padding-bottom: 2.5%;	
 	}
 }
 
@@ -19,8 +30,29 @@
 	}
 }
 
-.medium-donor {
+.second-tier-donor {
 	img {
 		max-width: 75%;
+	}
+}
+
+.medium-donor {
+	img {
+		max-width: 60%;
+	}
+}
+
+.small-donor {
+	img {
+		max-width: 55%;
+	}
+}
+
+@media all and (max-width: 768px) {
+	.big-donor, .second-tier-donor, .medium-donor, .small-donor {
+		padding: 2.5%;
+		&:last-child {
+			padding-bottom: 0;	
+		}
 	}
 }

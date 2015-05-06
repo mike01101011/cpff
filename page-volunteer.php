@@ -24,7 +24,7 @@
 	<section class="volunteer-form">
 		<div class="container">
 			<div class="volunteer-message" id="volunteer-message">
-				<p>If you are interested in becoming a volunteer please answer the questions below.</p>
+				<p>If you would like to volunteer with CPFF, please complete the following form.</p>
 			</div> <!-- /.volunteer-message -->
 			
 			<form name="volunteer" id="volunteer" onsubmit="myFunction()" action="https://docs.google.com/forms/d/1MrwCVrg1AHzGoH5bCTibXbb8CojcHoGh3GesvtqOLnI/formResponse" method="POST" target="_blank" >
@@ -73,6 +73,26 @@
 					</div>
 				</div> <!-- /.volunteer-multichoice -->
 
+				<div class="volunteer-multichoice">
+					<div class="volunteer-question" role="listitem">
+						<label for="entry_1138767840">Please indicate whether you would like to be a volunteer photographer for CPFF. <div class="sub-heading">You will need to use your own DSLR camera and would commit to sending the photos to CPFF within 3 days of the screening.</div></label>
+						<ul class="volunteer-radio" role="radiogroup" aria-label="Please indicate whether you would like to be a volunteer photographer for CPFF.  ">
+							<li class="volunteer-button">
+								<label>
+									<input type="radio" name="entry.1967354088" value="Yes" id="group_1967354088_1" role="radio" aria-label="Yes" required="" aria-required="true">
+									<span class="volunteer-button-label">Yes</span>
+								</label>
+							</li>
+							<li class="volunteer-button" >
+								<label>
+									<input type="radio" name="entry.1967354088" value="No" id="group_1967354088_2" role="radio" class="volunteer-button" aria-label="No" required="" aria-required="true">
+									<span class="volunteer-button-label">No</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+				</div> <!-- /.volunteer-multichoice -->
+
 				<div class="volunteer-skill">
 					<div class="volunteer-question" role="listitem">
 						<label for="entry_1698928937">Do you want to volunteer your skills or time for a specific role or project?</label>
@@ -86,8 +106,8 @@
 					<button type="reset" name="Reset" value="Reset" class="volunteer-reset" id="volunteer-reset">Reset</button>
 				</div> <!-- /.volunteer-buttons -->
 			</form>
-
 			<h3 id="volunteer-thank">Thank you for your Support!!!</h3>
+			<p class="newsletter">Please sign up for the festival e-newsletter <a href="#">here</a> so you won't miss a thing!</p>
 		</div> <!-- /.container -->
 	</section> <!-- /.volunteer-form -->
 </main> <!-- /.clearfix -->

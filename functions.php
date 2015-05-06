@@ -14,7 +14,11 @@ function theme_setup() {
 	set_post_thumbnail_size(120, 90, true);
 	add_image_size('square', 150, 150, true);
 	add_image_size('carousel', 5120, 1066, true);
-	add_image_size('medium-sponsor', 500,500,true);
+	add_image_size('presenting-sponsor-logo', 600, 600);
+	add_image_size('copresenter-logo', 425, 425);
+	add_image_size('food-vendor',400, 400);
+	add_image_size('small-logo', 200, 200);
+
 
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );
