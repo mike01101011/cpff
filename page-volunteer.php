@@ -107,7 +107,7 @@
 				</div> <!-- /.volunteer-buttons -->
 			</form>
 			<h3 id="volunteer-thank">Thank you for your Support!!!</h3>
-			<p class="newsletter">Please sign up for the festival e-newsletter <a href="#">here</a> so you won't miss a thing!</p>
+			<p class="newsletter">Sign up for the festival newsletter <a href="../contact/#newsletter-signup">here</a> so you won't miss a thing!</p>
 		</div> <!-- /.container -->
 	</section> <!-- /.volunteer-form -->
 </main> <!-- /.clearfix -->

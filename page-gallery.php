@@ -57,10 +57,22 @@
 				<section id="photo">
 					<div class="container">
 						<h3>Photo Gallery</h3>
+							<div class="photo-sample">
+							<?php if( have_rows('photos') ): ?>
+								<?php while( have_rows('photos') ): the_row();
+								$photo = get_sub_field('photo')?>
+									<div>
+										<img src="<?php echo $photo['sizes']['medium'] ?>" alt="<?php echo $photo['alt'] ?>">
+									</div>
+								<?php endwhile; ?>
+							<?php endif; ?>
+							</div>
 							<div class="galleries">
 							<?php if( get_field( "picture_gallery_text" ) ): ?>
 								<p><?php the_field( 'picture_gallery_text' ); ?></p>
 							<?php endif; ?>
+
+
 								<ul>
 								<?php if( have_rows('picture_galleries') ): ?>
 									<?php while( have_rows('picture_galleries') ): the_row();
@@ -77,7 +89,7 @@
 				<?php if( have_rows('screen_washes') ): ?>
 					<section id="video">
 						<div class="container">
-							<h3>Screen Wash Gallery</h3>
+							<h3>Pre-Show Gallery</h3>
 							<?php while( have_rows('screen_washes')): the_row();
 								$video = get_sub_field('screen_wash')?>
 								<div class="screen-video">

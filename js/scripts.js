@@ -66,18 +66,56 @@ $(function(){
 		    }
 		]
 	});
+
+	$('.photo-sample').slick({
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+        dots: true,
+		responsive: [
+		    {
+		      breakpoint: 964,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 2,
+		      }
+		    },
+		    {
+		    	breakpoint: 768,
+		    	settings: {
+		    		slidesToShow: 2,
+			        slidesToScroll: 2,
+		    		arrows: false,
+		    	}
+		    },
+		    {
+		      breakpoint: 630,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1,
+	    		arrows: false,
+		      }
+		    }
+		]
+	});
 });
 
 
 //Volunteer Submit Button - start
 function myFunction() {
-	document.getElementById("volunteer-submit").style.display = "none";
-	document.getElementById("volunteer-reset").style.display = "none";
 	document.getElementById("volunteer-message").style.display = "none";
 	document.getElementById("volunteer").style.display="none";
 	document.getElementById("volunteer-thank").style.display="block";
 }
 //Volunteer Submit Button - end
+
+
+// Newsletter - start
+function newsletter() {
+	document.getElementById("newsletter-form").style.display = "none";
+	document.getElementById("newsletter-thank").style.display = "block";
+}
+// Newsletter - end
 
 
 // Greensock Animation:

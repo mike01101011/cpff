@@ -1,0 +1,159 @@
+#newsletter-thank {
+	display: none;
+}
+
+.contact_details {
+	display: flex;
+	flex-flow: row wrap;
+	p {
+		a {
+			font-weight: 700;
+			color: green;
+			&:hover {
+				color: orange;
+			}
+		}
+	}
+}
+
+.social_sponsorship, .newsletter_survey {
+	flex: 1 0 375px;
+}
+
+.social_sponsorship {
+	border-right: 1px solid black;
+	padding-right: 2%;
+}
+
+.newsletter_survey {
+	padding-left: 2%;
+}
+
+.sponsorship {
+	margin-top: 2.75%;
+}
+
+.screenings {
+	margin-top: 2.75%;
+	p {
+		margin-top: 1%;
+		text-align: center;
+	}
+}
+
+.survey {
+	margin-top: 2.75%;
+}
+
+.social {
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		font-size: 2.4rem;
+		li {
+			a {
+				color: green;
+				&:hover {
+					color: orange;
+				}
+			}
+		}
+	}
+}
+
+.contact_details, .screenings {
+	p {
+		font-size: 2rem;
+	}
+}
+
+.mailchimp {
+	
+	.news-question {
+		margin-top: 1%;
+		label {
+			@include page-paragraph;
+			font-weight: 700;
+			text-align: left;
+		}
+
+		input {
+			display: block;
+			border-radius: 5px;
+			width: 100%;
+			font-size: 1.6rem;
+			padding: 5px;
+			@include page-paragraph;
+			outline: none;
+			border: none;
+			margin-top: .5%;
+			background: lightgreen;
+		}
+	}
+	#newsletter-thank {
+		text-align: center;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin: 2.75%;
+		font-family: $main;
+		font-size: 2.5rem;
+	}
+
+	button {
+		width: 100%;
+		font-size: 2.2rem;
+		background: transparent;
+		border: 5px solid black;
+		padding: 10px;
+		border-radius: 10px;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-top: 2.75%;
+		&:hover {
+			background: black;
+			color: white;
+		}
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+@media all and (max-width: 789px) {
+	.contact_details {
+		p {
+			text-align: center;
+		}
+	}
+
+
+	.newsletter_survey {
+		margin-top: 2.75%;
+	}
+
+
+	.social_sponsorship, .newsletter_survey {
+		flex: 1 0 100%;
+	}
+
+	.social_sponsorship {
+		border-right: 0px;
+		padding-right: 0;
+		.social {
+			ul {
+				display: flex;
+				flex-flow: row wrap;
+				li {
+					flex: 1 0 323px;
+					text-align: center;
+					margin-top: 1%;
+				}
+			}
+		}
+	}
+
+	.newsletter_survey {
+		padding-left: 0;
+	}
+}

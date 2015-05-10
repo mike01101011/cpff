@@ -18,14 +18,14 @@
 
 .staff-member {
 	flex: 1 0 33.33%;
-	padding: 2.5%;
+	padding: 2.75%;
 	padding-bottom: 0;
 }
 
 @media all and (max-width: 480px) {
 	.staff-member {
 		flex: 1 0 100%;
-		padding: 2.5%;
+		padding: 2.75%;
 		// border: 1px solid yellow;
 		&:last-child {
 			padding-bottom: 0;
@@ -52,7 +52,7 @@ ul.members {
 
 .board_member {
 	flex: 1 0 200px;
-	padding: 2.5%;
+	padding: 2.75%;
 	list-style-type: none;
 	text-align: center;
 	&:last-child {
