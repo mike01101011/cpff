@@ -7,6 +7,7 @@ var gulp = require('gulp'),
 	reload = browserSync.reload,
 	autoprefixer = require('gulp-autoprefixer'),
 	minifyCSS = require('gulp-minify-css'),
+	uglify = require('gulp-uglify'),
 	imagemin = require('gulp-imagemin');
 
 // Proxy Server
@@ -28,6 +29,13 @@ gulp.task('styles', function(){
 		.pipe(reload({stream:true}));
 });
 
+//Minify Javascript
+gulp.task('compress', function(){
+	return gulp. src('./js/scripts-work.js')
+		.pipe(uglify())
+		.pipe(gulp.dest('./js/scripts.js'));
+});
+
 
 // Minify images
 gulp.task('images', function() {
@@ -42,9 +50,10 @@ gulp.task('watch', function() {
 	gulp.watch("*.php").on("change", browserSync.reload);
 	gulp.watch('./sass/*.scss', ['styles']);
 	gulp.watch('./js/*.js').on("change", browserSync.reload);
+	gulp.watch('./js/*.js', ['compress']);
 	gulp.watch('./img/*.*', ['images']);
 
 });
 
 // Default
-gulp.task('default', ['styles', 'images', 'browser-sync', 'watch']);
+gulp.task('default', ['styles', 'compress', 'images', 'browser-sync', 'watch']);
