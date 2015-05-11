@@ -112,7 +112,11 @@
 		}
 		.container {
 			padding: 1.5% 2.5%;
-
+			h3 {
+				@include page-paragraph;
+				font-size: 2.6rem;
+				font-weight: 400;
+			}
 			p {
 				@include page-paragraph;
 				font-size: 2rem;
