@@ -9,10 +9,11 @@
 
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400italic,400,600,700italic,700,800|Rajdhani:600,700|Voltaire' rel='stylesheet' type='text/css'>
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.1/slick.min.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.1/slick-theme.min.css" />
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+
+  <?php wp_head(); ?>
 </head>
 
 <body>
