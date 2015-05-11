@@ -1,51 +1,7 @@
-//News Entry - start
-	article {
-		margin-bottom: 2.0rem;
-	}
-
-	// Old + New Entries - start
-		.alignleft {
-			float: left;
-		}
-
-		.alignright {
-			float: right;
-		}
-
-		.alignleft, .alignright {
-			margin-top: 2.0rem;
-		}
-	// Old + New Entries - end
-
-	// blog-post horizontal rule - start
-		hr.blog {
-			border: 0;
-			height: 0;
-			border-top: 1px dashed rgba(0, 0, 0, 0.2);
-			border-bottom: 1px dashed rgba(255, 255, 255, 0.7);
-		}
-	// blog-post horizontal rule - end
-
-
-	// blog post content - start
-		.entry-content > p{
-			margin-top: 1%;
-			margin-bottom: 2.5%;	
-		}
-	// blog post content - end
-	
-	// News Footer - start
-	article > footer {
-		display: none;
-	}
-	// News Footer - end
-
-//News Entry - end
-
-
 // Website Opening - start
 	section.lrg-bg {
-		background: linen;
+		background: url(./img/background.jpg) no-repeat center center fixed;
+		background-size:cover;
 		width: 100%;
 		height: 100vh;
 		display: -webkit-flex;
@@ -56,13 +12,33 @@
 		justify-content: center;
 		-webkit-align-items: center;
 		align-items: center;
+		 
+
+		h1.programTitle {
+			opacity: 0;
+			@include feature-title;
+			color: #1E582C;
+		}
+		
+		h3.present {
+			font-family: $short;
+			font-size: 2.4rem;
+			text-transform: uppercase;
+			text-align: center;
+			font-weight: 600;
+			opacity: 0;
+			color: #1E582C;
+			
+		}
+		
 	}
 // Website Opening - end
 
 //CPFF logo - start
 	.cpff-logo {
-		max-width: 75%;
+		max-width: 70%;
 		height: auto;
+		display: block;
 	}
 
 	.text {
@@ -76,18 +52,74 @@
 	}
 //CPFF logo - end
 
+
+// Presented By - start
+	.presented-by {
+		img {
+			width: 100%;
+		}
+	}
+// Presented By - end
+
+
+// Lead Sponsor - start
+	.leadSponsor {
+		opacity: 0;
+	}
+// Lead Sponsor - end
+
+
 //Down Arrow - start
 	.arrow {
-	  width: 50px;
-	  fill: black;
+	  width: 5%;
+	  fill: white;
 	  position: absolute;
-	  top:97.5%;
 	  left:50%;
-	  transform: translate(-50%, -99%)
+	  transform: translate(-50%, -100%);
+	  opacity: 0;
 	}
 
 	.big {
 	  fill: darkgreen;
 	}
 //Down Arrow - end
+
+
+// Festival Info - start
+.info {
+	h3 {
+		@include page-subheadline;
+		font-size: 2.4rem;
+		text-align: center;
+	}
+}
+// Festival Info - end
+
+
+// Latest News Section - start
+.news {
+	padding-bottom:0;
+	h2 {
+		margin-top: 0;
+	}
+	.story {
+		padding-bottom: 0;
+		&:nth-child(odd) {
+			background: beige;
+		}
+		&:nth-child(even) {
+			background: ivory;
+		}
+		.container {
+			padding: 1.5% 2.5%;
+
+			p {
+				@include page-paragraph;
+				font-size: 2rem;
+				font-weight: 400;
+			}
+		}
+	}
+}
+// Latest News Section - end
 

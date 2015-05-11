@@ -133,7 +133,32 @@ TweenMax.to(reel, '3', {
   opacity: '1',
 })
 TweenMax.to(reel, '3', {
-  delay: 3.5,
+  delay: '3.5',
   rotation:'720',
   transformOrigin: '50% 50%',
+});
+
+var present = document.getElementsByClassName("present")
+TweenMax.to(present, '3', {
+	delay: '2.5',
+	opacity: '1',
+});
+
+var program = document.getElementsByClassName("programTitle")
+TweenMax.to(program, '3', {
+	delay: '3.5',
+	opacity: '1',
+});
+
+var lead = document.getElementsByClassName("leadSponsor")
+TweenMax.to(lead, '3', {
+	delay: '3.5',
+	opacity: '1',
+});
+
+var arrow = document.getElementsByClassName("arrow")
+TweenMax.to(arrow, '1', {
+	delay: '3.25',
+	opacity: '1',
+	top:"97.5%",
 });

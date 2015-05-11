@@ -10,7 +10,7 @@
 	}
 
 	body {
-		color: #333;
+		color: darken(darkgreen, 5%);
 	}
 
 	h1,h2,h3,h4,h5,h6,p {
@@ -26,11 +26,46 @@
 		@include page-paragraph;
 	}
 
-	// For all anchor-tags - start
-		a,a:visited {
+	a {
+		color: $link;
+		font-weight: 800;
+		transition: all 0.3s;
+		text-decoration: none;
+		&:visited {
 			text-decoration: none;
 		}
-	// For all anchor-tags - end
+		&:hover {
+			color: $hover;
+			
+		}
+	}
+	input {
+		background: white;
+		color: darkgreen;
+		&:focus {
+			background: lighten(gold, 25%);
+			transition: all 0.3s;
+		}
+	}
+	button {
+		transition: all 0.3s;
+		width: 100%;
+		font-size: 2.2rem;
+		background: $link;
+		color: white;
+		padding: 10px;
+		border-radius: 10px;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-top: 2.5%;
+		outline: none;
+		border: 1px solid $link;
+		&:hover {
+			background: $hover;
+			border: 1px solid $hover;
+		}
+	}
+
 // Main Typography for entire document - start
 
 
@@ -51,12 +86,6 @@
 			text-align: center;
 			margin: -10px 0;
 		}
-		a {
-			color: pink;
-			&:hover {
-				color: blue;
-			}
-		}
 	}
 
 	.feature { 
@@ -70,6 +99,7 @@
 			font-size: 2.2rem;
 			&.director_name {
 				font-size: 3.2rem;
+				line-height: 2.2rem;
 			}
 		}
 	}
@@ -78,12 +108,6 @@
 		h3{
 			@include short-title;
 		}
-		a {
-			color: green;
-			&:hover {
-				color: orange;
-			}
-		}
 		h4 {
 			text-align: center;
 			font-family: Rajdhani,sans-serif;
@@ -91,6 +115,7 @@
 			font-size: 2.2rem;
 			&.director_name {
 				font-size: 3.2rem;
+				line-height: 2.2rem;
 			}
 		}
 	}
@@ -98,12 +123,6 @@
 	.date { h4
 		{
 			@include date;
-			a {
-				color: green;
-				&:hover {
-					color: orange;
-				}
-			}
 		}
 	}
 
@@ -115,24 +134,6 @@
 		font-weight: 700;
 	}
 
-	.show-hide > button {
-		text-align: center;
-		margin: 0 auto;
-		display: block;
-		border-radius: 1rem;
-		border: 5px solid black;
-		background: transparent;
-		outline: none;
-		font-size: 3.2rem;
-		font-family: $short;
-		text-transform: uppercase;
-		padding: 1rem;
-	}
-
-	.show-hide > button:hover {
-		background: black;
-		color: white;
-	}
 
 	.facebook-event {
 		@include event;
@@ -145,22 +146,6 @@
 			font-weight: 400;
 			// line-height: 40px;
 			text-align: center;
-		}
-		button {
-			width: 100%;
-			font-size: 2.2rem;
-			background: transparent;
-			border: 5px solid black;
-			padding: 10px;
-			border-radius: 10px;
-			text-transform: uppercase;
-			font-weight: 700;
-			margin-top: 2.5%;
-			outline: none;
-			&:hover {
-				background: black;
-				color: white;
-			}
 		}
 	}
 // Typography for Film page - end
@@ -212,12 +197,6 @@
 				.name {
 					@include news-source;
 				}
-				a {
-					color: #333;
-					&:hover {
-						color: white;
-					}
-				}	
 			}
 			li:last-child {
 				margin-bottom: 0;
@@ -251,33 +230,6 @@
 
 	.newsletter {
 		margin-top: 1.5%;
-		a {
-			font-weight: 800;
-			&:hover {
-				color: green;
-			}
-		}
-	}
-
-	.volunteer-buttons {
-		button {
-			width: 100%;
-			font-size: 2.2rem;
-			background: transparent;
-			border: 5px solid black;
-			padding: 10px;
-			border-radius: 10px;
-			text-transform: uppercase;
-			font-weight: 700;
-			margin-top: 2.5%;
-			&:hover {
-				background: black;
-				color: white;
-			}
-			&:first-child {
-				margin-top: 0;
-			}
-		}
 	}
 
 	.volunteer-question label{
@@ -304,7 +256,6 @@
 		outline: none;
 		border: none;
 		margin-top: .5%;
-		background: lightgreen;
 	}
 
 	#volunteer-thank {
@@ -334,23 +285,11 @@
 // Typography for Gallery page - end
 
 
-// Typography for Old + New posts - start
-	.alignleft, .alignright {
-		font-family: $main;
-		font-weight: 400;
-		text-transform: capitalize;
-		font-size: 1.2rem;
-		a {
-			color: $link;
-			transition: all 0.3s;
-			&:hover {
-				color: darken( $hover, 10% );
-			}
-		}
+// Typography for Footer - start
+	footer {
+		color: #999;
+		text-align: center;
+		padding: 1rem;
+		font-size: 1.0rem;
 	}
-
-	.entry-content {
-		font-size: 1.6rem;
-		font-family: 'Open Sans', sans-serif;
-	}
-// Typography for Old + New posts - end
+// Typography for Footer - end

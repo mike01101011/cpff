@@ -49,7 +49,7 @@
 				
 				<section id="staff_members">
 					<div class="container clearfix">
-						<h2>Festival Staff Members</h2>
+						<h2>Festival Founding Members</h2>
 							<div class="staff">
 								<?php while ( has_sub_field('staff_members') ): ?>
 									

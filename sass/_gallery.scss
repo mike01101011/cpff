@@ -1,24 +1,13 @@
-
 #design {
 	.poster-images {
 		margin: 0 1%;
 	}
 	.slick-slide img {
 	  margin: 0 auto;
+	  border: 2px solid darken(darkgreen, 5%);
+	  border-radius: 5px;
 	}
-	ul.slick-dots {
-		position: static;
-		margin-bottom: 0;
-		li.slick-active {
-			button:before {
-				color: green;
-			}
-		}
-	}
-	.slick-dots li button:before {
-		color: white;
-		opacity: 1;
-	}
+	
 	.poster-images {
 		padding-top: 2.75%;
 	}
@@ -31,19 +20,8 @@
 	}
 	.slick-slide img {
 	  margin: 0 auto;
-	}
-	ul.slick-dots {
-		position: static;
-		margin-bottom: 0;
-		li.slick-active {
-			button:before {
-				color: green;
-			}
-		}
-	}
-	.slick-dots li button:before {
-		color: white;
-		opacity: 1;
+	  border: 2px solid darken(darkgreen, 5%);
+	  border-radius: 5px;
 	}
 	.photo-sample {
 		padding-top: 2.75%;
@@ -65,12 +43,6 @@
 			.fa-2x {
 				vertical-align: 0;
 				// line-height: 0px;
-			}
-			a {
-				color: green;
-				&:hover {
-					color: pink;
-				}
 			}
 		}
 
@@ -117,9 +89,50 @@
 }
 
 // Slick Button customization - start
-.slick-prev:before, .slick-next:before {
-	color: white;
-}
+	.slick-slider {
+		button.slick-prev {
+			border: 0;
+			&:hover {
+				background: none;
+			}
+		}
+		button.slick-next {
+			border: 0;
+			&:hover {
+				background: none;
+			}
+		}
+
+		ul.slick-dots {
+			position: static;
+			margin-bottom: 0;
+			border:0;
+			button {
+				border: 0;
+				transition: all 0.3s;
+				&:hover {
+					background: transparent;
+				}
+			}
+			li.slick-active {
+				button {
+					&:before {
+						color: $hover;
+					}
+				}
+			}
+		}
+		.slick-dots li button {
+			color: $link;
+			opacity: 1;
+			
+		}
+
+		.slick-prev:before, .slick-next:before {
+			color: $link;
+			opacity: 1;
+		}
+	}
 // Slick Button customization - end
 
 // Vimeo Responsive - start

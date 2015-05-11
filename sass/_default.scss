@@ -6,7 +6,8 @@
 
 //borderbox - start
 	*, *:before, *:after {
-	  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;box-sizing: border-box;
 	 }
 //borderbox - end
 
@@ -30,7 +31,7 @@
 
 // main - start
 	main {
-		background: white;
+		background: beige;
 	}
 // main - end
 
@@ -45,22 +46,16 @@
 
 section {
 	padding: 1.5% 0;
-	&:nth-child(odd) {
-		background: #ccc;
-	}
 	&:nth-child(even) {
-		background: #ddd;
+		background: beige;
+	}
+	&:nth-child(odd) {
+		background: ivory;
 	}
 }
 
 section.carousel {
 	padding: 0;
-}
-
-article {
-	border-bottom: 1px solid purple;
-	&:last-child {
-		border-bottom: 0;
-	}
+	border-bottom: 0;
 }
 

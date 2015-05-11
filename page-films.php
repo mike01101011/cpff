@@ -77,7 +77,7 @@
 												<div class="short-film ">
 													<h3><?php echo $short; ?></h3>
 													<h4>Directed by:</h4>
-													<a href="<?php echo $twitter; ?>" target="_blank"><h4 class="director_name"><?php echo $filmmaker; ?></h4></a>
+													<h4 class="director_name"><a href="<?php echo $twitter; ?>" target="_blank"><?php echo $filmmaker; ?></a></h4>
 												</div> <!-- /.short-film -->
 											
 										<?php endwhile; ?>
@@ -146,7 +146,6 @@
 							<?php if( get_field('notes')):?> <!-- start loop -->	
 								<div class="additional-notes">
 									<?php the_field('notes'); ?>
-									<button>Buy Ticket</button>
 								</div> <!-- /.additional-notes -->
 							<?php endif; ?> <!-- end loop -->
 
