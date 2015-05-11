@@ -4,8 +4,6 @@
 	}
 // Post-Submit Message - end
 
-
-
 .volunteer-radio {
 	list-style-type: none;
 	padding: 0;
@@ -41,6 +39,42 @@
 .last-name, .phone, {
 	padding-left: 1%;
 }
+
+[type="radio"] {
+	border: 0; 
+	clip: rect(0 0 0 0); 
+	height: 1px; margin: -1px; 
+	overflow: hidden; 
+	padding: 0; 
+	position: absolute; 
+	width: 1px;
+}
+
+[type="radio"] + span::before {
+	content: '';
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	vertical-align: -0.25em;
+	border-radius: 1em;
+	border: 0.125em solid white;
+	box-shadow: 0 0 0 0.15em white;
+	margin-right: 0.75em;
+	background: white;
+	transition: 0.3s ease all;
+}
+
+[type="radio"]:checked + span::before {
+	background: $hover;
+	box-shadow: 0 0 0 0.25em $hover;
+}
+
+// [type="radio"]:focus + span::after {
+// 	content: '\0020\2190';
+// 	font-size: 1.5em;
+// 	line-height: 1;
+// 	vertical-align: -0.125em;
+// }
 
 @media all and (max-width: 768px) {
 	.first-name, .last-name, .e-mail, .phone {

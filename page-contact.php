@@ -55,7 +55,7 @@
 								<?php endif; ?>
 							
 							<div class="sponsorship">
-								<p>Click <a href="" target="">here</a> to request a sponsorship package.</p>
+								<p>Click <a href="https://docs.google.com/forms/d/1jKCwybywfaHxWdRezDQ0Mp1anKsW5wJW9dSVLs5IeNM/viewform" target="_blank">here</a> to request a sponsorship package.</p>
 							</div> <!-- /.sponsorship -->
 							
 							<?php if( get_field('survey')):?>
