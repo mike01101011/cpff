@@ -31,9 +31,9 @@ gulp.task('styles', function(){
 
 //Minify Javascript
 gulp.task('compress', function(){
-	return gulp. src('./js/scripts-work.js')
+	return gulp. src('./js/production/*.js')
 		.pipe(uglify())
-		.pipe(gulp.dest('./js/scripts.js'));
+		.pipe(gulp.dest('./js/live'));
 });
 
 

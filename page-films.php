@@ -35,7 +35,7 @@
 			<!-- start loop -->
 			<?php if ( $onePageQuery->have_posts() ) : ?>
 				<?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
-					<section class="film">
+					<section class="film <?php the_field( 'feature_film' ); ?>">
 						<div class="container">
 
 							<?php if( get_field('date')):?> <!-- start loop -->
