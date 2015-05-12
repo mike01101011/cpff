@@ -38,16 +38,16 @@
 					<section class="film <?php the_field( 'feature_film' ); ?>">
 						<div class="container">
 
-							<?php if( get_field('date')):?> <!-- start loop -->
-								<div class="date">
-									<h4><?php the_field( 'date' ); ?></h4>
-								</div> <!-- /.date -->
-							<?php endif; ?> <!-- end loop -->
-
 							<?php if( get_field('event_info')):?> <!-- start loop -->
 								<div class="event-info clearfix">
 									<?php the_field( 'event_info' ); ?>
 								</div> <!-- /.event-info -->
+							<?php endif; ?> <!-- end loop -->
+							
+							<?php if( get_field('date')):?> <!-- start loop -->
+								<div class="date">
+									<h4><?php the_field( 'date' ); ?></h4>
+								</div> <!-- /.date -->
 							<?php endif; ?> <!-- end loop -->
 							
 							<?php if( get_field('feature_film')):?> <!-- start loop -->

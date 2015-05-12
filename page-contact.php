@@ -91,7 +91,7 @@
 										<button type="submit" name="subscribe" id="mailchimp-subscribe">subscribe</button>
 									</div> <!-- /.news-submit -->
 								</form>
-								<h3 id="newsletter-thank">Be sure to check your inbox!!!</h3>
+								<h3 id="newsletter-thank">Be sure to check your inbox!</h3>
 							</div><!-- /.mailchimp -->
 							
 							

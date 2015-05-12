@@ -13,6 +13,21 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.1/slick-theme.min.css" />
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
+  <!-- social media - start -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@christiepitsff" />
+  <meta name="twitter:creator" content="@christiepitsff" />
+  <meta name="twitter:title" content="Christie Pits Film Festival" />
+  <meta name="twitter:description" content="Official website for the Toronto-based Film Festival." />
+  <meta name="twitter:image" content="http://christiepitsff.com/social/cpff-logo.png" />
+
+  <meta property="og:title" content="Christie Pits Film Festival" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://christiepitsff.com/" />
+  <meta property="og:description" content="Official website for the Toronto-based Film Festival." />
+  <meta property="og:image" content="http://christiepitsff.com/social/cpff-logo.png" />
+  <!-- social media - end -->
+
   <?php wp_head(); ?>
 </head>
 

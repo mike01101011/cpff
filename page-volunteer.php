@@ -106,7 +106,7 @@
 					<button type="reset" name="Reset" value="Reset" class="volunteer-reset" id="volunteer-reset">Reset</button>
 				</div> <!-- /.volunteer-buttons -->
 			</form>
-			<h3 id="volunteer-thank">Thank you for your Support!!!</h3>
+			<h3 id="volunteer-thank">Thank you for your Support!</h3>
 			<p class="newsletter">Sign up for the festival newsletter <a href="../contact/#newsletter-signup">here</a> so you won't miss a thing!</p>
 		</div> <!-- /.container -->
 	</section> <!-- /.volunteer-form -->
