@@ -16,11 +16,14 @@
 <!-- website main content - start -->
 <main class="clearfix">
 		
-		
-		<!-- page title - start -->
-		<h2><?php the_title(); ?></h2>
-		<!-- page title - end -->
-		
+	<div class="container">
+		<div class="title-headline">
+			<!-- page title - start -->
+			<h2><?php the_title(); ?></h2>
+			<!-- page title - end -->
+			<?php the_content(); ?>
+		</div>  <!-- /.title-headline -->			
+	</div> <!-- .container -->
 		
 	
 			<?php
@@ -130,6 +133,12 @@
 									</div> <!-- /.food-vendor -->
 								</div> <!-- /.food vendors -->
 							<?php endif; ?> <!-- end loop -->
+							
+							<?php if( get_field('notes')):?> <!-- start loop -->	
+								<div class="additional-notes">
+									<?php the_field('notes'); ?>
+								</div> <!-- /.additional-notes -->
+							<?php endif; ?> <!-- end loop -->
 
 							<?php if( get_field('trailer')):?> <!-- start loop -->
 								<div class="trailer clearfix">
@@ -143,11 +152,6 @@
 								</div> <!-- /.facebook-event -->
 							<?php endif; ?> <!-- end loop -->
 
-							<?php if( get_field('notes')):?> <!-- start loop -->	
-								<div class="additional-notes">
-									<?php the_field('notes'); ?>
-								</div> <!-- /.additional-notes -->
-							<?php endif; ?> <!-- end loop -->
 
 						</div> <!-- /.container -->
 					</section> <!-- /.film -->

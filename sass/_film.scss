@@ -2,6 +2,15 @@
 	margin: 15px 0;
 }
 
+.title-headline {
+	p {
+		margin-top: 1.5%;
+		font-size: 2rem;
+	}
+	border-bottom: .2rem solid darken(darkgreen, 5%);
+	padding-bottom: 1.5%;
+}
+
 .date {
 	margin-top: 0;
 }
@@ -15,6 +24,9 @@
 	margin-top: 0;
 }
 
+.facebook-event {
+	margin-bottom: 0;
+}
 
 .presenter-logo, .co-presenter-logo, .food-vendor-logo  {
 	text-align: center;
