@@ -157,7 +157,8 @@ TweenMax.to(lead, '3', {
 });
 
 var arrow = document.getElementsByClassName("arrow")
-TweenMax.from(arrow, '5', {
+TweenMax.from(arrow, '3', {
+	delay: '2.25',
 	opacity:'0',
 	onComplete:loop
 });
@@ -166,7 +167,7 @@ function loop() {
 	TweenMax.to(arrow, '.75', {
 		ease: Power1.easeInOut,
 		opacity: '1',
-		top:"97.5%",
+		top:"99%",
 		repeat:-1,
 		yoyo:true,
 	});
