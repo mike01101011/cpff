@@ -157,8 +157,17 @@ TweenMax.to(lead, '3', {
 });
 
 var arrow = document.getElementsByClassName("arrow")
-TweenMax.to(arrow, '1', {
-	delay: '3.25',
-	opacity: '1',
-	top:"97.5%",
+TweenMax.from(arrow, '5', {
+	opacity:'0',
+	onComplete:loop
 });
+
+function loop() {
+	TweenMax.to(arrow, '.75', {
+		ease: Power1.easeInOut,
+		opacity: '1',
+		top:"97.5%",
+		repeat:-1,
+		yoyo:true,
+	});
+}

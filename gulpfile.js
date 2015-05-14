@@ -49,8 +49,8 @@ gulp.task('images', function() {
 gulp.task('watch', function() {
 	gulp.watch("*.php").on("change", browserSync.reload);
 	gulp.watch('./sass/*.scss', ['styles']);
-	gulp.watch('./js/*.js').on("change", browserSync.reload);
-	gulp.watch('./js/*.js', ['compress']);
+	gulp.watch('./js/production/*.js', ['compress']);
+	gulp.watch('./js/live/*.js').on("change", browserSync.reload);
 	gulp.watch('./img/*.*', ['images']);
 
 });
