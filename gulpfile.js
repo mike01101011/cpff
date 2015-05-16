@@ -7,8 +7,7 @@ var gulp = require('gulp'),
 	reload = browserSync.reload,
 	autoprefixer = require('gulp-autoprefixer'),
 	minifyCSS = require('gulp-minify-css'),
-	uglify = require('gulp-uglify'),
-	imagemin = require('gulp-imagemin');
+	uglify = require('gulp-uglify');
 
 // Proxy Server
 gulp.task('browser-sync', function() {
@@ -37,23 +36,12 @@ gulp.task('compress', function(){
 });
 
 
-// Minify images
-gulp.task('images', function() {
-	return gulp.src('./img/*.*')
-		.pipe(imagemin({
-			svgoPlugins: [{removeViewBox: false}]
-		}))
-		.pipe(gulp.dest('./img/'))
-});
-
 gulp.task('watch', function() {
 	gulp.watch("*.php").on("change", browserSync.reload);
 	gulp.watch('./sass/*.scss', ['styles']);
 	gulp.watch('./js/production/*.js', ['compress']);
 	gulp.watch('./js/live/*.js').on("change", browserSync.reload);
-	gulp.watch('./img/*.*', ['images']);
-
 });
 
 // Default
-gulp.task('default', ['styles', 'compress', 'images', 'browser-sync', 'watch']);
+gulp.task('default', ['styles', 'compress', 'browser-sync', 'watch']);
