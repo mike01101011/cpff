@@ -1,16 +1,14 @@
 <?php get_header(); ?>
 <?php include("navigation.php"); ?>
 
-<!-- carousel - start -->
-	<? include("carousel.php"); ?>
-<!-- carousel - end -->
-  <div class="container">
+	<main class="clearfix">
+		<div class="container">
+			
+			<div class="error-message">
+				<iframe src="//giphy.com/embed/pvluAwaBlPhpm?html5=true" width="480" height="478" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			</div> <!-- /.flexItem -->
 
-    <h1>Not Found</h1>
-    <p>Apologies, but the page you requested could not be found. Perhaps searching will help.</p>
-    <?php get_search_form(); ?>
-
-  </div> <!-- /.container -->
-</main> <!-- /.main -->
+		</div> <!-- /.container -->
+	</main> <!-- /.main -->
 
 <?php get_footer(); ?>
