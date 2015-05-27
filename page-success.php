@@ -21,7 +21,7 @@
 	
 	<section class="donation">
 		<div class="container">
-			<?php the_content(); ?>
+			<h3>Thank you for your generosity!</h3>
 		</div> <!-- /.container -->
 	</section> <!-- /.donation -->
 

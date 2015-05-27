@@ -60,21 +60,7 @@ function hackeryou_scripts() {
   	true //load in footer
   );
 
-  wp_enqueue_script(
-    'plugins', //handle
-    get_template_directory_uri() . '/js/plugins.js', //source
-    false, //dependencies
-    null, // version number
-    true //load in footer
-  );
-
-  wp_enqueue_script(
-    'scripts', //handle
-    get_template_directory_uri() . '/js/scripts.js', //source
-    array( 'jquery', 'plugins' ), //dependencies
-    null, // version number
-    true //load in footer
-  );
+  
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_scripts' );
