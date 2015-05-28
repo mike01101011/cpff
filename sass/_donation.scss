@@ -1,15 +1,16 @@
 .sc-uea-container {
-	margin-top: 3%;
+	margin-top: .5%;
 	input {
 		display: block;
 		border-radius: 5px;
-		width: 100%;
+		width: 50%;
 		font-size: 1.6rem;
 		padding: 5px;
+		text-align: center;
 		@include page-paragraph;
 		outline: none;
 		border: none;
-		margin-top: .5%;
+		margin: 0 auto;
 	}
 }
 
@@ -20,7 +21,7 @@
 .parsley-errors-list {
 	list-style-type: none;
 	padding: 0;
-	margin-top: 2%;
+	margin-top: 5px;
 	margin-bottom: 0;
 	@include page-paragraph;
 	font-size: 2rem;
@@ -36,5 +37,40 @@
 		margin: 2.5%;
 		font-family: $main;
 		font-size: 3rem;
+	}
+}
+
+.donation-message {
+	text-align: center;
+}
+
+.donation-label {
+	text-align: center;
+	font-weight: 700;
+	margin-top: 3%;
+}
+
+.sc-form-group {
+	label {
+		top: 100%;
+		left: 25%;
+		position: relative;
+		font-family: "Open Sans",sans-serif;
+		font-size: 1.6rem;
+		font-weight: 700;
+	}
+}
+
+.fine-print {
+	text-align: center;
+	margin-top: 1%;
+	font-size: 1.4rem;
+}
+
+@media all and (max-width: 650px) {
+	.sc-uea-container {
+		input {
+			width: 75%;
+		}
 	}
 }
