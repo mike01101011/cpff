@@ -22,6 +22,7 @@
 	<section class="donation">
 		<div class="container">
 			<h3>Thank you for your generosity!</h3>
+			<p class="donation-message">Be sure to check your inbox with a receipt from <strong>Toronto Outdoor Picture Show</strong>.</p>
 		</div> <!-- /.container -->
 	</section> <!-- /.donation -->
 
