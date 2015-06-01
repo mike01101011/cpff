@@ -21,11 +21,6 @@
 			<!-- page title - start -->
 			<h2><?php the_title(); ?></h2>
 			<!-- page title - end -->
-			<?php the_content(); ?>
-		</div>  <!-- /.title-headline -->			
-	</div> <!-- .container -->
-		
-	
 			<?php
 				$onePageQuery = new WP_Query(
 					array(
@@ -35,10 +30,24 @@
 					)
 				);
 			?>
+			<ul class="menu_dates">
+				<?php if ( $onePageQuery->have_posts() ) : ?>
+					<?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
+						<li class="menu_date"><a href = "./#<?php echo str_replace(' ', '', get_field( 'feature_film' )); ?>"><?php the_field( 'feature_film' ); ?></a></li>
+					<?php endwhile; ?>
+					<?php wp_reset_postdata(); ?>
+					<?php else: ?>
+				<?php endif; ?>
+			</ul>
+			<?php the_content(); ?>
+		</div>  <!-- /.title-headline -->			
+	</div> <!-- .container -->
+		
+	
 			<!-- start loop -->
 			<?php if ( $onePageQuery->have_posts() ) : ?>
 				<?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
-					<section class="film <?php the_field( 'feature_film' ); ?>">
+					<section class="film" id="<?php echo str_replace(' ', '', get_field( 'feature_film' )); ?>">
 						<div class="container">
 
 							<?php if( get_field('event_info')):?> <!-- start loop -->

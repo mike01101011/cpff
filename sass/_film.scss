@@ -74,6 +74,25 @@
 }
 
 
+// Navigation to Individual Films - start
+ul.menu_dates {
+	display: flex;
+	flex-flow: row wrap;
+	padding: 0;
+	margin:0;
+}
+
+.menu_date {
+	flex: 1 0 250px;
+	padding: 1.5% 0;
+	list-style-type: none;
+	text-align: center;
+	&:last-child {
+		padding-bottom: 0;
+	}
+}
+// Navigation to Individual Films - end
+
 
 //Facebook event link - start
 .facebook-event {
