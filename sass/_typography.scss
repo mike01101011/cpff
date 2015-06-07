@@ -141,17 +141,31 @@
 
 	.additional-notes {
 		p {
-			@include page-paragraph;
-			font-size: 2rem;
-			font-weight: 400;
+			font-size: 2.4rem;
+			font-weight: 700;
 			// line-height: 40px;
+			text-transform: uppercase;
 			text-align: center;
+			margin-bottom: 10px;
+		}
+		p.rain {
+			@include page-paragraph;
+			text-transform: none;
+			font-weight: 400;
+			font-size: 2rem;
+		}
+		hr {
+			background-color: #004b00;
+			  padding-bottom: .2rem;
+			  border: none;
+			  margin-bottom: 1.5%;
 		}
 	}
 
 	li.menu_date {
 		display: list-item;
 		font-size: 4rem;
+		line-height: 3.9rem;
 		font-family: $feature;
 		font-weight: 600;
 		text-transform: uppercase;

@@ -33,7 +33,7 @@
 			<ul class="menu_dates">
 				<?php if ( $onePageQuery->have_posts() ) : ?>
 					<?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
-						<li class="menu_date"><a href = "./#<?php echo str_replace(' ', '', get_field( 'feature_film' )); ?>"><?php the_field( 'feature_film' ); ?></a></li>
+						<li class="menu_date"><a href = "./#<?php echo str_replace(str_split(' ,?\\/:*?"<>|~`'), '', get_field( 'feature_film' )); ?>"><?php the_field( 'feature_film' ); ?></a></li>
 					<?php endwhile; ?>
 					<?php wp_reset_postdata(); ?>
 					<?php else: ?>
@@ -47,7 +47,7 @@
 			<!-- start loop -->
 			<?php if ( $onePageQuery->have_posts() ) : ?>
 				<?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
-					<section class="film" id="<?php echo str_replace(' ', '', get_field( 'feature_film' )); ?>">
+					<section class="film" id="<?php echo str_replace(str_split(' ,?\\/:*?"<>|~`'), '', get_field( 'feature_film' )); ?>">
 						<div class="container">
 
 							<?php if( get_field('event_info')):?> <!-- start loop -->
@@ -142,6 +142,18 @@
 									</div> <!-- /.food-vendor -->
 								</div> <!-- /.food vendors -->
 							<?php endif; ?> <!-- end loop -->
+
+							<?php if( get_field('trailer')):?> <!-- start loop -->
+								<div class="trailer clearfix">
+									<?php the_field( 'trailer' ); ?>
+								</div> <!-- /.trailer -->
+							<?php endif; ?> <!-- end loop -->
+							
+							<?php if( get_field('facebook_rsvp')):?> <!-- start loop -->	
+								<div class="facebook-event">
+									<a href="<?php the_field('facebook_rsvp'); ?>" target="_blank"><i class="fa fa-facebook-official "></i> event page</a>
+								</div> <!-- /.facebook-event -->
+							<?php endif; ?> <!-- end loop -->
 							
 							<?php if( get_field('notes')):?> <!-- start loop -->	
 								<div class="additional-notes">
@@ -149,17 +161,6 @@
 								</div> <!-- /.additional-notes -->
 							<?php endif; ?> <!-- end loop -->
 
-							<?php if( get_field('trailer')):?> <!-- start loop -->
-								<div class="trailer clearfix">
-									<?php the_field( 'trailer' ); ?>
-								</div> <!-- /.trailer -->
-							<?php endif; ?> <!-- end loop -->
-
-							<?php if( get_field('facebook_rsvp')):?> <!-- start loop -->	
-								<div class="facebook-event">
-									<a href="<?php the_field('facebook_rsvp'); ?>" target="_blank"><i class="fa fa-facebook-official "></i> event page</a>
-								</div> <!-- /.facebook-event -->
-							<?php endif; ?> <!-- end loop -->
 
 
 						</div> <!-- /.container -->

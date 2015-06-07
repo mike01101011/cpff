@@ -38,10 +38,10 @@
 
 	@mixin feature-title {
 		font-family: $feature;
-		font-size: 9rem;
+		font-size: 8.5rem;
 		text-align: center;
 		text-transform: uppercase;
-		line-height: 7.5rem;
+		line-height: 8.25rem;
 	}
 
 	@mixin short-title {
