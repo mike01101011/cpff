@@ -98,7 +98,7 @@
 
 
 // Festival Info - start
-.info {
+#info {
 	h3 {
 		@include page-subheadline;
 		font-size: 2.4rem;
@@ -113,6 +113,7 @@
 	padding-bottom:0;
 	h2 {
 		margin-top: 0;
+		padding-top: 0;
 	}
 	.story {
 		padding-bottom: 0;
