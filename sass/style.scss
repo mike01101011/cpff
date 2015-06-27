@@ -206,3 +206,7 @@ p.form-allowed-tags, .nocomments { display:none; }
 }
 .comment-meta a:active, .comment-meta a:hover, .reply a:hover, a.comment-edit-link:hover { color:#ff4b33; }
 #respond p, #comments-list ul #respond { margin:0; }
+
+* {
+  min-width: 0;
+}
