@@ -55,11 +55,12 @@
 		}
 	
 		li {
-			flex: 1 0 200px;
+			flex: 1 0 300px;
 			padding: 2.75%;
 			@include feature-title;
 			font-size: 4.75rem;
 			display: list-item;
+			line-height: 1;
 		}
 	}
 }

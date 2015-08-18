@@ -75,7 +75,7 @@
 		font-family: $short;
 		text-transform: uppercase;
 		font-size: 2.6rem;
-		// line-height: 25px;
+		line-height: 1;
 	}
 
 	.live-music {
@@ -99,7 +99,7 @@
 			font-size: 2.2rem;
 			&.director_name {
 				font-size: 3.2rem;
-				line-height: 2.2rem;
+				line-height: .8;
 			}
 		}
 	}
@@ -115,7 +115,7 @@
 			font-size: 2.2rem;
 			&.director_name {
 				font-size: 3.2rem;
-				line-height: 2.2rem;
+				line-height: .8;
 			}
 		}
 	}
@@ -165,7 +165,7 @@
 	li.menu_date {
 		display: list-item;
 		font-size: 4rem;
-		line-height: 3.9rem;
+		line-height: 1;
 		font-family: $feature;
 		font-weight: 600;
 		text-transform: uppercase;
@@ -180,7 +180,7 @@
 
 	.staff-name > h3 {
 		font-size: 2.5rem;
-		line-height: 23px;
+		line-height: 1;
 		text-transform: capitalize;
 		font-family: $main;
 		font-weight: 700;
@@ -192,7 +192,7 @@
 		font-weight: 400;
 		font-size: 2rem;
 		margin-top: 5px;
-		line-height: 20px;
+		line-height: 1;
 	}
 
 	li.board_member {
