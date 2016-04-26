@@ -46,13 +46,13 @@
 						</div> <!-- /.festival-image -->
 					</div> <!-- /.container -->
 				</section> <!-- #festial_bio -->
-				
+
 				<section id="staff_members">
 					<div class="container clearfix">
 						<h2>Festival Founding Members</h2>
 							<div class="staff">
 								<?php while ( has_sub_field('staff_members') ): ?>
-									
+
 										<div class="staff-member">
 											<div class="staff-image">
 												<?php $image = get_sub_field('staff_image'); ?>
@@ -68,8 +68,8 @@
 												</div> <!-- /.staff-title -->
 						                    </div> <!-- /.staff-info -->
 										</div> <!-- /.staff-member -->
-									
-								<?php endwhile; ?>	
+
+								<?php endwhile; ?>
 							</div> <!-- /.staff -->
 					</div> <!-- /.container -->
 				</section><!-- /#staff_members -->

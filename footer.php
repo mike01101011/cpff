@@ -23,6 +23,8 @@
 	 s.parentNode.insertBefore(g,s)}(document,"script"));
 	</script>
 
+<!-- UNCOMMENT TO SHOW ADMIN BAR -->
+<!-- <?php wp_footer(); ?> -->
 
 </body>
 </html>

@@ -18,6 +18,7 @@ function theme_setup() {
 	add_image_size('copresenter-logo', 425, 425);
 	add_image_size('food-vendor',400, 400);
 	add_image_size('small-logo', 200, 200);
+	add_image_size('films-page', 300, 450);
 
 
 	// Add default posts and comments RSS feed links to head
@@ -264,4 +265,5 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
+// UNCOMMENT TO SHOW ADMIN BAR
 show_admin_bar(false);
