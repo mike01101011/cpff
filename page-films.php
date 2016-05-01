@@ -17,11 +17,11 @@
 <main class="clearfix">
 
 	<div class="container">
-		<!-- <div class="title-headline"> -->
+		<div class="main-header">
 			<p>All screenings at Christie Pits Park</p>
 			<p>PWYC with suggested donation of $10</p>
 			<p>Screenings begin at sunset</p>
-		<!-- </div> .title-headline -->
+		</div> <!-- .main-header -->
 	</div> <!-- .container -->
 
 	<div class="container">

@@ -54,14 +54,14 @@
 
 .short-films, .co-presenter, .food-vendor {
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: column wrap;
 }
 .short-film, .co-presenter-logo, .food-vendor-logo {
-	flex: 1 0 300px;
+	// flex: 1 0 300px;
 	padding: 1% 0 2.75% 0;
 	// padding-top: 1%;
 	// border: 1px solid yellow;
-	margin: auto;
+	// margin: auto;
 	&:last-child {
 		// padding-bottom: 0;
 	}
@@ -123,14 +123,81 @@ ul.menu_dates {
 
 .film {
 	border: .2rem solid darken(darkgreen, 5%);
-	margin: 20px;
-	width: 45%;
+	margin: 10px;
+	width: 47%;
+	box-shadow: 2px 2px 2px #888;
+	img {
+		box-shadow: 1px 1px 1px #888;
+	}
+	h3, h4 {
+		text-shadow: 1px 1px 1px #888;
+	}
 }
 .flex {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: center;
 }
+.poster img{
+	max-width: 100%;
+	border: .2rem solid darken(darkgreen, 5%); 
+}
+.main-header {
+	text-align: right;
+}
+
+// Responsive - Start
+
+@media (max-width: 1000px) {
+	.feature h3 {
+		font-size: 4.25rem;
+		// font-size: 8.5rem;
+		line-height: 4.125rem;
+		// line-height: 8.25rem;
+	}
+	.short-film h3 {
+		font-size: 2.5rem;
+		// font-size: 5rem;
+		line-height: 2.25rem;
+		// line-height: 4.5rem;
+	}
+	.date h4{
+		font-size: 1.5rem;
+		// font-size: 3rem;
+		line-height: 1.25rem;
+		// line-height: 2.5rem;
+	}
+}
+@media (max-width: 790px) {
+	.feature h3 {
+		font-size: 2.83rem;
+		// font-size: 8.5rem;
+		line-height: 2.75rem;
+		// line-height: 8.25rem;
+	}
+	.short-film h3 {
+		font-size: 1.66rem;
+		// font-size: 5rem;
+		line-height: 1.5rem;
+		// line-height: 4.5rem;
+	}
+	.date h4{
+		font-size: 1rem;
+		// font-size: 3rem;
+		line-height: 0.83rem;
+		// line-height: 2.5rem;
+	}
+	.film {
+		margin: 7px;
+	}
+}
+@media (max-width: 480px) {
+	.film {
+		width: 47%;
+		margin: 6px;
+	}
+}
+// Responsive - End
 
 // MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE
