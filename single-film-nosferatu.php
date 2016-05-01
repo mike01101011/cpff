@@ -28,7 +28,7 @@
 					array(
 						'posts_per_page' => -1,
 // SET POST TYPE
-						'post_type' => 'film',
+						'post_type' => 'event',
 						'name' => 'nosferatu',
 						'order' => 'DSC'
 					)

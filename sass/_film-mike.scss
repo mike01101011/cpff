@@ -20,10 +20,12 @@
 
 // New CSS - Start
 
-.film {
+.films {
 	border: .2rem solid darken(darkgreen, 5%);
-	margin: 5px;
-	width: 31%;
+	margin: 10px;
+	// margin: 5px;
+	width: 47%;
+	// width: 31%;
 	box-shadow: 2px 2px 2px #bbb;
 	img {
 		box-shadow: 1px 1px 1px #bbb;
@@ -65,7 +67,7 @@
 // Responsive - Start
 
 @media (max-width: 1492px) {
-	.film {
+	.films {
 		width: 47%;
 		margin: 10px;
 	}
@@ -91,7 +93,7 @@
 	}
 }
 @media (max-width: 790px) {
-	.film {
+	.films {
 		width: 47%;
 		margin: 6px;
 	}
@@ -113,14 +115,14 @@
 		line-height: 0.83rem;
 		// line-height: 2.5rem;
 	}
-	.film {
+	.films {
 		margin: 7px;
 	}
 }
 @media (max-width: 480px) {
-	.film {
+	.films {
 		width: 47%;
-		margin: 6px;
+		margin: 5px;
 	}
 }
 // Responsive - End

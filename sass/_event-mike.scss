@@ -1,0 +1,10 @@
+.film {
+	margin: 20px;
+	width: 62%;
+	p {
+		@include page-paragraph;
+		text-align: left;
+		text-transform: none;
+		text-shadow: 1px 1px 1px #ccc;
+	}
+}

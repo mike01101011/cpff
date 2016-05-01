@@ -49,15 +49,7 @@
 section {
 	padding: 1.5% 0;
 	&:nth-child(even) {
-
-// MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE
-
-		background: darken(ivory, 2.5%);
-		// background: darken(beige, 2.5%);
-
-// MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE
-
-
+		background: darken(beige, 2.5%);
 	}
 	&:nth-child(odd) {
 		background: darken(ivory, 2.5%);

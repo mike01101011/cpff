@@ -46,13 +46,13 @@
 			<?php the_content(); ?>
 		</div>  <!-- /.title-headline -->			
 	</div> <!-- .container -->
-
+<div class="container">
 <div class="flex">
 			<!-- start loop -->
 			<?php if ( $onePageQuery->have_posts() ) : ?>
 				<?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
 					
-					<section class="film" id="<?php echo str_replace(str_split(' ,?\\/:*?"<>|~`'), '', get_field( 'feature_film' )); ?>">
+					<section class="films" id="<?php echo str_replace(str_split(' ,?\\/:*?"<>|~`'), '', get_field( 'feature_film' )); ?>">
 						<div class="container">
 
 <!-- POSTER -->
@@ -104,6 +104,7 @@
 				<?php endwhile; ?>
 
 </div> <!-- /.flex -->
+</div>
 			
 				<?php wp_reset_postdata(); ?>
 				<?php else: ?>

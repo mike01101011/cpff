@@ -42,7 +42,7 @@
 			<?php if ( $onePageQuery->have_posts() ) : ?>
 				<?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
 					
-					<section class="film" id="<?php echo str_replace(str_split(' ,?\\/:*?"<>|~`'), '', get_field( 'feature_film' )); ?>">
+					<section class="film films" id="<?php echo str_replace(str_split(' ,?\\/:*?"<>|~`'), '', get_field( 'feature_film' )); ?>">
 						<div class="container">
 <!-- xx01 TITLE TEXT -->
 							<?php if( get_field('title')):?> <!-- start loop -->
