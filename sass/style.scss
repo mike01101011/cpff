@@ -9,6 +9,7 @@ Author URI: http://nikin.net
  
 // base style - start
   @import 'variables';
+  @import 'variables-mike';
   @import 'default';
   @import 'typography';
   @import 'navigation';
@@ -16,6 +17,7 @@ Author URI: http://nikin.net
   @import 'home';
   @import 'about';
   @import 'film';
+  @import 'film-mike';
   @import 'media';
   @import 'sponsorsPartners';
   @import 'gallery';

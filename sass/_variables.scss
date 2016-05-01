@@ -63,17 +63,12 @@
 
 	@mixin date {
 		font-family: $short;
-		font-size: 2.25rem;
-		// font-size: 3rem;
+		font-size: 3rem;
 		text-transform: uppercase;
-		text-align: left;
-		// text-align: center;
+		text-align: center;
 		font-weight: 600;
-		line-height: 1.875rem;
-		// line-height: 2.5rem;
+		line-height: 2.5rem;
 	}
-
-// MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE - End
 
 	@mixin event {
 		font-family: $short;
