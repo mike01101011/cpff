@@ -19,6 +19,7 @@ function theme_setup() {
 	add_image_size('food-vendor',400, 400);
 	add_image_size('small-logo', 200, 200);
 	add_image_size('films-page', 300, 450);
+	add_image_size('films-page-large', 400, 600);
 
 
 	// Add default posts and comments RSS feed links to head

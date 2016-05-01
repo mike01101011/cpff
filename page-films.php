@@ -27,7 +27,7 @@
 	<div class="container">
 		<div class="title-headline">
 			<!-- page title - start -->
-			<h2><?php the_title(); ?></h2>
+			<h2>Summer 2016 Season</h2>
 			<!-- page title - end -->
 			<?php
 				$onePageQuery = new WP_Query(
@@ -57,13 +57,16 @@
 
 <!-- POSTER -->
 							<?php if( get_field('poster')):?> <!-- start loop -->
-								<div class="poster clearfix">
-									<?php $image = get_field('poster'); if( !empty($image) ): ?>
+								<a href="<?php the_permalink(); ?>">
+									<div class="poster clearfix">
+										<?php $image = get_field('poster'); if( !empty($image) ): ?>
 <!-- TO PRINT ARRAY -->
 <!-- <pre><?php print_r($image);?></pre> -->
-										<img src="<?php echo $image['sizes']['films-page']; ?>" alt="<?php echo $image['alt']; ?>" />
-									<?php endif; ?>
-								</div> <!-- /.poster -->
+											<img src="<?php echo $image['sizes']['films-page-large']; ?>" alt="<?php echo $image['alt']; ?>" />
+										
+										<?php endif; ?>
+									</div> <!-- /.poster -->
+								</a>
 							<?php endif; ?> <!-- end loop -->
 <!-- FEATURE -->
 							<?php if( get_field('feature_film')):?> <!-- start loop -->

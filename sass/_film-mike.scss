@@ -1,21 +1,35 @@
+// Updated CSS - Start
 
 .short-film, .co-presenter-logo, .food-vendor-logo {
-	// flex: 1 0 300px;
-	// margin: auto;
+	flex: 0 1 auto;
+	margin: 0;
+}
+.title-headline {
+	h2{
+		text-align: left;
+	}
+	p {
+    	font-size: 1.6rem;
+    }
+    border-bottom: none;
+ 	text-shadow: 1px 1px 1px #ccc;
 }
 
-// MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE
+
+// Updated CSS - End
+
+// New CSS - Start
 
 .film {
 	border: .2rem solid darken(darkgreen, 5%);
-	margin: 10px;
-	width: 47%;
-	box-shadow: 2px 2px 2px #888;
+	margin: 5px;
+	width: 31%;
+	box-shadow: 2px 2px 2px #bbb;
 	img {
-		box-shadow: 1px 1px 1px #888;
+		box-shadow: 1px 1px 1px #bbb;
 	}
 	h3, h4 {
-		text-shadow: 1px 1px 1px #888;
+		text-shadow: 1px 1px 1px #bbb;
 	}
 }
 .flex {
@@ -26,14 +40,36 @@
 }
 .poster img{
 	max-width: 100%;
-	border: .2rem solid darken(darkgreen, 5%); 
+	border: .2rem solid darken(mediumseagreen, 5%);
+	transition: border 500ms;
+	&:hover {
+		border: .2rem solid darken(darkgreen, 5%);
+	}
 }
 .main-header {
 	text-align: right;
+	margin-top: 20px;
+	padding-top: 20px;
+	text-shadow: 1px 1px 1px #ccc;
+	border-top: .2rem solid darken(darkgreen, 5%);
+	p {
+		font-size: 1.3rem;
+	}
+}
+.title-headline {
+	border-bottom: .2rem solid darken(darkgreen, 5%); 
+	margin-bottom: 20px;
+	padding-bottom: 20px;
 }
 
 // Responsive - Start
 
+@media (max-width: 1492px) {
+	.film {
+		width: 47%;
+		margin: 10px;
+	}
+}
 @media (max-width: 1000px) {
 	.feature h3 {
 		font-size: 4.25rem;
@@ -55,6 +91,10 @@
 	}
 }
 @media (max-width: 790px) {
+	.film {
+		width: 47%;
+		margin: 6px;
+	}
 	.feature h3 {
 		font-size: 2.83rem;
 		// font-size: 8.5rem;
@@ -85,4 +125,4 @@
 }
 // Responsive - End
 
-// MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE MIKE
+// New CSS - End

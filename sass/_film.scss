@@ -57,11 +57,11 @@
 	flex-flow: column wrap;
 }
 .short-film, .co-presenter-logo, .food-vendor-logo {
-	// flex: 1 0 300px;
+	flex: 1 0 300px;
 	padding: 1% 0 2.75% 0;
 	// padding-top: 1%;
 	// border: 1px solid yellow;
-	// margin: auto;
+	margin: auto;
 	&:last-child {
 		// padding-bottom: 0;
 	}
