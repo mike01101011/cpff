@@ -1,10 +1,72 @@
+.short-films, .co-presenter, .food-vendor {
+	flex-flow: row wrap;
+}
+
 .film {
 	margin: 20px;
-	width: 62%;
+	border: .2rem solid darken(darkgreen, 5%);
+	box-shadow: 2px 2px 2px #bbb;
 	p {
 		@include page-paragraph;
 		text-align: left;
 		text-transform: none;
 		text-shadow: 1px 1px 1px #ccc;
 	}
+	.event-poster img, .event-trailer {
+		box-shadow: 1px 1px 1px #bbb;
+	}
+	h3, h4, a {
+		text-shadow: 1px 1px 1px #bbb;
+	}
 }
+// .event-co-presenter-logo img {
+//     max-height: 101.75px;
+//     box-shadow: none;
+// }
+// .supporter-logo img {
+// 	max-height: 118px;
+// 	box-shadow: 1px 1px 1px #bbb;
+// }
+
+.films-page-link {
+	@include sponsor-partner;
+	text-align: left;
+	margin-top: 20px;
+	text-shadow: 1px 1px 1px #ccc;
+}
+.event-poster {
+	img {
+		border: .2rem solid darken(darkgreen, 5%);
+	}
+}
+.event-poster-credit p {
+	font-size: 1rem;
+}
+.event-feature h3 {
+		font-size: 4.25rem;
+		// font-size: 8.5rem;
+		line-height: 4.125rem;
+		// line-height: 8.25rem;
+}
+.event-short h3 {
+	font-size: 2.5rem;
+	line-height: 2.25rem;
+}
+.presenter-logo, .co-presenter-logo, .food-vendor-logo  {
+	margin: auto 0;
+	text-align: left;
+}
+.food-vendor-logo  {
+	max-width: 45%;
+}
+	// @include navbar;
+	// @include page-headline;
+	// @include page-paragraph;
+	// @include feature-title;
+	// @include short-title;
+	// @include date;
+	// @include event;
+	// @include page-subheadline;
+	// @include news-source;
+	// @include news;
+	// @include sponsor-partner;
