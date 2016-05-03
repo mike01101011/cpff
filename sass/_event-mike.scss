@@ -1,7 +1,5 @@
-.short-films, .co-presenter, .food-vendor {
-	flex-flow: row wrap;
-}
 
+// General CSS - Start
 .film {
 	margin: 20px;
 	border: .2rem solid darken(darkgreen, 5%);
@@ -19,21 +17,56 @@
 		text-shadow: 1px 1px 1px #bbb;
 	}
 }
-// .event-co-presenter-logo img {
-//     max-height: 101.75px;
-//     box-shadow: none;
-// }
-// .supporter-logo img {
-// 	max-height: 118px;
-// 	box-shadow: 1px 1px 1px #bbb;
-// }
+// General CSS - Start
 
+.details > p {
+    font-weight: 700;
+}
+
+// Flexbox - Start
+.short-films, .co-presenter, .food-vendor {
+	flex-flow: row wrap;
+}
+.trailer-facebook-flex {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.details-flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.details-flex-right {
+	width: 50%;
+	border-left: .2rem solid darken(darkgreen, 5%); 
+}
+// Flexbox - End
+
+.bottom-border {
+	border-bottom: .2rem solid darken(darkgreen, 5%);
+	padding-bottom: 15px;
+}
+
+.event-overview p {
+	padding: 5px 0;
+}
+
+.event-short-film {
+	padding: 0;
+}
+
+// Films Page Link - Start
 .films-page-link {
 	@include sponsor-partner;
 	text-align: left;
 	margin-top: 20px;
 	text-shadow: 1px 1px 1px #ccc;
 }
+// Films Page Link - Start
+
+
+// Poster - Start
 .event-poster {
 	img {
 		border: .2rem solid darken(darkgreen, 5%);
@@ -42,23 +75,38 @@
 .event-poster-credit p {
 	font-size: 1rem;
 }
+// Poster - End
+
+
+// Feature - Start
 .event-feature h3 {
 		font-size: 4.25rem;
 		// font-size: 8.5rem;
 		line-height: 4.125rem;
 		// line-height: 8.25rem;
 }
+// Feature - End
+
+// Images - Start
+.event-poster img, .event-presenter-logo img, .event-co-presenter-logo img, .event-food-vendor-logo img {
+	display: block;
+	margin: 0 auto;
+}
+// Images - Start
+
+// Short - Start
 .event-short h3 {
 	font-size: 2.5rem;
 	line-height: 2.25rem;
 }
-.presenter-logo, .co-presenter-logo, .food-vendor-logo  {
-	margin: auto 0;
-	text-align: left;
-}
+// Short - End
+
+// Food Vendor - Start
 .food-vendor-logo  {
 	max-width: 45%;
 }
+// Food Vendor - End
+
 	// @include navbar;
 	// @include page-headline;
 	// @include page-paragraph;
