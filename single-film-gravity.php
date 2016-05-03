@@ -34,7 +34,7 @@
 			<section class="film" id="<?php echo str_replace(str_split(' ,?\\/:*?"<>|~`'), '', get_field( 'feature_film' )); ?>">
 				<div class="container">
 					<div class="films-page-link bottom-border">
-						<a href=" http://localhost:8888/cpff/films/">Return to Films Page</a>
+						<a href=" http://localhost:8888/cpff/films/">Films Page</a>
 					</div> <!-- .container -->
 				</div>
 				<div class="container">
@@ -49,7 +49,7 @@
 <!-- 02 DATE WYSIWYG -->
 					<?php if( get_field('date')):?> <!-- start loop -->
 						<div class="date event-date">
-							<h4><?php the_field( 'date' ); ?></h4>
+							<?php the_field( 'date' ); ?>
 						</div> <!-- /.date -->
 					<?php endif; ?> <!-- end loop -->
 
@@ -71,18 +71,22 @@
 						</div> <!-- /.shorts -->
 					<?php endif; ?> <!-- end loop -->
 <!-- 05 POSTER IMAGE -->
+<div class="poster-flex">
 					<?php if( get_field('poster')):?> <!-- start loop -->
 						<div class="poster event-poster clearfix">
 							<?php $image = get_field('poster'); if( !empty($image) ): ?>
 <!-- TO PRINT ARRAY -->
 <!-- <pre><?php //print_r($image);?></pre> -->
-								<img src="<?php echo $image['sizes']['films-page-large']; ?>" alt="<?php echo $image['alt']; ?>" />
+								<a href="<?php echo $image['url']; ?>" target="_blank">
+									<img src="<?php echo $image['sizes']['films-page-large']; ?>" alt="<?php echo $image['alt']; ?>" />
+								</a>
 							<?php endif; ?>
-							<div class="short event-poster-credit clearfix">
-								<p>Design Credit: José Garcia of <a href="http://www.garciadesign.ca/" target="_blank">Garcia Design</a></p>
-							</div>
 						</div> <!-- /.poster -->
+						<div class="short event-poster-credit clearfix">
+							<p>Designer: José Garcia, <a href="http://www.garciadesign.ca/" target="_blank">Garcia Design</a></p>
+						</div>
 					<?php endif; ?> <!-- end loop -->
+</div> <!-- .poster-flex -->
 <!-- 06 FEATURE FILM TEXT -->
 	
 					<?php if( get_field('feature_film')):?> <!-- start loop -->
@@ -95,13 +99,13 @@
 					<?php if( have_rows('short_films') ): ?> <!-- start loop -->
 						<div class="shorts event-shorts clearfix bottom-border">
 							<p>Screening with</p>
-							<div class="short-films event-short">
+							<div class="short-films event-short-films">
 								<?php while( have_rows('short_films') ): the_row();
 									$short = get_sub_field('short_film');
 									$filmmaker = get_sub_field('short_director');
 									$twitter = get_sub_field('twitter_handle');
 								?>						
-										<div class="short-film ">
+										<div class="short-film event-short-film">
 											<h3><?php echo $short; ?></h3>
 										</div> <!-- /.short-film -->	
 								<?php endwhile; ?>
@@ -114,7 +118,7 @@
 	<div class="details-flex-left">
 					<div class="details clearfix">
 						<p>Event Details</p>
-						<ul>
+						<ul class="details-list">
 							<li><p>Eats & Treats @ 6pm</p></li>
 							<li><p>Films @ Sundown</p></li>
 							<li><p>Free / PWYC (suggested donation $10)</p></li>
@@ -132,7 +136,6 @@
 							<a href="<?php the_field( 'trailer' ); ?>" target="_blank"><i class="fa fa-youtube-square "></i> Film Trailer</a>
 						</div> <!-- /.facebook-event -->
 					<?php endif; ?> <!-- end loop -->
-<!-- <i class="fa fa-youtube-square fa-5x" title="YouTube" aria-hidden="true"></i> -->
 
 <!-- 13 FACEBOOK RSVP TEXT -->
 
@@ -141,10 +144,10 @@
 							<a href="<?php the_field('facebook_rsvp'); ?>" target="_blank"><i class="fa fa-facebook-official "></i> event page</a>
 						</div> <!-- /.facebook-event -->
 					<?php endif; ?> <!-- end loop -->
-<!-- <i class="fa fa-facebook-square fa-5x" title="Facebook" aria-hidden="true"></i> -->
 		 </div> <!-- .trailer-facebook-flex -->
 	</div> <!-- .details-flex-right -->
 </div> <!-- .details-flex -->
+
 <!-- 08 FOOD VENDORS REPEATER -->
 					<?php if( have_rows('food_vendors') ): ?> <!-- start loop -->
 						<div class="food-vendors event-food-vendors clearfix bottom-border">
@@ -155,7 +158,9 @@
 									$food = get_sub_field('food_vendor'); 
 								?>
 									<div class="food-vendor-logo event-food-vendor-logo">
-										<a href="<?php echo $foodlink ?>" target="_blank"><img src="<?php echo $food['sizes']['food-vendor'] ?>" alt="<?php echo $food['alt'] ?>"></a>
+										<a href="<?php echo $foodlink ?>" target="_blank">
+											<img src="<?php echo $food['sizes']['food-vendor'] ?>" alt="<?php echo $food['alt'] ?>">
+										</a>
 									</div> <!-- /.food-vendor-logo -->	
 								<?php endwhile; ?>
 							</div> <!-- /.food-vendor -->
@@ -171,7 +176,9 @@
 								$presenter = get_sub_field('presenter_logo'); 
 							?>
 								<div class="presenter-logo event-presenter-logo">
-									<a href="<?php echo $presenterlink ?>" target="_blank"><img src="<?php echo $presenter['sizes']['presenting-sponsor-logo'] ?>" alt="<?php echo $presenter['alt'] ?>"></a>
+									<a href="<?php echo $presenterlink ?>" target="_blank">
+										<img src="<?php echo $presenter['sizes']['presenting-sponsor-logo'] ?>" alt="<?php echo $presenter['alt'] ?>">
+									</a>
 								</div> <!-- /.presenter-logo -->
 							<?php endwhile; ?>
 						</div> <!-- /.presenting-sponsors -->
@@ -187,7 +194,9 @@
 									$copresenter = get_sub_field('co-presenting_sponsor'); 
 								?>
 									<div class="co-presenter-logo event-co-presenter-logo">
-										<a href="<?php echo $copresenterlink ?>" target="_blank"><img class="logo" src="<?php echo $copresenter['sizes']['copresenter-logo'] ?>" alt="<?php echo $copresenter['alt'] ?>"></a>
+										<a href="<?php echo $copresenterlink ?>" target="_blank">
+											<img class="logo" src="<?php echo $copresenter['sizes']['copresenter-logo'] ?>" alt="<?php echo $copresenter['alt'] ?>">
+										</a>
 									</div> <!-- /.co-presenter-logo -->
 								<?php endwhile; ?>
 							</div> <!-- /.co-presenter -->
@@ -204,7 +213,9 @@
 									$supporter = get_sub_field('supporting_sponsor'); 
 								?>
 									<div class="co-presenter-logo event-co-presenter-logo supporter-logo">
-										<a href="<?php echo $supporterlink ?>" target="_blank"><img class="logo" src="<?php echo $supporter['sizes']['copresenter-logo'] ?>" alt="<?php echo $supporter['alt'] ?>"></a>
+										<a href="<?php echo $supporterlink ?>" target="_blank">
+											<img class="logo" src="<?php echo $supporter['sizes']['copresenter-logo'] ?>" alt="<?php echo $supporter['alt'] ?>">
+										</a>
 									</div> <!-- /.co-presenter-logo -->
 								<?php endwhile; ?>
 							</div> <!-- /.co-presenter -->
