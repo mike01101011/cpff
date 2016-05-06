@@ -33,11 +33,14 @@
 			
 			<section class="film" id="<?php echo str_replace(str_split(' ,?\\/:*?"<>|~`'), '', get_field( 'feature_film' )); ?>">
 				<div class="container">
+
+<!-- START -->
+
+<!-- 00 FILMS PAGE LINK -->
+				
 					<div class="films-page-link bottom-border">
 						<a href=" http://localhost:8888/cpff/films/">Films Page</a>
-					</div> <!-- .container -->
-				</div>
-				<div class="container">
+					</div> <!-- .films-page-link -->
 
 <!-- xx01 TITLE TEXT -->
 					<?php if( get_field('title')):?> <!-- start loop -->
@@ -229,6 +232,7 @@
 							<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/OiTiKOy59o4?rel=0" frameborder="0" allowfullscreen></iframe> -->
 						<!-- </div> /.trailer -->
 					<!-- <?php //endif; ?> end loop -->
+<!-- END -->
 
 				</div> <!-- /.container -->
 			</section> <!-- /.film -->

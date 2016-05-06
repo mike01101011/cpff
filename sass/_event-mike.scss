@@ -35,6 +35,8 @@
 }
 .details-flex {
 	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -49,10 +51,12 @@
 	padding-bottom: 15px;
 }
 
-.event-overview p:nth-child(-n+2) {
-	padding-bottom: 15px;
+.event-overview p {
+	width: 64%;
+	&:nth-child(-n+2) {
+		padding-bottom: 15px;
+	}
 }
-
 .event-short-film {
 	padding: 0;
 }
@@ -141,6 +145,61 @@ div.event-food-vendor-logo, div.event-presenter-logo, div.event-co-presenter-log
 .event-food-vendor, .event-presenting-sponsors, .event-co-presenters {
 	align-items: center;
 }
+
+// Responsive - Start
+
+@media (max-width: 1492px) {
+	
+}
+@media (max-width: 1000px) {
+	.feature h3 {
+		font-size: 4.2rem;
+		// font-size: 8.5rem;
+		line-height: 4.08rem;
+		// line-height: 8.25rem;
+	}
+	.short-film h3 {
+		font-size: 1.76rem;
+		// font-size: 5rem;
+		line-height: 1.5rem;
+		// line-height: 4.5rem;
+	}
+	.details-list li p {
+		font-size: 1.2rem;
+	}
+}
+@media (max-width: 790px) {
+	.feature h3 {
+		font-size: 2.49rem;
+		// font-size: 8.5rem;
+		line-height: 2.42rem;
+		// line-height: 8.25rem;
+	}
+	.short-film h3 {
+		font-size: 1.76rem;
+		// font-size: 5rem;
+		line-height: 1.5rem;
+		// line-height: 4.5rem;
+	}
+	div.details-flex-left, div.details-flex-right {
+		width: 100%;
+	}
+	.details-flex-right {
+	border-left: none; 
+	border-top: .2rem solid darken(darkgreen, 5%); 
+}
+	.details-list li p {
+		font-size: 1.4rem;
+	}
+	.event-overview p {
+		width: 83.33%;
+	}
+}
+@media (max-width: 480px) {
+	
+}
+// Responsive - End
+
 	// @include navbar;
 	// @include page-headline;
 	// @include page-paragraph;
