@@ -13,7 +13,17 @@
 <!-- website main content - start -->
 <main class="clearfix">
 	
-	<?php $onePageQuery = new WP_Query( array( 'posts_per_page' => -1, 'post_type' => 'event', 'name' => 'stranded', 'order' => 'DSC' ) );?>
+	<?php 
+		$onePageQuery = new WP_Query( 
+			array(
+				'posts_per_page' => -1,
+	// SET POST TYPE
+				'post_type' => 'event',
+				'name' => 'gravity',
+				'order' => 'DSC'
+			)
+		);
+	?>
 
 <div class="flex">
 
@@ -31,6 +41,13 @@
 					<div class="films-page-link bottom-border">
 						<a href=" http://localhost:8888/cpff/films/">Films Page</a>
 					</div> <!-- .films-page-link -->
+
+<!-- xx01 TITLE TEXT -->
+					<?php if( get_field('title')):?> <!-- start loop -->
+						<div class="feature event-title clearfix ">
+							<h3><?php the_field( 'title' ); ?></h3>
+						</div> <!-- /.feature -->
+					<?php endif; ?> <!-- end loop -->
 
 <!-- 02 DATE WYSIWYG -->
 					<?php if( get_field('date')):?> <!-- start loop -->

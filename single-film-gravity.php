@@ -212,7 +212,7 @@
 							<p>Thank you to the Ontario Arts Council and Toronto Arts Council for their support of Christie Pits Film Festival.</p>
 							<div class="co-presenter event-co-presenter">
 								<?php while( have_rows('supporting_sponsors') ): the_row();
-									$supporterlink = get_sub_field('supporting_sponsor_link');
+									$supporterlink = get_sub_field('supporting_sponsors_link');
 									$supporter = get_sub_field('supporting_sponsor'); 
 								?>
 									<div class="co-presenter-logo event-co-presenter-logo supporter-logo">

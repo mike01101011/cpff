@@ -122,12 +122,21 @@
 	.films {
 		margin: 7px;
 	}
+	.title-headline h2 {
+		font-size: 4.1rem;
+		line-height: 3.71rem;
+	}
 }
-// @media (max-width: 480px) {
-@media (max-width: 492px) {
+@media (max-width: 480px) {
 	.films {
 		width: 47%;
 		margin: 5px;
+	}
+	.date h4{
+		font-size: 1.3rem;
+		// font-size: 3rem;
+		line-height: 1.08rem;
+		// line-height: 2.5rem;
 	}
 }
 // Responsive - End

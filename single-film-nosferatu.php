@@ -45,7 +45,7 @@
 <!-- xx01 TITLE TEXT -->
 					<?php if( get_field('title')):?> <!-- start loop -->
 						<div class="feature event-title clearfix ">
-							<h3><?php the_field( 'title' ); ?></h3>
+							<?php the_field( 'title' ); ?>
 						</div> <!-- /.feature -->
 					<?php endif; ?> <!-- end loop -->
 
@@ -58,7 +58,7 @@
 
 <!-- xx03 HEADLINE TEXT -->
 					<?php if( get_field('headline') ): ?> <!-- start loop -->
-						<div class="shorts event-headline clearfix">
+						<div class="shorts event-headline clearfix bottom-border">
 							<div class="short-films">
 								<div class="short-film event-short-film">
 									<h3><?php the_field( 'headline' ); ?></h3>
@@ -155,9 +155,10 @@
 
 <!-- MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP -->
 <div class="map bottom-border">
+<p>Map</p>
 <div class="poster-flex">
 					<?php if( get_field('map')):?> <!-- start loop -->
-						<div class="poster event-poster clearfix">
+						<div class="poster event-poster map-poster clearfix">
 							<?php $image = get_field('map'); if( !empty($image) ): ?>
 <!-- TO PRINT ARRAY -->
 <!-- <pre><?php //print_r($image);?></pre> -->
@@ -197,7 +198,7 @@
 <!-- 09 PRESENTING SPONSORS REPEATER -->
 					<?php if( have_rows('presenting_sponsors') ): ?> <!-- start loop -->
 						<div class="presenting-sponsors event-presenting-sponsors clearfix bottom-border">
-							<p>Opening Night Sponsor</p>
+							<p>Presented by</p>
 							<?php while( have_rows('presenting_sponsors') ): the_row();
 								$presenterlink = get_sub_field('presenter_link');
 								$presenter = get_sub_field('presenter_logo'); 
@@ -215,7 +216,7 @@
 					<?php if( have_rows('co-presenting_sponsors') ): ?> <!-- start loop -->
 						<div class="co-presenters event-co-presenters clearfix bottom-border">
 							<p>This project was supported through Toronto Arts Council Strategic Funding</p>
-							<div class="co-presenter event-co-presenter">
+							<div class="co-presenter event-co-presenter event-co-presenter-nosferatu">
 								<?php while( have_rows('co-presenting_sponsors') ): the_row();
 									$copresenterlink = get_sub_field('co-presenting_sponsor_link');
 									$copresenter = get_sub_field('co-presenting_sponsor'); 
@@ -236,7 +237,7 @@
 							<p>Co-Presented by</p>
 							<div class="co-presenter event-co-presenter">
 								<?php while( have_rows('supporting_sponsors') ): the_row();
-									$supporterlink = get_sub_field('supporting_sponsor_link');
+									$supporterlink = get_sub_field('supporting_sponsors_link');
 									$supporter = get_sub_field('supporting_sponsor'); 
 								?>
 									<div class="co-presenter-logo event-co-presenter-logo supporter-logo">
