@@ -82,6 +82,11 @@
 	width: 50%;
 	display: flex;
 	flex-direction: column;
+	margin: 0 auto;
+}
+.event-poster {
+	display: flex;
+	justify-content: center;
 }
 .event-poster img {
 	border: .2rem solid darken(mediumseagreen, 5%);
@@ -103,7 +108,7 @@
 .map .poster-flex {
 	margin: 0 auto;
 }
-.map p {
+p.map {
 	font-weight: 700;
 	margin-top: 15px;
 }
@@ -132,7 +137,7 @@
 	}
 }
 
-.event-co-presenter-nosferatu div:nth-child(2) {
+.support-nosferatu div:nth-child(2) {
 	img {
 		height: 154.484px;
 	}
@@ -234,11 +239,19 @@ div.event-food-vendor-logo, div.event-presenter-logo, div.event-co-presenter-log
     	line-height: 3.98rem;
     	// line-height: 4.125rem;
 	}
-	.event-co-presenter-nosferatu div:nth-child(2) {
-	img {
-		height: 124.234px;
+	.support-nosferatu div:nth-child(2) {
+		img {
+			height: 124.234px;
+		}
 	}
-}
+	.co-presenter-nosferatu {
+		div {
+			padding-bottom: 15px;
+		}
+		div:last-child {
+			padding-bottom: 0;
+		}
+	}
 }
 @media (max-width: 790px) {
 	.event-title h3 {
@@ -304,7 +317,7 @@ div.event-food-vendor-logo, div.event-presenter-logo, div.event-co-presenter-log
 		font-size: 1.8rem;
     	line-height: 1.62rem;
 	}
-	.event-co-presenter-nosferatu div:nth-child(2) {
+	.support-nosferatu div:nth-child(2) {
 		img {
 			height: 97.078px;
 		}
@@ -312,14 +325,14 @@ div.event-food-vendor-logo, div.event-presenter-logo, div.event-co-presenter-log
 }
 
 @media (max-width: 665px) {
-	.event-co-presenter-nosferatu div:nth-child(2) {
+	.support-nosferatu div:nth-child(2) {
 		img {
 			height: 161.5px;
 		}
 	}
 }
 @media (max-width: 480px) {
-	.event-co-presenter-nosferatu div:nth-child(2) {
+	.support-nosferatu div:nth-child(2) {
 		img {
 			height: 116.031px;
 		}

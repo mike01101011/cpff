@@ -155,7 +155,7 @@
 
 <!-- MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP -->
 <div class="map bottom-border">
-<p>Map</p>
+<p class="map">Map</p>
 <div class="poster-flex">
 					<?php if( get_field('map')):?> <!-- start loop -->
 						<div class="poster event-poster map-poster clearfix">
@@ -216,7 +216,7 @@
 					<?php if( have_rows('co-presenting_sponsors') ): ?> <!-- start loop -->
 						<div class="co-presenters event-co-presenters clearfix bottom-border">
 							<p>This project was supported through Toronto Arts Council Strategic Funding</p>
-							<div class="co-presenter event-co-presenter event-co-presenter-nosferatu">
+							<div class="co-presenter event-co-presenter support-nosferatu">
 								<?php while( have_rows('co-presenting_sponsors') ): the_row();
 									$copresenterlink = get_sub_field('co-presenting_sponsor_link');
 									$copresenter = get_sub_field('co-presenting_sponsor'); 
@@ -235,7 +235,7 @@
 					<?php if( have_rows('supporting_sponsors') ): ?> <!-- start loop -->
 						<div class="co-presenters event-co-presenters clearfix bottom-border">
 							<p>Co-Presented by</p>
-							<div class="co-presenter event-co-presenter">
+							<div class="co-presenter event-co-presenter co-presenter-nosferatu">
 								<?php while( have_rows('supporting_sponsors') ): the_row();
 									$supporterlink = get_sub_field('supporting_sponsors_link');
 									$supporter = get_sub_field('supporting_sponsor'); 
