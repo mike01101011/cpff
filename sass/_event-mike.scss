@@ -14,6 +14,9 @@
 	.event-poster img, .event-trailer {
 		box-shadow: 1px 1px 1px #bbb;
 	}
+	.map-poster img {
+		box-shadow: none;
+	}
 	h3, h4, a {
 		text-shadow: 1px 1px 1px #bbb;
 	}
@@ -39,12 +42,32 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	margin-top: 15px;
 }
 .details-flex-right {
 	width: 50%;
 	border-left: .2rem solid darken(darkgreen, 5%); 
 }
+.overview-poster-flex {
+	display: flex;
+	flex-direction: row;
+	// flex-wrap: wrap;
+	justify-content: space-between;
+}
+div.overview-poster-flex-left {
+	width: 60%;	
+}
+div.overview-poster-flex-right{
+	width: 40%;	
+}
+div.details-flex-left {
+	width: 60%;
+}
+div.details-flex-right {
+	width: 40%;
+}
 // Flexbox - End
+
 
 .bottom-border {
 	border-bottom: .2rem solid darken(darkgreen, 5%);
@@ -55,12 +78,6 @@
 	text-align: left;
 }
 
-.event-overview p {
-	width: 64%;
-	&:nth-child(-n+2) {
-		padding-bottom: 15px;
-	}
-}
 .event-short-film {
 	padding: 0;
 }
@@ -79,7 +96,7 @@
 
 // Poster - Start
 .poster-flex {
-	width: 50%;
+	// width: 100%;
 	display: flex;
 	flex-direction: column;
 	margin: 0 auto;
@@ -88,13 +105,7 @@
 	display: flex;
 	justify-content: center;
 }
-// .event-poster img {
-// 	border: .2rem solid darken(mediumseagreen, 5%);
-// 	transition: border 500ms;
-// 	&:hover {
-// 		border: .2rem solid darken(darkgreen, 5%);
-// 	}
-// }
+
 .event-poster-credit p {
 	text-align: center;
 	font-size: 1rem;
@@ -103,16 +114,15 @@
 // Poster - End
 
 .map-poster {
-	padding-top: 15px;
-}
-.map .poster-flex {
-	margin: 0 auto;
-}
-p.map {
-	font-weight: 700;
-	margin-top: 15px;
+	padding-top: 15px;	
 }
 
+.map .poster-flex {
+	margin: 0 auto;
+}	
+.disable-click{
+    pointer-events: none;
+}
 // Feature - Start
 .event-feature h3 {
 		font-size: 4.25rem;
@@ -138,7 +148,7 @@ p.map {
 
 .support-nosferatu div:nth-child(2) {
 	img {
-		height: 154.484px;
+		max-width: 32.5%;
 	}
 }
 .event-co-presenter div:first-child {
@@ -238,11 +248,7 @@ div.event-food-vendor-logo, div.event-presenter-logo, div.event-co-presenter-log
     	line-height: 3.98rem;
     	// line-height: 4.125rem;
 	}
-	.support-nosferatu div:nth-child(2) {
-		img {
-			height: 124.234px;
-		}
-	}
+
 	.co-presenter-nosferatu {
 		div {
 			padding-bottom: 15px;
@@ -316,25 +322,11 @@ div.event-food-vendor-logo, div.event-presenter-logo, div.event-co-presenter-log
 		font-size: 1.8rem;
     	line-height: 1.62rem;
 	}
-	.support-nosferatu div:nth-child(2) {
-		img {
-			height: 97.078px;
-		}
-	}
+
 }
 
-@media (max-width: 665px) {
-	.support-nosferatu div:nth-child(2) {
-		img {
-			height: 161.5px;
-		}
-	}
-}
+
 @media (max-width: 480px) {
-	.support-nosferatu div:nth-child(2) {
-		img {
-			height: 116.031px;
-		}
-	}
+
 }
 // Responsive - End
