@@ -42,7 +42,7 @@
 						<!-- <a href=" http://localhost:8888/cpff/films/">Films Page</a> -->
 					<!-- </div> .films-page-link -->
 				
-<div class="overview-poster-flex bottom-border">	
+<div class="overview-poster-flex ">	
 	<div class="overview-poster-flex-left">
 
 <!-- xx01 TITLE TEXT -->
@@ -76,6 +76,27 @@
 								<?php the_field('overview'); ?>
 							</div> <!-- /.shorts -->
 						<?php endif; ?> <!-- end loop -->
+	</div> <!-- .overview-poster-flex-left -->
+<!-- 05 POSTER IMAGE -->
+	<div class="overview-poster-flex-right">
+					<div class="poster-flex">
+						<?php if( get_field('poster')):?> <!-- start loop -->
+							<div class="poster event-poster clearfix">
+								<?php $image = get_field('poster'); if( !empty($image) ): ?>
+<!-- TO PRINT ARRAY -->
+<!-- <pre><?php //print_r($image);?></pre> -->
+									<a href="<?php echo $image['url']; ?>" target="_blank">
+										<img src="<?php echo $image['sizes']['films-page-large']; ?>" alt="<?php echo $image['alt']; ?>" />
+									</a>
+								<?php endif; ?>
+							</div> <!-- /.poster -->
+							<div class="short event-poster-credit clearfix">
+								<p>design credit José Garcia of <a href="http://www.garciadesign.ca/" target="_blank">Garcia Design</a></p>
+							</div>
+						<?php endif; ?> <!-- end loop -->
+					</div> <!-- .poster-flex -->
+	</div> <!-- .overview-poster-flex-left -->
+</div> <!-- .overview-poster-flex -->
 <!-- 06 FEATURE FILM TEXT -->
 	
 					<?php if( get_field('feature_film')):?> <!-- start loop -->
@@ -86,7 +107,7 @@
 
 <!-- 07 SHORT FILMS REPEATER -->
 					<?php if( have_rows('short_films') ): ?> <!-- start loop -->
-						<div class="shorts event-shorts clearfix">
+						<div class="shorts event-shorts clearfix bottom-border">
 							<div class="short-films event-short-films">
 								<?php while( have_rows('short_films') ): the_row();
 									$short = get_sub_field('short_film');
@@ -100,27 +121,6 @@
 							</div> <!-- /.short-films -->
 						</div> <!-- /.shorts -->
 					<?php endif; ?> <!-- end loop -->
-	</div> <!-- .overview-poster-flex-left -->
-	<!-- 05 POSTER IMAGE -->
-	<div class="overview-poster-flex-right">
-					<div class="poster-flex">
-						<?php if( get_field('poster')):?> <!-- start loop -->
-							<div class="poster event-poster clearfix">
-								<?php $image = get_field('poster'); if( !empty($image) ): ?>
-	<!-- TO PRINT ARRAY -->
-	<!-- <pre><?php //print_r($image);?></pre> -->
-									<a href="<?php echo $image['url']; ?>" target="_blank">
-										<img src="<?php echo $image['sizes']['films-page-large']; ?>" alt="<?php echo $image['alt']; ?>" />
-									</a>
-								<?php endif; ?>
-							</div> <!-- /.poster -->
-							<div class="short event-poster-credit clearfix">
-								<p>design credit José Garcia of <a href="http://www.garciadesign.ca/" target="_blank">Garcia Design</a></p>
-							</div>
-						<?php endif; ?> <!-- end loop -->
-					</div> <!-- .poster-flex -->
-	</div> <!-- .overview-poster-flex-left -->
-</div> <!-- .overview-poster-flex -->
 <!-- DETAILS -->
 <div class="details-flex bottom-border">
 	<div class="details-flex-left">
@@ -133,8 +133,8 @@
 							<li><p>BYOBlanket & Chairs</p></li>
 							<li><p>Scheduled rain date: June 25th, Queensway Park</p></li>
 						</ul>
-					</div>
-	</div>
+					</div> <!-- .details -->
+	</div> <!-- .details-flex-left -->
 <!-- 12-LINK TRAILER TEXT -->
 	<div class="details-flex-right">
 		<div class="trailer-facebook-flex">
@@ -155,7 +155,7 @@
 <!-- MAP -->
 		 <div class="map">
 		 	<?php if( get_field('map')):?> <!-- start loop -->
-		 		<div class="poster event-poster map-poster clearfix">
+		 		<div class="poster map-poster clearfix">
 		 			<?php $image = get_field('map'); if( !empty($image) ): ?>
 <!-- TO PRINT ARRAY -->
 <!-- <pre><?php //print_r($image);?></pre> -->
