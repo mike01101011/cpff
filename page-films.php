@@ -17,37 +17,32 @@
 <main class="clearfix">
 
 	<div class="container">
-		<div class="main-header">
-			<p>All screenings at Christie Pits Park</p>
-			<p>PWYC with suggested donation of $10</p>
-			<p>Screenings begin at sunset</p>
-		</div> <!-- .main-header -->
+		<div class="title-headline">
+			<div class="title-headline-flex">
+				<div class="title-headline-flex-left">
+					<!-- page title - start -->
+					<h2>Summer 2016 Season</h2>
+					<!-- page title - end -->				
+				</div> <!-- .title-headline-left -->
+				<div class="title-headline-flex-right">
+					<div class="main-header">
+						<p>All screenings at Christie Pits Park are PWYC</p>
+						<p>with a suggested donation of $10.</p>
+						<p>Screenings begin at sundown.</p>
+					</div> <!-- .main-header -->
+				</div> <!-- .title-headline-right -->
+			</div> <!-- .title-headline-flex -->
+			<?php the_content(); ?>
+		</div>  <!-- /.title-headline -->	
 	</div> <!-- .container -->
+
+
+<?php $onePageQuery = new WP_Query( array( 'posts_per_page' => -1, 'post_type' => 'film', 'order' => 'DSC' ) );?>
+<!-- PRINT PRINT PRINT -->
+<!-- <pre><?php //print_r($onePageQuery->posts); ?></pre> -->
 
 	<div class="container">
-		<div class="title-headline">
-			<!-- page title - start -->
-			<h2>Summer 2016 Season</h2>
-			<!-- page title - end -->
-			<?php
-				$onePageQuery = new WP_Query(
-					array(
-						'posts_per_page' => -1,
-// SET POST TYPE
-						'post_type' => 'film',
-						'order' => 'DSC'
-					)
-				);
-			?>
-
-<!-- PRINT PRINT PRINT -->
-<!-- <pre><?php print_r($onePageQuery->posts); ?></pre> -->
-
-			<?php the_content(); ?>
-		</div>  <!-- /.title-headline -->			
-	</div> <!-- .container -->
-<div class="container">
-<div class="flex">
+		<div class="flex">
 			<!-- start loop -->
 			<?php if ( $onePageQuery->have_posts() ) : ?>
 				<?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
@@ -69,6 +64,9 @@
 								</a>
 							<?php endif; ?> <!-- end loop -->
 <!-- FEATURE -->
+
+<div class="align-films-details">
+
 							<?php if( get_field('feature_film')):?> <!-- start loop -->
 								<div class="feature clearfix">
 									<a href="<?php the_permalink(); ?>"><h3><?php the_field( 'feature_film' ); ?></h3></a>
@@ -95,9 +93,11 @@
 <!-- DATE -->
 							<?php if( get_field('date')):?> <!-- start loop -->
 								<div class="date">
-									<h4><?php the_field( 'date' ); ?></h4>
+									<?php the_field( 'date' ); ?>
 								</div> <!-- /.date -->
 							<?php endif; ?> <!-- end loop -->
+
+</div> <!-- .center-films-details -->
 
 						</div> <!-- /.container -->
 					</section> <!-- /.film -->

@@ -155,8 +155,6 @@
 
 <!-- MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP -->
 <div class="map bottom-border">
-<p class="map">Map</p>
-<div class="poster-flex">
 					<?php if( get_field('map')):?> <!-- start loop -->
 						<div class="poster event-poster map-poster clearfix">
 							<?php $image = get_field('map'); if( !empty($image) ): ?>
@@ -167,11 +165,7 @@
 								</a>
 							<?php endif; ?>
 						</div> <!-- /.poster -->
-						<div class="short event-poster-credit clearfix">
-							<p>Designer: José Garcia, <a href="http://www.garciadesign.ca/" target="_blank">Garcia Design</a></p>
-						</div>
 					<?php endif; ?> <!-- end loop -->
-</div> <!-- .poster-flex -->
 </div> <!-- .map -->
 <!-- MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP -->
 
