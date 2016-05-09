@@ -52,16 +52,16 @@
 
 <!-- POSTER -->
 							<?php if( get_field('poster')):?> <!-- start loop -->
-								<a href="<?php the_permalink(); ?>">
+								
 									<div class="poster clearfix">
 										<?php $image = get_field('poster'); if( !empty($image) ): ?>
 <!-- TO PRINT ARRAY -->
 <!-- <pre><?php print_r($image);?></pre> -->
+										<a href="<?php the_permalink(); ?>">
 											<img src="<?php echo $image['sizes']['films-page-large']; ?>" alt="<?php echo $image['alt']; ?>" />
-										
+										</a>
 										<?php endif; ?>
 									</div> <!-- /.poster -->
-								</a>
 							<?php endif; ?> <!-- end loop -->
 <!-- FEATURE -->
 
