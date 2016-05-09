@@ -75,7 +75,7 @@ div.details-flex-right {
 		margin: 0 auto;
 	}
 }
-.support-nosferatu div:nth-child(2) {
+.co-presenter-nosferatu div:nth-child(2) {
 	img {
 		max-width: 32.5%;
 	}
@@ -142,9 +142,10 @@ div.details-flex-right {
 .map .poster-flex {
 	margin: 0 auto;
 }	
-.disable-click{
+.disable-click, div.supporter-logo:nth-child(3) {
     pointer-events: none;
 }
+
 // Map - End
 
 // Feature - Start
@@ -239,7 +240,7 @@ div.event-food-vendor-logo, div.event-presenter-logo, div.event-co-presenter-log
 		line-height: 3.3rem;
 	}
 
-	.co-presenter-nosferatu {
+	.support-nosferatu {
 		div {
 			padding-bottom: 15px;
 		}

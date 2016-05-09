@@ -19,7 +19,7 @@
 				'posts_per_page' => -1,
 	// SET POST TYPE
 				'post_type' => 'event',
-				// 'name' => 'nosferatu',
+				'name' => 'nosferatu',
 				'order' => 'DSC'
 			)
 		);
@@ -154,18 +154,20 @@
 		 </div> <!-- .trailer-facebook-flex -->
 <!-- MAP -->
 		 <div class="map">
-		 	<?php if( get_field('map')):?> <!-- start loop -->
-		 		<div class="poster map-poster clearfix">
-		 			<?php $image = get_field('map'); if( !empty($image) ): ?>
+		 			<?php if( get_field('map')):?> <!-- start loop -->
+
+<!-- CLICK DISABLED -->
+		 			<div class="disable-click poster map-poster clearfix">
+		 				<?php $image = get_field('map'); if( !empty($image) ): ?>
 <!-- TO PRINT ARRAY -->
 <!-- <pre><?php //print_r($image);?></pre> -->
-						<a class="disable-click" href="#" target="_blank">
-							<img src="<?php echo $image['sizes']['presenting-sponsor-logo']; ?>" alt="<?php echo $image['alt']; ?>" />
-						</a>
-					<?php endif; ?>
-				</div> <!-- /.poster -->
-			<?php endif; ?> <!-- end loop -->
-		 </div> <!-- .map -->
+							<a href="#" target="_blank">
+								<img src="<?php echo $image['sizes']['presenting-sponsor-logo']; ?>" alt="<?php echo $image['alt']; ?>" />
+							</a>
+						<?php endif; ?>
+					</div> <!-- /.poster -->
+					<?php endif; ?> <!-- end loop -->
+		</div> <!-- .map -->
 	</div> <!-- .details-flex-right -->
 </div> <!-- .details-flex -->
 
@@ -197,7 +199,9 @@
 								$presenterlink = get_sub_field('presenter_link');
 								$presenter = get_sub_field('presenter_logo'); 
 							?>
-								<div class="presenter-logo event-presenter-logo">
+
+<!-- CLICK DISABLED -->
+								<div class="disable-click presenter-logo event-presenter-logo">
 									<a href="<?php echo $presenterlink ?>" target="_blank">
 										<img src="<?php echo $presenter['sizes']['presenting-sponsor-logo'] ?>" alt="<?php echo $presenter['alt'] ?>">
 									</a>
@@ -210,7 +214,7 @@
 					<?php if( have_rows('co-presenting_sponsors') ): ?> <!-- start loop -->
 						<div class="co-presenters event-co-presenters clearfix bottom-border">
 							<p>This project was supported through Toronto Arts Council Strategic Funding.</p>
-							<div class="co-presenter event-co-presenter support-nosferatu">
+							<div class="co-presenter event-co-presenter co-presenter-nosferatu">
 								<?php while( have_rows('co-presenting_sponsors') ): the_row();
 									$copresenterlink = get_sub_field('co-presenting_sponsor_link');
 									$copresenter = get_sub_field('co-presenting_sponsor'); 
@@ -229,11 +233,12 @@
 					<?php if( have_rows('supporting_sponsors') ): ?> <!-- start loop -->
 						<div class="co-presenters event-co-presenters clearfix bottom-border">
 							<p>Co-Presented by</p>
-							<div class="co-presenter event-co-presenter co-presenter-nosferatu">
+							<div class="co-presenter event-co-presenter support-nosferatu">
 								<?php while( have_rows('supporting_sponsors') ): the_row();
 									$supporterlink = get_sub_field('supporting_sponsors_link');
 									$supporter = get_sub_field('supporting_sponsor'); 
 								?>
+<!-- CLICK DISABLED, nth-child(3)-->
 									<div class="co-presenter-logo event-co-presenter-logo supporter-logo">
 										<a href="<?php echo $supporterlink ?>" target="_blank">
 											<img class="logo" src="<?php echo $supporter['sizes']['copresenter-logo'] ?>" alt="<?php echo $supporter['alt'] ?>">
