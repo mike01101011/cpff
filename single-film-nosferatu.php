@@ -248,14 +248,7 @@
 							</div> <!-- /.co-presenter -->
 						</div> <!-- /.co-presenters -->
 					<?php endif; ?> <!-- end loop -->
-
-<!-- 12-IFRAME TRAILER TEXT -->
-					<!-- <?php //if( get_field('trailer')):?> start loop -->
-						<!-- <div class="trailer event-trailer clearfix bottom-border"> -->
-							<!-- <?php //the_field( 'trailer' ); ?>  -->
-							<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/OiTiKOy59o4?rel=0" frameborder="0" allowfullscreen></iframe> -->
-						<!-- </div> /.trailer -->
-					<!-- <?php //endif; ?> end loop -->
+					
 <!-- END -->
 
 				</div> <!-- /.container -->
