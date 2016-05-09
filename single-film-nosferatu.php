@@ -19,7 +19,7 @@
 				'posts_per_page' => -1,
 	// SET POST TYPE
 				'post_type' => 'event',
-				'name' => 'nosferatu',
+				// 'name' => 'nosferatu',
 				'order' => 'DSC'
 			)
 		);

@@ -24,7 +24,7 @@
 	</script>
 
 <!-- UNCOMMENT TO SHOW ADMIN BAR -->
-<!-- <?php wp_footer(); ?> -->
+<!-- <?php //wp_footer(); ?> -->
 
 </body>
 </html>
