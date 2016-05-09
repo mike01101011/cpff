@@ -1,3 +1,15 @@
+// COMING SOON CSS End - Start
+div.coming-soon-title-headline {
+	h2 {
+		font-family: 'Rajdhani', sans-serif;
+		font-size: 6rem;
+	}
+	justify-content: center;
+	padding-bottom: 0;
+}
+// COMING SOON CSS TEMP - End
+
+
 // Updated CSS - Start
 
 .short-film {
@@ -7,6 +19,7 @@
 .title-headline {
 	h2{
 		text-align: left;
+		text-transform: uppercase;
 	}
 	p {
     	font-size: 2.6rem;
@@ -17,7 +30,6 @@
     border-bottom: none;
  	text-shadow: 1px 1px 1px #ccc;
 }
-
 
 // Updated CSS - End
 

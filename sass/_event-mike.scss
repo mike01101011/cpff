@@ -21,12 +21,11 @@
 		text-shadow: 1px 1px 1px #bbb;
 	}
 }
-// General CSS - Start
-
-.details p {
-    font-size: 1.8rem;
-    font-weight: 700;
+.bottom-border {
+	border-bottom: .2rem solid darken(darkgreen, 5%);
+	padding-bottom: 15px;
 }
+// General CSS - End
 
 // Flexbox - Start
 .event-short-films, .event-co-presenter, .event-food-vendor, .event-presenting-sponsors {
@@ -69,26 +68,42 @@ div.details-flex-right {
 }
 // Flexbox - End
 
-
-.bottom-border {
-	border-bottom: .2rem solid darken(darkgreen, 5%);
-	padding-bottom: 15px;
+// Images - Start
+.event-food-vendor-logo a, .event-presenter-logo a, .event-co-presenter-logo a {
+	img {
+		display: block;
+		margin: 0 auto;
+	}
 }
+.support-nosferatu div:nth-child(2) {
+	img {
+		max-width: 32.5%;
+	}
+}
+// Images - End
 
+// Event-Title - Start
 .event-title h4{
 	text-align: left;
 }
+.event-title h4 {
+	padding-bottom: 10px;
+}
+.event-title h3 {
+	font-size: 5rem;
+}
+// Event Title - End
+
+// Event-Overview - Start
 .event-overview p {
 	font-size: 2.3rem;
 	padding: 15px 0;
 	width: 90%;
 }
-.event-short-film {
-	padding: 0;
+.italic {
+	font-style: italic;
 }
-.event-short-films {
-	padding-top: 15px;
-}
+// Event-Overview - End
 
 // Films Page Link - Start
 .films-page-link {
@@ -97,7 +112,6 @@ div.details-flex-right {
 	text-shadow: 1px 1px 1px #ccc;
 }
 // Films Page Link - Start
-
 
 // Poster - Start
 .poster-flex {
@@ -120,64 +134,44 @@ div.details-flex-right {
 }
 // Poster - End
 
+// Map - Start
 .map-poster {
-	padding-top: 15px;	
+	padding-top: 15px;
+	padding-left: 15px;
 }
-
 .map .poster-flex {
 	margin: 0 auto;
 }	
 .disable-click{
     pointer-events: none;
 }
+// Map - End
+
 // Feature - Start
 .event-feature h3 {
-		font-size: 4.25rem;
-		// font-size: 8.5rem;
-		line-height: 4.125rem;
-		// line-height: 8.25rem;
+	font-size: 4.25rem;
+	// font-size: 8.5rem;
+	line-height: 4.125rem;
+	// line-height: 8.25rem;
+}
+.event-feature {
+	margin-bottom: 0;
 }
 // Feature - End
 
-
-// Images - Start
-.event-food-vendor-logo a, .event-presenter-logo a, .event-co-presenter-logo a {
-	img {
-		display: block;
-		margin: 0 auto;
-		// border: .2rem solid darken(mediumseagreen, 5%);
-		// transition: border 500ms;
-		// &:hover {
-		// border: .2rem solid darken(darkgreen, 5%); 
-		// }
-	}
+// Short - Start
+.event-short-film {
+	padding: 0;
 }
-
-.support-nosferatu div:nth-child(2) {
-	img {
-		max-width: 32.5%;
-	}
+.event-short-films {
+	padding-top: 15px;
 }
-.event-co-presenter div:first-child {
-	// flex: 2.38787104845 1;
+.event-shorts {
+	margin-top: 0;
 }
-.event-co-presenter div:nth-child(2) {
-	// flex: 1 1;
-}
-// Images - Start
-
 .event-short-film h3:nth-child(2) {
 	padding-top: 15px;
 }
-.event-title h4 {
-	padding-bottom: 10px;
-}
-.event-title h3 {
-	font-size: 5rem;
-}
-
-// Short - Start
-
 .event-short-film h3 {
 	font-size: 2.8rem;
 	// font-size: 5rem;
@@ -186,18 +180,30 @@ div.details-flex-right {
 }
 // Short - End
 
+// Details - Start
+.details p {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+// Details - End
+
 // Food Vendor - Start
 .event-food-vendor-logo  {
 	max-width: 45%;
 }
 // Food Vendor - End
 
+// Co-Presenter - Start
 .event-co-presenter {
 	padding-top: 15px;
 }
+// Co-Presenter - End
+
+// Food Vendor + Presenter + Co-Presenter - Start
 div.event-food-vendor-logo, div.event-presenter-logo, div.event-co-presenter-logo {
 	padding: 0;
 }
+
 .event-food-vendor, .event-presenting-sponsors, .event-co-presenters {
 	align-items: center;
 }
@@ -206,13 +212,11 @@ div.event-food-vendor-logo, div.event-presenter-logo, div.event-co-presenter-log
 	margin: 0;
 	margin-top: 15px;
 }
-
-.italic {
-	font-style: italic;
-}
+// Food Vendor + Presenter + Co-Presenter - End
 
 // Responsive - Start
 
+// 1000px Width - Start
 @media (max-width: 1000px) {
 	.details-list li p {
 		font-size: 1.6rem;
@@ -224,15 +228,11 @@ div.event-food-vendor-logo, div.event-presenter-logo, div.event-co-presenter-log
 	}
 	.event-date h4{
 		font-size: 2.25rem;
-		// font-size: 2.25rem;
 		line-height: 1.875rem;
-    	// line-height: 1.875rem;
 	}
 	.event-feature h3 {
 		font-size: 3.9rem;
-		// font-size: 4.25rem;
     	line-height: 3.98rem;
-    	// line-height: 4.125rem;
 	}
 	.event-short-film h3 {
 		font-size: 2.1rem;
@@ -264,7 +264,6 @@ div.event-food-vendor-logo, div.event-presenter-logo, div.event-co-presenter-log
 	}
 	.event-overview {
 		display: flex;
-
 		align-items: center;
 		p {
 			width: 90%;
@@ -272,6 +271,8 @@ div.event-food-vendor-logo, div.event-presenter-logo, div.event-co-presenter-log
 		}
 	}
 }
+
+// 790px Width - Start
 @media (max-width: 790px) {
 	div.details-flex-left, div.details-flex-right {
 		width: 100%;
@@ -294,7 +295,7 @@ div.event-food-vendor-logo, div.event-presenter-logo, div.event-co-presenter-log
 	}
 }
 
-
+// 480px Width - Start
 @media (max-width: 480px) {
 	.event-feature h3 {
 		font-size: 3rem;
@@ -307,4 +308,6 @@ div.event-food-vendor-logo, div.event-presenter-logo, div.event-co-presenter-log
 		width: 95%;
 	}
 }
+// 480px Width - End
+
 // Responsive - End
