@@ -18,9 +18,12 @@ function theme_setup() {
 	add_image_size('copresenter-logo', 425, 425);
 	add_image_size('food-vendor',400, 400);
 	add_image_size('small-logo', 200, 200);
+
+// New Content - Start 
 	add_image_size('films-page', 300, 450);
 	add_image_size('films-page-large', 400, 600);
-
+	add_image_size('event-page-food-vendor', 300, 300);
+// New Content - End
 
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );
@@ -267,4 +270,4 @@ function cc_mime_types($mimes) {
 add_filter('upload_mimes', 'cc_mime_types');
 
 // UNCOMMENT TO SHOW ADMIN BAR
-show_admin_bar(false);
+show_admin_bar(true);

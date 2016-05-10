@@ -108,8 +108,12 @@ div.details-flex-right {
 // Films Page Link - Start
 .films-page-link {
 	@include sponsor-partner;
-	text-align: left;
+	text-align: right;
 	text-shadow: 1px 1px 1px #ccc;
+	a {
+		padding-right: 45px;
+	}
+
 }
 // Films Page Link - Start
 
@@ -142,11 +146,14 @@ div.details-flex-right {
 .map .poster-flex {
 	margin: 0 auto;
 }	
-.disable-click, div.supporter-logo:nth-child(3) {
-    pointer-events: none;
-}
 
 // Map - End
+
+// MAP and Presenter - Start
+.disable-click, div.disable-supporter-logo:nth-child(3) {
+    pointer-events: none;
+}
+// MAP and Presenter - End
 
 // Feature - Start
 .event-feature h3 {
@@ -163,6 +170,10 @@ div.details-flex-right {
 // Short - Start
 .event-short-film {
 	padding: 0;
+	p {
+		font-size: 1.8rem;
+		font-weight: 700
+	}
 }
 .event-short-films {
 	padding-top: 15px;
@@ -188,27 +199,34 @@ div.details-flex-right {
 }
 // Details - End
 
-// Food Vendor - Start
-.event-food-vendor-logo  {
-	max-width: 45%;
-}
-// Food Vendor - End
-
 // Co-Presenter - Start
 .event-co-presenter {
 	padding-top: 15px;
 }
 // Co-Presenter - End
 
+
+
+
+// CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES
+div.event-food-vendor-logo {
+    flex: 0 0 300px;
+}
+div.event-co-presenter-logo {
+    flex: 0 0 300px;
+}
+// CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES
+
+
+
+
 // Food Vendor + Presenter + Co-Presenter - Start
 div.event-food-vendor-logo, div.event-presenter-logo, div.event-co-presenter-logo {
 	padding: 0;
 }
-
 .event-food-vendor, .event-presenting-sponsors, .event-co-presenters {
 	align-items: center;
 }
-
 .event-presenter-logo, .event-food-vendor {
 	margin: 0;
 	margin-top: 15px;

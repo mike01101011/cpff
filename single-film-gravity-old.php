@@ -13,7 +13,7 @@
 <!-- website main content - start -->
 <main class="clearfix">
 	
-	<?php $onePageQuery = new WP_Query( array( 'posts_per_page' => -1, 'post_type' => 'event', 'name' => 'nosferatu', 'order' => 'DSC' ) ); ?>
+	<?php $onePageQuery = new WP_Query( array( 'posts_per_page' => -1, 'post_type' => 'event', 'name' => 'gravity', 'order' => 'DSC' ) ); ?>
 
 <div class="flex">
 
@@ -28,17 +28,14 @@
 
 <!-- 00 FILMS PAGE LINK -->
 				
-					<!-- <div class="films-page-link bottom-border"> -->
-						<!-- <a href=" http://localhost:8888/cpff/films/">Films Page</a> -->
-					<!-- </div> .films-page-link -->
-				
-<div class="overview-poster-flex ">	
-	<div class="overview-poster-flex-left">
+					<div class="films-page-link bottom-border">
+						<a href=" http://localhost:8888/cpff/films/">Films Page</a>
+					</div> <!-- .films-page-link -->
 
 <!-- xx01 TITLE TEXT -->
 					<?php if( get_field('title')):?> <!-- start loop -->
 						<div class="feature event-title clearfix ">
-							<?php the_field( 'title' ); ?>
+							<h3><?php the_field( 'title' ); ?></h3>
 						</div> <!-- /.feature -->
 					<?php endif; ?> <!-- end loop -->
 
@@ -51,7 +48,7 @@
 
 <!-- xx03 HEADLINE TEXT -->
 					<?php if( get_field('headline') ): ?> <!-- start loop -->
-						<div class="shorts event-headline clearfix bottom-border">
+						<div class="shorts event-headline clearfix">
 							<div class="short-films">
 								<div class="short-film event-short-film">
 									<h3><?php the_field( 'headline' ); ?></h3>
@@ -61,34 +58,30 @@
 					<?php endif; ?> <!-- end loop -->
 
 <!-- xx04 OVERVIEW TEXT -->
-						<?php if( get_field('overview') ): ?> <!-- start loop -->
-							<div class="shorts event-overview clearfix bottom-border">
-								<?php the_field('overview'); ?>
-							</div> <!-- /.shorts -->
-						<?php endif; ?> <!-- end loop -->
-	</div> <!-- .overview-poster-flex-left -->
+					<?php if( get_field('overview') ): ?> <!-- start loop -->
+						<div class="shorts event-overview clearfix bottom-border">
+							<?php the_field('overview'); ?>
+						</div> <!-- /.shorts -->
+					<?php endif; ?> <!-- end loop -->
 
 <!-- 05 POSTER IMAGE -->
-	<div class="overview-poster-flex-right">
-					<div class="poster-flex">
-						<?php if( get_field('poster')):?> <!-- start loop -->
-							<div class="poster event-poster clearfix">
-								<?php $image = get_field('poster'); if( !empty($image) ): ?>
+<div class="poster-flex">
+					<?php if( get_field('poster')):?> <!-- start loop -->
+						<div class="poster event-poster clearfix">
+							<?php $image = get_field('poster'); if( !empty($image) ): ?>
 <!-- TO PRINT ARRAY -->
 <!-- <pre><?php //print_r($image);?></pre> -->
 
-									<a href="<?php echo $image['url']; ?>" target="_blank">
-										<img src="<?php echo $image['sizes']['films-page-large']; ?>" alt="<?php echo $image['alt']; ?>" />
-									</a>
-								<?php endif; ?>
-							</div> <!-- /.poster -->
-							<div class="short event-poster-credit clearfix">
-								<p>design credit José Garcia of <a href="http://www.garciadesign.ca/" target="_blank">Garcia Design</a></p>
-							</div>
-						<?php endif; ?> <!-- end loop -->
-					</div> <!-- .poster-flex -->
-	</div> <!-- .overview-poster-flex-left -->
-</div> <!-- .overview-poster-flex -->
+								<a href="<?php echo $image['url']; ?>" target="_blank">
+									<img src="<?php echo $image['sizes']['films-page-large']; ?>" alt="<?php echo $image['alt']; ?>" />
+								</a>
+							<?php endif; ?>
+						</div> <!-- /.poster -->
+						<div class="short event-poster-credit clearfix">
+							<p>Designer: José Garcia, <a href="http://www.garciadesign.ca/" target="_blank">Garcia Design</a></p>
+						</div>
+					<?php endif; ?> <!-- end loop -->
+</div> <!-- .poster-flex -->
 
 <!-- 06 FEATURE FILM TEXT -->
 	
@@ -101,6 +94,7 @@
 <!-- 07 SHORT FILMS REPEATER -->
 					<?php if( have_rows('short_films') ): ?> <!-- start loop -->
 						<div class="shorts event-shorts clearfix bottom-border">
+							<p>Screening with</p>
 							<div class="short-films event-short-films">
 								<?php while( have_rows('short_films') ): the_row();
 									$short = get_sub_field('short_film');
@@ -114,20 +108,22 @@
 							</div> <!-- /.short-films -->
 						</div> <!-- /.shorts -->
 					<?php endif; ?> <!-- end loop -->
+
 <!-- DETAILS -->
 <div class="details-flex bottom-border">
 	<div class="details-flex-left">
 					<div class="details clearfix">
 						<p>Event Details</p>
 						<ul class="details-list">
-							<li><p>Saturday, June 18th, Queensway Park</p></li>
-							<li><p>Eats & Treats @ 7pm. Pre-show entertainment @ 8pm. Film @ 9:15pm.</p></li>
-							<li><p>Free / fully accessible</p></li>
-							<li><p>BYOBlanket & Chairs</p></li>
-							<li><p>Scheduled rain date: June 25th, Queensway Park</p></li>
+							<li><p>Eats & Treats @ 6pm</p></li>
+							<li><p>Films @ Sundown</p></li>
+							<li><p>Free / PWYC (suggested donation $10)</p></li>
+							<li><p>BYOBlanket</p></li>
+							<li><p>Accessible venue</p></li>
+							<li><p>Films are screened with captioning whenever possible</p></li>
 						</ul>
-					</div> <!-- .details -->
-	</div> <!-- .details-flex-left -->
+					</div>
+	</div>
 
 <!-- 12-LINK TRAILER TEXT -->
 	<div class="details-flex-right">
@@ -139,34 +135,14 @@
 					<?php endif; ?> <!-- end loop -->
 
 <!-- 13 FACEBOOK RSVP TEXT -->
-
 					<?php if( get_field('facebook_rsvp')):?> <!-- start loop -->	
 						<div class="facebook-event event-facebook-event">
 							<a href="<?php the_field('facebook_rsvp'); ?>" target="_blank"><i class="fa fa-facebook-official "></i> event page</a>
 						</div> <!-- /.facebook-event -->
 					<?php endif; ?> <!-- end loop -->
 		 </div> <!-- .trailer-facebook-flex -->
-
-<!-- MAP -->
-		 <div class="map">
-		 			<?php if( get_field('map')):?> <!-- start loop -->
-
-<!-- CLICK DISABLED -->
-		 			<div class="disable-click poster map-poster clearfix">
-		 				<?php $image = get_field('map'); if( !empty($image) ): ?>
-<!-- TO PRINT ARRAY -->
-<!-- <pre><?php //print_r($image);?></pre> -->
-
-							<a href="#" target="_blank">
-								<img src="<?php echo $image['sizes']['presenting-sponsor-logo']; ?>" alt="<?php echo $image['alt']; ?>" />
-							</a>
-						<?php endif; ?>
-					</div> <!-- /.poster -->
-					<?php endif; ?> <!-- end loop -->
-		</div> <!-- .map -->
 	</div> <!-- .details-flex-right -->
 </div> <!-- .details-flex -->
-
 
 <!-- 08 FOOD VENDORS REPEATER -->
 					<?php if( have_rows('food_vendors') ): ?> <!-- start loop -->
@@ -190,14 +166,12 @@
 <!-- 09 PRESENTING SPONSORS REPEATER -->
 					<?php if( have_rows('presenting_sponsors') ): ?> <!-- start loop -->
 						<div class="presenting-sponsors event-presenting-sponsors clearfix bottom-border">
-							<p>Presented by</p>
+							<p>Opening Night Sponsor</p>
 							<?php while( have_rows('presenting_sponsors') ): the_row();
 								$presenterlink = get_sub_field('presenter_link');
 								$presenter = get_sub_field('presenter_logo'); 
 							?>
-
-<!-- CLICK DISABLED -->
-								<div class="disable-click presenter-logo event-presenter-logo">
+								<div class="presenter-logo event-presenter-logo">
 									<a href="<?php echo $presenterlink ?>" target="_blank">
 										<img src="<?php echo $presenter['sizes']['presenting-sponsor-logo'] ?>" alt="<?php echo $presenter['alt'] ?>">
 									</a>
@@ -209,8 +183,8 @@
 <!-- 10 CO-PRESENTING SPONSORS REPEATER -->
 					<?php if( have_rows('co-presenting_sponsors') ): ?> <!-- start loop -->
 						<div class="co-presenters event-co-presenters clearfix bottom-border">
-							<p>This project was supported through Toronto Arts Council Strategic Funding.</p>
-							<div class="co-presenter event-co-presenter co-presenter-nosferatu">
+							<p>Co-presented by</p>
+							<div class="co-presenter event-co-presenter">
 								<?php while( have_rows('co-presenting_sponsors') ): the_row();
 									$copresenterlink = get_sub_field('co-presenting_sponsor_link');
 									$copresenter = get_sub_field('co-presenting_sponsor'); 
@@ -228,14 +202,13 @@
 <!-- 11 SUPPORTING SPONSORS REPEATER -->
 					<?php if( have_rows('supporting_sponsors') ): ?> <!-- start loop -->
 						<div class="co-presenters event-co-presenters clearfix bottom-border">
-							<p>Co-Presented by</p>
-							<div class="co-presenter event-co-presenter support-nosferatu">
+							<p>Thank you to the Ontario Arts Council and Toronto Arts Council for their support of Christie Pits Film Festival.</p>
+							<div class="co-presenter event-co-presenter">
 								<?php while( have_rows('supporting_sponsors') ): the_row();
 									$supporterlink = get_sub_field('supporting_sponsors_link');
 									$supporter = get_sub_field('supporting_sponsor'); 
 								?>
-<!-- CLICK DISABLED, nth-child(3)-->
-									<div class="co-presenter-logo event-co-presenter-logo supporter-logo disable-supporter-logo">
+									<div class="co-presenter-logo event-co-presenter-logo supporter-logo">
 										<a href="<?php echo $supporterlink ?>" target="_blank">
 											<img class="logo" src="<?php echo $supporter['sizes']['copresenter-logo'] ?>" alt="<?php echo $supporter['alt'] ?>">
 										</a>
