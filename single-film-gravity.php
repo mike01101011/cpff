@@ -37,7 +37,7 @@
 
 <!-- xx01 TITLE TEXT -->
 					<?php if( get_field('title')):?> <!-- start loop -->
-						<div class="feature event-title clearfix ">
+						<div class="feature event-title onsite-event-title clearfix ">
 							<?php the_field( 'title' ); ?>
 						</div> <!-- /.feature -->
 					<?php endif; ?> <!-- end loop -->
@@ -53,7 +53,7 @@
 					<?php if( get_field('headline') ): ?> <!-- start loop -->
 						<div class="shorts event-headline clearfix bottom-border">
 							<div class="short-films">
-								<div class="short-film event-short-film">
+								<div class="short-film event-short-film onsite-short-film">
 									<h3><?php the_field( 'headline' ); ?></h3>
 								</div> <!-- /.short-film -->
 							</div> <!-- /.short-films -->
@@ -93,7 +93,7 @@
 <!-- 06 FEATURE FILM TEXT -->
 	
 					<?php if( get_field('feature_film')):?> <!-- start loop -->
-						<div class="feature event-feature clearfix">
+						<div class="feature event-feature onsite-event-feature clearfix">
 							<h3><?php the_field( 'feature_film' ); ?></h3>
 						</div> <!-- /.feature -->
 					<?php endif; ?> <!-- end loop -->
@@ -107,8 +107,8 @@
 									$filmmaker = get_sub_field('short_director');
 									$twitter = get_sub_field('twitter_handle');
 								?>						
-										<div class="short-film event-short-film">
-											<p>Screening with</p>
+										<div class="short-film event-short-film onsite-event-short-film">
+											<h4>Screening with</h4>
 											<h3><?php echo $short; ?></h3>
 										</div> <!-- /.short-film -->	
 								<?php endwhile; ?>

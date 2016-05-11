@@ -53,6 +53,7 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	align-items: center;
 }
 div.overview-poster-flex-left {
 	width: 60%;	
@@ -174,6 +175,9 @@ div.details-flex-right {
 		font-size: 1.8rem;
 		font-weight: 700
 	}
+	// h4 {
+	// 	text-align: left;
+	// }
 }
 .event-short-films {
 	padding-top: 15px;
@@ -210,10 +214,16 @@ div.details-flex-right {
 
 // CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES
 div.event-food-vendor-logo {
-    flex: 0 0 300px;
+    flex: 1 0 285px;
+    margin: 7.5px 0;
 }
 div.event-co-presenter-logo {
-    flex: 0 0 300px;
+    flex: 1 0 300px;
+    margin: 7.5px 0;
+}
+
+.event-co-presenter {
+	align-items: center;
 }
 // CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES
 
