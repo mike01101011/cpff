@@ -210,9 +210,7 @@ div.details-flex-right {
 // Co-Presenter - End
 
 
-
-
-// CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES
+// Food Vendor + Co-Presenter - Start
 div.event-food-vendor-logo {
     flex: 1 0 285px;
     margin: 7.5px 0;
@@ -225,10 +223,7 @@ div.event-co-presenter-logo {
 .event-co-presenter {
 	align-items: center;
 }
-// CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES
-
-
-
+// Food Vendor + Co-Presenter - End
 
 // Food Vendor + Presenter + Co-Presenter - Start
 div.event-food-vendor-logo, div.event-presenter-logo, div.event-co-presenter-logo {
@@ -298,6 +293,9 @@ div.event-food-vendor-logo, div.event-presenter-logo, div.event-co-presenter-log
 			width: 90%;
 			margin: 0 auto;
 		}
+	}
+	.event-poster a {
+		padding-left: 0px;
 	}
 }
 

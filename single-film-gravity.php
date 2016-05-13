@@ -1,4 +1,4 @@
-<!-- website header - start -->
+	<!-- website header - start -->
 <?php get_header(); ?>
 <!-- website header - end -->
 
@@ -188,37 +188,14 @@
 							?>
 								<div class="presenter-logo event-presenter-logo">
 									<a href="<?php echo $presenterlink ?>" target="_blank">
+<!-- OLD -->
 										<!-- <img src="<?php //echo $presenter['sizes']['presenting-sponsor-logo'] ?>" alt="<?php //echo $presenter['alt'] ?>"> -->
-									
-<!-- // CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES -->
-
+<!-- NEW -->
 										<img src="<?php echo $presenter['sizes']['food-vendor'] ?>" alt="<?php echo $presenter['alt'] ?>">
-									
-<!-- // CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES CHANGES -->
-
 									</a>
 								</div> <!-- /.presenter-logo -->
 							<?php endwhile; ?>
 						</div> <!-- /.presenting-sponsors -->
-					<?php endif; ?> <!-- end loop -->
-
-<!-- 10 CO-PRESENTING SPONSORS REPEATER -->
-					<?php if( have_rows('co-presenting_sponsors') ): ?> <!-- start loop -->
-						<div class="co-presenters event-co-presenters clearfix bottom-border">
-							<p>Co-Presented by</p>
-							<div class="co-presenter event-co-presenter">
-								<?php while( have_rows('co-presenting_sponsors') ): the_row();
-									$copresenterlink = get_sub_field('co-presenting_sponsor_link');
-									$copresenter = get_sub_field('co-presenting_sponsor'); 
-								?>
-									<div class="co-presenter-logo event-co-presenter-logo">
-										<a href="<?php echo $copresenterlink ?>" target="_blank">
-											<img class="logo" src="<?php echo $copresenter['sizes']['copresenter-logo'] ?>" alt="<?php echo $copresenter['alt'] ?>">
-										</a>
-									</div> <!-- /.co-presenter-logo -->
-								<?php endwhile; ?>
-							</div> <!-- /.co-presenter -->
-						</div> <!-- /.co-presenters -->
 					<?php endif; ?> <!-- end loop -->
 
 <!-- 11 SUPPORTING SPONSORS REPEATER -->
@@ -233,6 +210,25 @@
 									<div class="co-presenter-logo event-co-presenter-logo supporter-logo">
 										<a href="<?php echo $supporterlink ?>" target="_blank">
 											<img class="logo" src="<?php echo $supporter['sizes']['copresenter-logo'] ?>" alt="<?php echo $supporter['alt'] ?>">
+										</a>
+									</div> <!-- /.co-presenter-logo -->
+								<?php endwhile; ?>
+							</div> <!-- /.co-presenter -->
+						</div> <!-- /.co-presenters -->
+					<?php endif; ?> <!-- end loop -->
+
+<!-- 10 CO-PRESENTING SPONSORS REPEATER -->
+					<?php if( have_rows('co-presenting_sponsors') ): ?> <!-- start loop -->
+						<div class="co-presenters event-co-presenters clearfix bottom-border">
+							<p>Co-Presented by</p>
+							<div class="co-presenter event-co-presenter">
+								<?php while( have_rows('co-presenting_sponsors') ): the_row();
+									$copresenterlink = get_sub_field('co-presenting_sponsor_link');
+									$copresenter = get_sub_field('co-presenting_sponsor'); 
+								?>
+									<div class="co-presenter-logo event-co-presenter-logo">
+										<a href="<?php echo $copresenterlink ?>" target="_blank">
+											<img class="logo" src="<?php echo $copresenter['sizes']['copresenter-logo'] ?>" alt="<?php echo $copresenter['alt'] ?>">
 										</a>
 									</div> <!-- /.co-presenter-logo -->
 								<?php endwhile; ?>
