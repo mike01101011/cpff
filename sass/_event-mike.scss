@@ -56,10 +56,10 @@
 	align-items: center;
 }
 div.overview-poster-flex-left {
-	width: 60%;	
+	width: 70%;	
 }
 div.overview-poster-flex-right{
-	width: 40%;	
+	width: 30%;	
 }
 div.details-flex-left {
 	width: 60%;
@@ -287,12 +287,15 @@ div.event-food-vendor-logo, div.event-presenter-logo, div.event-co-presenter-log
 		margin: 0 auto;
 	}
 	.event-overview {
-		display: flex;
+		display: initial;
 		align-items: center;
 		p {
 			width: 90%;
 			margin: 0 auto;
 		}
+	}
+	.overview-poster-flex-left {
+		border-bottom: .2rem solid darken(darkgreen, 5%);
 	}
 	.event-poster a {
 		padding-left: 0px;

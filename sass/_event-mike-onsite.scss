@@ -2,6 +2,13 @@
 	font-size: 4.81rem;
 }
 
+.onsite-event-short-film h4 {
+	text-align: left;
+}
+.onsite-event-short-film:nth-child(n+2) h4{
+		display: none;
+	}
+
 .onsite-short-film h3 {
 	font-size: 3.81rem;
 }
@@ -9,6 +16,7 @@
 @media (max-width: 1000px) {
 	.onsite-event-short-film h4 {
 		font-size: 2.1rem;
+		text-align: center;
 	}
 	.onsite-event-short-film h3 {
 		font-size: 2.5rem;

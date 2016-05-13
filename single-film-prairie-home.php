@@ -13,7 +13,7 @@
 <!-- website main content - start -->
 <main class="clearfix">
 	
-	<?php $onePageQuery = new WP_Query( array( 'posts_per_page' => -1, 'post_type' => 'event', 'name' => 'stranded', 'order' => 'DSC' ) ); ?>
+	<?php $onePageQuery = new WP_Query( array( 'posts_per_page' => -1, 'post_type' => 'event', 'name' => 'prairie-home', 'order' => 'DSC' ) ); ?>
 
 <div class="flex">
 
@@ -108,7 +108,7 @@
 									$twitter = get_sub_field('twitter_handle');
 								?>						
 										<div class="short-film event-short-film onsite-event-short-film">
-											<!-- <h4>Made possible by</h4> -->
+											<h4>With Short Films</h4>
 											<h3><?php echo $short; ?></h3>
 										</div> <!-- /.short-film -->	
 								<?php endwhile; ?>
@@ -116,20 +116,20 @@
 						</div> <!-- /.shorts -->
 					<?php endif; ?> <!-- end loop -->
 <!-- DETAILS -->
-<!-- <div class="details-flex bottom-border">
+<div class="details-flex bottom-border">
 	<div class="details-flex-left">
 					<div class="details clearfix">
 						<p>Event Details</p>
 						<ul class="details-list">
 							<li><p>Films @ Sundown</p></li>
 							<li><p>Eats & Treats @ 6pm</p></li>
-							<li><p>Free / PWYC (suggested donation $10)</p></li>
+							<li><p>Free / PWYC</p></li>
 							<li><p>BYOBlanket</p></li>
-							<li><p>Accessible venue</p></li>
+							<li><p>Accessible venue / All gender restrooms tonight</p></li>
 							<li><p>Films are screened with captioning whenever possible</p></li>
 						</ul>
-					</div> .details
-	</div> .details-flex-left -->
+					</div> <!-- .details -->
+	</div> <!-- .details-flex-left -->
 
 <!-- 12-LINK TRAILER TEXT -->
 	<div class="details-flex-right">
