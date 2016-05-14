@@ -15,7 +15,7 @@
 		 
 
 		h1.programTitle {
-			opacity: 0;
+			// opacity: 0;
 			@include feature-title;
 			color: #1E582C;
 		}
@@ -63,7 +63,7 @@
 
 
 // Lead Sponsor - start
-	.leadSponsor {
+	.leadSponsor, .leadPresenter {
 		opacity: 0;
 	}
 // Lead Sponsor - end
@@ -75,7 +75,7 @@
 		fill: white;
 		position: absolute;
 		left:50%;
-		top: 96.5%;
+		top: 97.5%;
 		transform: translate(-50%, -100%);
 	}
 

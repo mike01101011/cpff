@@ -1,0 +1,16 @@
+.news .story:first-child div {
+	border-top: .2rem solid #004b00;
+	// border-bottom: .2rem solid #004b00;
+}
+h1.stranded-programTitle {
+	font-family: Rajdhani,sans-serif;
+    opacity: 1;
+    text-transform: uppercase;
+    color: #1E582C;
+    font-size: 6.275rem;
+    text-align: center;
+    line-height: 6.0875rem;
+}
+.news .story:nth-child(odd) {
+			background: darken(ivory, 2.5%);
+		}

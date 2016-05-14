@@ -181,7 +181,7 @@
 <!-- 09 PRESENTING SPONSORS REPEATER -->
 					<?php if( have_rows('presenting_sponsors') ): ?> <!-- start loop -->
 						<div class="presenting-sponsors event-presenting-sponsors clearfix bottom-border">
-							<p>Opening Night Sponsor</p>
+							<p>Presenting Sponsor</p>
 							<?php while( have_rows('presenting_sponsors') ): the_row();
 								$presenterlink = get_sub_field('presenter_link');
 								$presenter = get_sub_field('presenter_logo'); 

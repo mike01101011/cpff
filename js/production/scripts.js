@@ -119,10 +119,29 @@ function newsletter() {
 
 
 // Greensock Animation:
+
+// var program = document.getElementsByClassName("programTitle")
+// TweenMax.to(program, '3', {
+// 	delay: '0',
+// 	opacity: '1',
+// });
+
+var leadPresenter = document.getElementsByClassName("leadPresenter")
+TweenMax.to(leadPresenter, '3', {
+	delay: '0',
+	opacity: '1',
+});
+
+var present = document.getElementsByClassName("present")
+TweenMax.to(present, '3', {
+	delay: '0',
+	opacity: '1',
+});
+
 // - Animating Text
 var text = document.getElementsByClassName("text")
 TweenMax.to(text, '1', {
-  delay: '1',
+  delay: '2',
   opacity: '1',
 });
 
@@ -133,32 +152,20 @@ TweenMax.to(reel, '3', {
   opacity: '1',
 })
 TweenMax.to(reel, '3', {
-  delay: '3.5',
+  delay: '4',
   rotation:'720',
   transformOrigin: '50% 50%',
 });
 
-var present = document.getElementsByClassName("present")
-TweenMax.to(present, '3', {
-	delay: '2.5',
-	opacity: '1',
-});
-
-var program = document.getElementsByClassName("programTitle")
-TweenMax.to(program, '3', {
-	delay: '3.5',
-	opacity: '1',
-});
-
-var lead = document.getElementsByClassName("leadSponsor")
-TweenMax.to(lead, '3', {
-	delay: '3.5',
+var leadSponsor = document.getElementsByClassName("leadSponsor")
+TweenMax.to(leadSponsor, '3', {
+	delay: '2',
 	opacity: '1',
 });
 
 var arrow = document.getElementsByClassName("arrow")
 TweenMax.from(arrow, '3', {
-	delay: '2.25',
+	delay: '7',
 	opacity:'0',
 	onComplete:loop
 });
