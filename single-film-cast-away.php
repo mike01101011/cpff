@@ -13,7 +13,7 @@
 <!-- website main content - start -->
 <main class="clearfix">
 	
-	<?php $onePageQuery = new WP_Query( array( 'posts_per_page' => -1, 'post_type' => 'event', 'name' => 'duel', 'order' => 'DSC' ) ); ?>
+	<?php $onePageQuery = new WP_Query( array( 'posts_per_page' => -1, 'post_type' => 'event', 'name' => 'cast-away', 'order' => 'DSC' ) ); ?>
 
 <div class="flex">
 
@@ -83,7 +83,7 @@
 								<?php endif; ?>
 							</div> <!-- /.poster -->
 							<div class="short event-poster-credit clearfix">
-								<p><a href="https://www.cinematerial.com/" target="_blank">Cinema Material</a></p>
+								<!-- <p><a href="https://www.cinematerial.com/" target="_blank">Cinema Material</a></p> -->
 							</div>
 						<?php endif; ?> <!-- end loop -->
 					</div> <!-- .poster-flex -->

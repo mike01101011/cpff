@@ -13,7 +13,7 @@
 <!-- website main content - start -->
 <main class="clearfix">
 	
-	<?php $onePageQuery = new WP_Query( array( 'posts_per_page' => -1, 'post_type' => 'event', 'name' => 'duel', 'order' => 'DSC' ) ); ?>
+	<?php $onePageQuery = new WP_Query( array( 'posts_per_page' => -1, 'post_type' => 'event', 'name' => 'rain-date', 'order' => 'DSC' ) ); ?>
 
 <div class="flex">
 
@@ -33,7 +33,7 @@
 					<!-- </div> .films-page-link -->
 				
 <div class="overview-poster-flex ">	
-	<div class="overview-poster-flex-left">
+	<div class="overview-poster-flex-left onsite-overview-poster-flex-left">
 
 <!-- xx01 TITLE TEXT -->
 					<?php if( get_field('title')):?> <!-- start loop -->
@@ -83,11 +83,11 @@
 								<?php endif; ?>
 							</div> <!-- /.poster -->
 							<div class="short event-poster-credit clearfix">
-								<p><a href="https://www.cinematerial.com/" target="_blank">Cinema Material</a></p>
+								<p>design credit José Garcia of <a href="http://www.garciadesign.ca/" target="_blank">Garcia Design</a></p>
 							</div>
 						<?php endif; ?> <!-- end loop -->
 					</div> <!-- .poster-flex -->
-	</div> <!-- .overview-poster-flex-left -->
+	</div> <!-- .overview-poster-flex-right -->
 </div> <!-- .overview-poster-flex -->
 
 <!-- 06 FEATURE FILM TEXT -->
@@ -115,24 +115,9 @@
 							</div> <!-- /.short-films -->
 						</div> <!-- /.shorts -->
 					<?php endif; ?> <!-- end loop -->
-<!-- DETAILS -->
-<div class="details-flex bottom-border">
-	<div class="details-flex-left">
-					<div class="details clearfix">
-						<p>Event Details</p>
-						<ul class="details-list">
-							<li><p>Films @ Sundown</p></li>
-							<li><p>Eats & Treats @ 6pm</p></li>
-							<li><p>Free / PWYC</p></li>
-							<li><p>BYOBlanket</p></li>
-							<li><p>Accessible venue</p></li>
-							<li><p>Films are screened with captioning whenever possible</p></li>
-						</ul>
-					</div> <!-- .details -->
-	</div> <!-- .details-flex-left -->
 
 <!-- 12-LINK TRAILER TEXT -->
-	<div class="details-flex-right">
+	<div class="details-flex-right onsite-details-flex-right">
 		<div class="trailer-facebook-flex">
 					<?php if( get_field('trailer')):?> <!-- start loop -->
 						<div class="facebook-event event-facebook-event">
