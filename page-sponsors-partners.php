@@ -14,12 +14,14 @@
 
 
 <!-- website main content - start -->
-<main class="clearfix">
+<main class="clearfix sponsors-partners">
 	
 		
 	
 		<!-- page title - start -->
-		<h2><?php the_title(); ?></h2>
+		<div class="container bottom-border">
+			<h2>Thank you to all of our <?php the_title(); ?></h2>
+		</div>
 		<!-- page title - end -->
 		
 		
@@ -37,7 +39,7 @@
 			<?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
 					
 				<section class="level">
-					<div class="container">
+					<div class="container bottom-border">
 						<?php if( get_field('type')):?>
 		                    <h3><?php the_field( 'type' ); ?></h3>
 						<?php endif; ?>
