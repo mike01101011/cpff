@@ -108,7 +108,7 @@
 									$twitter = get_sub_field('twitter_handle');
 								?>						
 										<div class="short-film event-short-film onsite-event-short-film">
-											<h4>With Short Films</h4>
+											<h4>With Short Film</h4>
 											<h3><?php echo $short; ?></h3>
 										</div> <!-- /.short-film -->	
 								<?php endwhile; ?>
