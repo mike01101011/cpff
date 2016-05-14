@@ -83,7 +83,7 @@
 								<?php endif; ?>
 							</div> <!-- /.poster -->
 							<div class="short event-poster-credit clearfix">
-								<!-- <p><a href="https://www.cinematerial.com/" target="_blank">Cinema Material</a></p> -->
+								<p>design credit Paul Wallace</p>
 							</div>
 						<?php endif; ?> <!-- end loop -->
 					</div> <!-- .poster-flex -->

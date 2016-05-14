@@ -83,7 +83,7 @@
 								<?php endif; ?>
 							</div> <!-- /.poster -->
 							<div class="short event-poster-credit clearfix">
-								<!-- <p><a href="https://www.cinematerial.com/" target="_blank">Cinema Material</a></p> -->
+								<p>credit <a href="http://soulist-aurora.tumblr.com" target="_blank">Hajin Bae</a></p>
 							</div>
 						<?php endif; ?> <!-- end loop -->
 					</div> <!-- .poster-flex -->
@@ -108,7 +108,7 @@
 									$twitter = get_sub_field('twitter_handle');
 								?>						
 										<div class="short-film event-short-film onsite-event-short-film">
-											<h4>With Short Films</h4>
+											<h4>With Music Videos</h4>
 											<h3><?php echo $short; ?></h3>
 										</div> <!-- /.short-film -->	
 								<?php endwhile; ?>

@@ -83,7 +83,7 @@
 								<?php endif; ?>
 							</div> <!-- /.poster -->
 							<div class="short event-poster-credit clearfix">
-								<!-- <p><a href="https://www.cinematerial.com/" target="_blank">Cinema Material</a></p> -->
+								<p>credit <a href="http://christianfrarey.tumblr.com" target="_blank">Christian Frarey</a></p>
 							</div>
 						<?php endif; ?> <!-- end loop -->
 					</div> <!-- .poster-flex -->
@@ -108,7 +108,7 @@
 									$twitter = get_sub_field('twitter_handle');
 								?>						
 										<div class="short-film event-short-film onsite-event-short-film">
-											<h4>With Short Films</h4>
+											<h4>With Short Film</h4>
 											<h3><?php echo $short; ?></h3>
 										</div> <!-- /.short-film -->	
 								<?php endwhile; ?>
@@ -121,7 +121,7 @@
 					<div class="details clearfix">
 						<p>Event Details</p>
 						<ul class="details-list">
-							<li><p>Films @ Sundown</p></li>
+							<li><p>Films @ Sundown (8:45pm)</p></li>
 							<li><p>Eats & Treats @ 6pm</p></li>
 							<li><p>Free / PWYC</p></li>
 							<li><p>BYOBlanket</p></li>

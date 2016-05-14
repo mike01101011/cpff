@@ -83,7 +83,7 @@
 								<?php endif; ?>
 							</div> <!-- /.poster -->
 							<div class="short event-poster-credit clearfix">
-								<p>credit <a href="http://rachaelsinclair.myportfolio.com/" target="_blank">Rachael Sinclair</a></p>
+								<!-- <p>credit <a href="" target="_blank"></a></p> -->
 							</div>
 						<?php endif; ?> <!-- end loop -->
 					</div> <!-- .poster-flex -->
