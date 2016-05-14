@@ -62,7 +62,7 @@
 
 <!-- xx04 OVERVIEW TEXT -->
 						<?php if( get_field('overview') ): ?> <!-- start loop -->
-							<div class="shorts event-overview clearfix bottom-border">
+							<div class="shorts event-overview clearfix">
 								<?php the_field('overview'); ?>
 							</div> <!-- /.shorts -->
 						<?php endif; ?> <!-- end loop -->
@@ -107,7 +107,7 @@
 									$filmmaker = get_sub_field('short_director');
 									$twitter = get_sub_field('twitter_handle');
 								?>						
-										<div class="short-film event-short-film onsite-event-short-film">
+										<div class="short-film event-short-film onsite-event-short-film stranded-onsite-event-short-film">
 											<!-- <h4>Made possible by</h4> -->
 											<h3><?php echo $short; ?></h3>
 										</div> <!-- /.short-film -->	
@@ -132,7 +132,7 @@
 	</div> .details-flex-left -->
 
 <!-- 12-LINK TRAILER TEXT -->
-	<div class="details-flex-right">
+	<div class="details-flex-right stranded-details-flex-right">
 		<div class="trailer-facebook-flex">
 					<?php if( get_field('trailer')):?> <!-- start loop -->
 						<div class="facebook-event event-facebook-event">
