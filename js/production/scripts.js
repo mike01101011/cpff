@@ -134,38 +134,38 @@ TweenMax.to(leadPresenter, '3', {
 
 var present = document.getElementsByClassName("present")
 TweenMax.to(present, '3', {
-	delay: '0',
+	delay: '2',
 	opacity: '1',
 });
 
 // - Animating Text
 var text = document.getElementsByClassName("text")
 TweenMax.to(text, '1', {
-  delay: '2',
+  delay: '4',
   opacity: '1',
 });
 
-// - Animating the Reel
-var reel = document.getElementsByClassName("reel")
-TweenMax.to(reel, '3', {
-  delay: '2', 
-  opacity: '1',
-})
-TweenMax.to(reel, '3', {
-  delay: '4',
-  rotation:'720',
-  transformOrigin: '50% 50%',
-});
+// // - Animating the Reel
+// var reel = document.getElementsByClassName("reel")
+// TweenMax.to(reel, '3', {
+//   delay: '2', 
+//   opacity: '1',
+// })
+// TweenMax.to(reel, '3', {
+//   delay: '4',
+//   rotation:'720',
+//   transformOrigin: '50% 50%',
+// });
 
 var leadSponsor = document.getElementsByClassName("leadSponsor")
 TweenMax.to(leadSponsor, '3', {
-	delay: '2',
+	delay: '6',
 	opacity: '1',
 });
 
 var arrow = document.getElementsByClassName("arrow")
 TweenMax.from(arrow, '3', {
-	delay: '7',
+	delay: '6',
 	opacity:'0',
 	onComplete:loop
 });
