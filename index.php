@@ -37,12 +37,16 @@
         <?php endif; ?>
 <!-- CHRISTIE PITS FILM FESTIVAL LOGO TEXT - End -->
 
+        <div class="program-title presents-program-title leadSponsor">
+          <h3 class="present">Lead Sponsor</h3>
+        </div> <!-- /.program-title -->
+
 <!-- SHOMI LOGO - Start -->
-        <div class="shomi-banner shomi leadSponsor">
+        <div class="shomi-banner home-shomi leadSponsor">
           <?php $image = get_field('lead_logo'); if( !empty($image) ): ?>
             <div class="presented-by">
               <div class="container">
-                <!-- <h3 class="present">presented by</h3> -->
+                <!-- <h3 class="present">Lead Sponsor</h3> -->
                 <div class="leadSponsor leadSponsor-shomi">
 
 <!-- TO PRINT ARRAY -->

@@ -1,7 +1,8 @@
 // _HOME.SCSS UPDATED _HOME.SCSS UPDATED _HOME.SCSS UPDATED _HOME.SCSS UPDATED _HOME.SCSS UPDATED _HOME.SCSS UPDATED _HOME.SCSS UPDATED
 
-.news .story:first-child div {
-	border-top: .2rem solid #004b00;
+// .news .story:first-child div {
+    main.home:nth-child(2) {
+	border-bottom: .2rem solid #004b00;
 }
 h1.stranded-programTitle {
 	font-family: Rajdhani,sans-serif;
@@ -17,7 +18,7 @@ h1.stranded-programTitle {
 }
 
 .tops-presented-by, .presents-program-title, .cpff-program-title, .shomi-banner {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .lrg-bg div.presents-program-title h3{
@@ -26,21 +27,28 @@ h1.stranded-programTitle {
     font-weight: 700;
 }
 
-.shomi {
+.home-shomi {
     background: #2c0251;
 }
 .shomi-banner {
     margin-bottom: 30px;
-    width: 100%;
+    width: 44%;
+    border-radius: 10px;
 }
 .leadSponsor-shomi img {
     display: block;
     margin: 0 auto;
-    padding: 30px 0 15px 0;
+    padding: 30px 0 15px 35px;
 }
 div.program-title h1.home-cpff {
     font-size: 8.375rem;
     text-align: center;
     line-height: 8.1875rem;
     text-transform: initial;
+}
+section.news {
+    padding-top: 0;
+}
+div.container .bottom-border {
+    padding-bottom: 30px;
 }

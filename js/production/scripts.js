@@ -128,20 +128,20 @@ function newsletter() {
 
 var leadPresenter = document.getElementsByClassName("leadPresenter")
 TweenMax.to(leadPresenter, '3', {
-	delay: '0',
+	delay: '.5',
 	opacity: '1',
 });
 
 var present = document.getElementsByClassName("present")
 TweenMax.to(present, '3', {
-	delay: '2',
+	delay: '1.5',
 	opacity: '1',
 });
 
 // - Animating Text
 var text = document.getElementsByClassName("text")
 TweenMax.to(text, '1', {
-  delay: '4',
+  delay: '2.5',
   opacity: '1',
 });
 
@@ -159,13 +159,13 @@ TweenMax.to(text, '1', {
 
 var leadSponsor = document.getElementsByClassName("leadSponsor")
 TweenMax.to(leadSponsor, '3', {
-	delay: '6',
+	delay: '3.5',
 	opacity: '1',
 });
 
 var arrow = document.getElementsByClassName("arrow")
 TweenMax.from(arrow, '3', {
-	delay: '6',
+	delay: '4.5',
 	opacity:'0',
 	onComplete:loop
 });
