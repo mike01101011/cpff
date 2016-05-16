@@ -45,7 +45,7 @@
         <div class="shomi-banner home-shomi leadSponsor">
           <?php $image = get_field('lead_logo'); if( !empty($image) ): ?>
             <div class="presented-by">
-              <div class="container">
+              <div class="container home-shomi-container">
                 <!-- <h3 class="present">Lead Sponsor</h3> -->
                 <a href="http://www.shomi.com" target="_blank">
                   <div class="leadSponsor leadSponsor-shomi">

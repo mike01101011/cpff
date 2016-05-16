@@ -72,6 +72,9 @@ main.home-home {
     .tops-presented-by, .presents-program-title, .cpff-program-title, .shomi-banner {
         margin-top: 10px;
     }
+    .home-shomi-container {
+        padding: 0 10%;
+    }
 }
 @media (max-width: 790px) {
     #info.home-info h3 {
@@ -85,9 +88,9 @@ main.home-home {
 }
 @media (max-width: 480px) {
     div.program-title h1.home-cpff {
-    font-size: 7.375rem;
-    line-height: 7.1875rem;
-}
+        font-size: 7.375rem;
+        line-height: 7.1875rem;
+    }
     h1.stranded-programTitle {
         font-size: 5.275rem;
         line-height: 5.0875rem;
