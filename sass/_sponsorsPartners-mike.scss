@@ -1,6 +1,30 @@
 main.sponsors-partners {
 	background-color: #ffffe3;
 	h3 {
-		padding:0 0 30px;
+		padding:0 0 15px;
 	}
 }
+div.container.bottom-border {
+	padding-bottom: 2%;
+}
+
+// Responsive - Start
+@media (max-width: 1000px) {
+	.sponsors-partners div h2 {
+		font-size: 5.2rem;
+    	line-height: 4.8rem;
+	}
+}
+@media (max-width: 790px) {
+	.sponsors-partners div h2 {
+		font-size: 3.8rem;
+    	line-height: 3.8rem;
+	}
+}
+@media (max-width: 480px) {
+	.sponsors-partners div h2 {
+		font-size: 3.1rem;
+    	line-height: 2.8rem;
+	}	
+}
+// Responsive - End
