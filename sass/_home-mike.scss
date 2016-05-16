@@ -1,7 +1,6 @@
 // _HOME.SCSS UPDATED _HOME.SCSS UPDATED _HOME.SCSS UPDATED _HOME.SCSS UPDATED _HOME.SCSS UPDATED _HOME.SCSS UPDATED _HOME.SCSS UPDATED
 
-// .news .story:first-child div {
-    main.home:nth-child(2) {
+    #info {
 	border-bottom: .2rem solid #004b00;
 }
 h1.stranded-programTitle {
@@ -32,13 +31,13 @@ h1.stranded-programTitle {
 }
 .shomi-banner {
     margin-bottom: 30px;
-    width: 44%;
+    width: 40%;
     border-radius: 10px;
 }
 .leadSponsor-shomi img {
     display: block;
     margin: 0 auto;
-    padding: 30px 0 15px 35px;
+    padding: 30px 0 20px;
 }
 div.program-title h1.home-cpff {
     font-size: 8.375rem;
@@ -46,9 +45,52 @@ div.program-title h1.home-cpff {
     line-height: 8.1875rem;
     text-transform: initial;
 }
-section.news {
-    padding-top: 0;
+.home-news {
+    padding-bottom: 1.5%;
+    h2 {
+       line-height: 2.8rem;
+    }
+    article.story div.container {
+        padding: 0 2.5%;
+    }
 }
-div.container .bottom-border {
-    padding-bottom: 30px;
+section.news, section#info {
+    margin: 0 30px;
 }
+main.home-home {
+    background: #ffffe3;
+}
+
+#info.home-info h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+// Responsive - Start
+@media (max-width: 1000px) {
+    .tops-presented-by, .presents-program-title, .cpff-program-title, .shomi-banner {
+        margin-top: 10px;
+    }
+}
+@media (max-width: 790px) {
+    #info.home-info h3 {
+        font-size: 2.1rem;
+    }
+    .home-news {
+        article.story div.container h3 {
+            font-size: 2.1rem;
+        }
+    }
+}
+@media (max-width: 480px) {
+    div.program-title h1.home-cpff {
+    font-size: 7.375rem;
+    line-height: 7.1875rem;
+}
+    h1.stranded-programTitle {
+        font-size: 5.275rem;
+        line-height: 5.0875rem;
+    }
+}
+// Responsive - End

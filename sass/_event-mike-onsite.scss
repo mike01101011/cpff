@@ -2,16 +2,15 @@
 	font-size: 4.81rem;
 }
 
+.onsite-short-film h3 {
+	font-size: 3.31rem;
+}
 .onsite-event-short-film h4 {
 	text-align: left;
 }
 .onsite-event-short-film:nth-child(n+2) h4{
 		display: none;
 	}
-
-.onsite-short-film h3 {
-	font-size: 3.31rem;
-}
 
 .event-short-films {
 	flex-flow: column wrap;
@@ -21,7 +20,7 @@ a.shomi {
 	// font-size: 2.8rem;
 }
 
-
+// Responsive - Start
 @media (max-width: 1000px) {
 	.onsite-event-short-film h4 {
 		font-size: 2.1rem;
@@ -37,7 +36,6 @@ a.shomi {
 		border-bottom: 0rem;
 	}
 }
-
 @media (max-width: 790px) {
 	.onsite-details-flex-right {
 		border-top: 0rem; 
@@ -47,7 +45,5 @@ a.shomi {
 	}
 
 }
-
-@media (max-width: 480px) {
-
-}
+@media (max-width: 480px) {}
+// Responsive - End

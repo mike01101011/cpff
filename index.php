@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 <?php include("navigation.php"); ?>
 
-<main class="home">
+<main class="home home-home">
 
   <?php $onePageQuery = new WP_Query( array( 'posts_per_page' => -1, 'post_type' => 'home', 'order' => 'DSC' ) ); ?>
 
@@ -76,7 +76,7 @@
       <?php if( have_rows('festival_info')):?>
         <?php while(have_rows('festival_info') ): the_row(); $info = get_sub_field('info'); ?>
 
-        <section id="info">
+        <section id="info" class="home-info">
 <!-- Name of Program - start -->
           <?php if( get_field('program_name')):?>
             <div class="program-title">
@@ -95,8 +95,8 @@
 <!-- Festival Info - end -->  
 
 <!-- News Section - start -->
-      <section class="news">
-        <h2>Latest News</h2>
+      <section class="news home-news">
+        <!-- <h2>Latest News</h2> -->
         <?php if( have_rows('latest_news')):?>
           <?php while(have_rows('latest_news') ): the_row(); $info = get_sub_field('latest'); ?>
             <article class="story">
