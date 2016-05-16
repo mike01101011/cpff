@@ -38,7 +38,7 @@
 		<?php if ( $onePageQuery->have_posts() ) : ?>
 			<?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
 					
-				<section class="level">
+				<section class="level sponsors-partners-level">
 					<div class="container sponsors-partners-container">
 						<?php if( get_field('type')):?>
 		                    <h3><?php the_field( 'type' ); ?></h3>
