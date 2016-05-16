@@ -47,13 +47,13 @@
             <div class="presented-by">
               <div class="container">
                 <!-- <h3 class="present">Lead Sponsor</h3> -->
-                <div class="leadSponsor leadSponsor-shomi">
-
+                <a href="http://www.shomi.com" target="_blank">
+                  <div class="leadSponsor leadSponsor-shomi">
 <!-- TO PRINT ARRAY -->
 <!-- <pre><?php //print_r($image);?></pre> -->
-
-                  <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
-                </div> 
+                    <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
+                  </div> <!-- .leadSponsor -->
+                </a>
               </div> <!-- /.container -->
             </div> <!-- /.presented-by -->
           <?php endif; ?>
