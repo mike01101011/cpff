@@ -4,8 +4,19 @@ main.sponsors-partners {
 		padding:0 0 15px;
 	}
 }
-div.container.bottom-border {
+div.container.sponsors-partners-container {
 	padding-bottom: 2%;
+}
+div.big-donor, div.second-tier-donors, div.medium-donors, div.small-donors {
+	    border-bottom: .2rem solid #004b00;
+	    img:last-child {
+	    	padding-bottom: 15px;
+	    }
+}
+div.sponsors-partners-title h2 {
+	border-bottom: .2rem solid #004b00;
+	padding-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 // Responsive - Start
