@@ -17,11 +17,13 @@
 <main class="clearfix main-media">
 	
 		
-		<div class="container bottom-border">
-			<!-- page title - start -->
-			<h2><?php the_title(); ?></h2>
-			<!-- page title - end -->
-		</div>
+		<div class="container">
+			<div class="bottom-border">
+				<!-- page title - start -->
+				<h2><?php the_title(); ?></h2>
+				<!-- page title - end -->
+			</div> <!-- .bottom-border -->
+		</div> <!-- .container -->
 		
 		<?php
 			$onePageQuery = new WP_Query(
@@ -37,17 +39,19 @@
 			<?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
 					
 				<section id="year">
-					<div class="container bottom-border">
-	                    <h3><?php the_field( 'media_year' ); ?></h3>
-	                    <ul>
-	                    <?php while ( has_sub_field('news_article') ): ?>
-	                    	<li>
-	                    		<a href="<?php the_sub_field('article_link'); ?>" target="_blank">
-	                    			<span class="name"><?php the_sub_field('article_publisher');?>: </span> <em><?php the_sub_field('article_title'); ?></em>
-	                    		</a>
-	                    	</li>
-		                <?php endwhile; ?>
-	                    </ul>
+					<div class="container">
+						<div class="bottom-border">
+		                    <h3><?php the_field( 'media_year' ); ?></h3>
+		                    <ul>
+		                    <?php while ( has_sub_field('news_article') ): ?>
+		                    	<li>
+		                    		<a href="<?php the_sub_field('article_link'); ?>" target="_blank">
+		                    			<span class="name"><?php the_sub_field('article_publisher');?>: </span> <em><?php the_sub_field('article_title'); ?></em>
+		                    		</a>
+		                    	</li>
+			                <?php endwhile; ?>
+		                    </ul>
+		                  </div> <!-- .bottom-border -->
 	                </div> <!-- /.container -->
 				</section><!-- /#year -->
 					
