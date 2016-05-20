@@ -14,13 +14,15 @@
 
 
 <!-- website main content - start -->
-<main class="clearfix">
+<main class="clearfix main-gallery">
 
 	
 		
 	
 		<!-- page title - start -->
-		<h2><?php the_title(); ?></h2>
+		<div class="container bottom-border">
+			<h2><?php the_title(); ?></h2>
+		</div>
 		<!-- page title - end -->
 		
 		
@@ -38,7 +40,7 @@
 		<?php if ( $onePageQuery->have_posts() ) : ?>
 			<?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
 				<section id="design">
-					<div class="container">
+					<div class="container bottom-border">
 						<h3>Poster Gallery</h3>
 						<div class="poster-images">
 						<?php if( have_rows('poster_designs') ): ?>
@@ -55,7 +57,7 @@
 				</section> <!-- /.design -->
 		
 				<section id="photo">
-					<div class="container">
+					<div class="container bottom-border">
 						<h3>Photo Gallery</h3>
 							<div class="photo-sample">
 							<?php if( have_rows('photos') ): ?>
@@ -69,7 +71,7 @@
 							</div>
 							<div class="galleries">
 							<?php if( get_field( "picture_gallery_text" ) ): ?>
-								<p><?php the_field( 'picture_gallery_text' ); ?></p>
+								<h3><?php the_field( 'picture_gallery_text' ); ?></h3>
 							<?php endif; ?>
 
 
