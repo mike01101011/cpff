@@ -20,9 +20,11 @@
 		
 	
 		<!-- page title - start -->
-		<div class="container bottom-border">
-			<h2><?php the_title(); ?></h2>
-		</div>
+		<div class="container gallery-title">
+			<div class="bottom-border">
+				<h2><?php the_title(); ?></h2>
+			</div> <!-- .bottom-border -->
+		</div> <!-- .container -->
 		<!-- page title - end -->
 		
 		
@@ -40,25 +42,28 @@
 		<?php if ( $onePageQuery->have_posts() ) : ?>
 			<?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
 				<section id="design">
-					<div class="container bottom-border">
-						<h3>Poster Gallery</h3>
-						<div class="poster-images">
-						<?php if( have_rows('poster_designs') ): ?>
-							<?php while( have_rows('poster_designs') ): the_row();
-							$images = get_sub_field('poster')?>
-								<div>
-									<img src="<?php echo $images['sizes']['medium'] ?>" alt="<?php echo $images['alt'] ?>">
-									<h4><?php echo $images['title'] ?></h4>
-								</div>
-							<?php endwhile; ?>
-						<?php endif; ?>
-						</div> <!-- /.poster-images -->
+					<div class="container">
+						<div class="bottom-border">
+							<h3>Posters</h3>
+							<div class="poster-images">
+							<?php if( have_rows('poster_designs') ): ?>
+								<?php while( have_rows('poster_designs') ): the_row();
+								$images = get_sub_field('poster')?>
+									<div>
+										<img src="<?php echo $images['sizes']['medium'] ?>" alt="<?php echo $images['alt'] ?>">
+										<h4><?php echo $images['title'] ?></h4>
+									</div>
+								<?php endwhile; ?>
+							<?php endif; ?>
+							</div> <!-- /.poster-images -->
+						</div> <!-- .bottom-border -->
 					</div> <!-- /.container -->
 				</section> <!-- /.design -->
 		
 				<section id="photo">
-					<div class="container bottom-border">
-						<h3>Photo Gallery</h3>
+					<div class="container">
+						<div class="bottom-border">
+							<h3>Photos</h3>
 							<div class="photo-sample">
 							<?php if( have_rows('photos') ): ?>
 								<?php while( have_rows('photos') ): the_row();
@@ -68,8 +73,8 @@
 									</div>
 								<?php endwhile; ?>
 							<?php endif; ?>
-							</div>
-							<div class="galleries">
+							</div> <!-- .photo-sample -->
+							<div class="galleries gallery-galleries">
 							<?php if( get_field( "picture_gallery_text" ) ): ?>
 								<h3><?php the_field( 'picture_gallery_text' ); ?></h3>
 							<?php endif; ?>
@@ -85,21 +90,26 @@
 								<?php endif; ?>
 								</ul>
 							</div> <!-- /.galleries -->
+						</div> <!-- .bottom-border -->
 					</div> <!-- /.container -->
 				</section> <!-- /#photo -->
 
 				<?php if( have_rows('screen_washes') ): ?>
 					<section id="video">
 						<div class="container">
-							<h3>Pre-Show Gallery</h3>
-							<?php while( have_rows('screen_washes')): the_row();
-								$video = get_sub_field('screen_wash')?>
-								<div class="screen-video">
-									<div class='embed-container'>
-										<?php echo $video ?>
-									</div>
-								</div> <!-- /.screen-video -->
-							<?php endwhile; ?>
+							<div class="bottom-border">
+								<h3>Pre-Show Reels</h3>
+								<div class="screen-wash-videos-flex">
+										<?php while( have_rows('screen_washes')): the_row();
+											$video = get_sub_field('screen_wash')?>
+											<div class="screen-video">
+												<div class='embed-container'>
+													<?php echo $video ?>
+												</div>
+											</div> <!-- /.screen-video -->
+										<?php endwhile; ?>
+								</div> <!-- .screen-wash-videos-flex -->
+							</div> <!-- .bottom-border -->
 						</div> <!-- /.container -->
 					</section> <!-- /.video -->
 				<?php endif; ?>

@@ -1,3 +1,53 @@
 .main-gallery {
 	background-color: #ffffe3;
 }
+.screen-wash-videos-flex{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.screen-video {
+	width: 50%;
+	padding: 10px;
+	.embed-container {
+		border: 1px solid #004b00;
+	}
+}
+.embed-container {
+	display: block;
+}
+iframe {
+	display: block;
+}
+.gallery-title {
+	padding-bottom: 1.5%;
+}
+#photo .gallery-galleries {
+	padding-top: 0;
+}
+#photo .gallery-galleries h3 {
+	padding-top: 10px;
+	font-size: 3.1rem;
+}
+@media (max-width: 963px) {
+	#photo .gallery-galleries h3 {
+		padding-top: 0px;
+	}
+}
+@media (max-width: 790px) {
+	.screen-video {
+		width: 100%;
+	}
+	#photo .gallery-galleries h3 {
+		font-size: 2.3rem;
+	}
+}
+@media (max-width: 480px) {
+	.gallery-fa-facebook-official {
+		width: 100%;
+	}
+}
