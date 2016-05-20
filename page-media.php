@@ -14,14 +14,14 @@
 
 
 <!-- website main content - start -->
-<main class="clearfix">
+<main class="clearfix main-media">
 	
 		
-	
-		<!-- page title - start -->
-		<h2><?php the_title(); ?></h2>
-		<!-- page title - end -->
-		
+		<div class="container bottom-border">
+			<!-- page title - start -->
+			<h2><?php the_title(); ?></h2>
+			<!-- page title - end -->
+		</div>
 		
 		<?php
 			$onePageQuery = new WP_Query(
@@ -37,7 +37,7 @@
 			<?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
 					
 				<section id="year">
-					<div class="container">
+					<div class="container bottom-border">
 	                    <h3><?php the_field( 'media_year' ); ?></h3>
 	                    <ul>
 	                    <?php while ( has_sub_field('news_article') ): ?>
