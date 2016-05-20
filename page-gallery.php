@@ -20,7 +20,7 @@
 		
 	
 		<!-- page title - start -->
-		<div class="container gallery-title">
+		<div class="contagminer gallery-title">
 			<div class="bottom-border">
 				<h2><?php the_title(); ?></h2>
 			</div> <!-- .bottom-border -->
