@@ -14,12 +14,12 @@
 
 
 <!-- website main content - start -->
-<main class="clearfix">
+<main class="clearfix blog-main">
 
 	<div class="container">
 		<div class="title-headline">
 			<div class="title-headline-flex coming-soon-title-headline blog-title-headline">
-				<div class="title-headline-flex-left">
+				<div class="title-headline-flex-left blog-title-headline-flex-left">
 					<!-- page title - start -->
 					<h2>Stay tuned!</h2>
 					<p>Updates to come in late May</p>
