@@ -12,6 +12,12 @@
         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <h1 class="entry-title"><?php the_title(); ?></h1>
 
+<!-- IMAGE -->
+
+<?php the_post_thumbnail('thumbnail'); ?>
+
+<!-- IMAGE -->
+
           <div class="entry-meta">
             <?php hackeryou_posted_on(); ?>
           </div><!-- .entry-meta -->
