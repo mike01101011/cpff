@@ -1,4 +1,4 @@
-<?php // If there are no posts to display, such as an empty archive page ?>
+<?php // the blog loop ?>
 
 <?php if ( ! have_posts() ) : ?>
 

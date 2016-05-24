@@ -1,4 +1,4 @@
-<?php //index.php is the last resort template, if no other templates match ?>
+<?php //font-page.php *** USED TO BE index.php *** ?>
 <?php get_header(); ?>
 <?php include("navigation.php"); ?>
 

@@ -1,3 +1,4 @@
+<?php // single.php single blog page ?>
 <?php get_header(); ?>
 <?php include("navigation.php"); ?>
 
