@@ -98,6 +98,10 @@
       <?php //get_sidebar(); ?>
     </section>
   </div> <!-- /.container -->
-</main> <!-- /.main -->
+</main> <!-- /.clearfix -->
+<!-- website main content - end -->
 
+
+<!-- website footer - start -->
 <?php get_footer(); ?>
+<!-- website footer - end
