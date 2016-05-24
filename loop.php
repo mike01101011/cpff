@@ -23,6 +23,11 @@
         <!-- </a> -->
       </h2>
 
+
+<!-- FEATURED IMAGE -->
+<?php //the_post_thumbnail('thumbnail'); ?>
+<!-- FEATURED IMAGE -->
+
 			<div class="entry-content">
 				<p><?php the_content('Continue reading <span class="meta-nav">&rarr;</span>'); ?></p>
 				<?php wp_link_pages( array(

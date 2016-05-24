@@ -16,35 +16,32 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<h2 class="entry-title">
-        <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
-          <?php the_title(); ?>
-        <!-- </a> -->
-      </h2>
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<h2 class="entry-title">
+			<a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
+				<?php the_title(); ?>
+			</a>
+		</h2>
 
-<!-- IMAGE -->
+<!-- FEATURED IMAGE -->
+<?php //the_post_thumbnail('thumbnail'); ?>
+<!-- FEATURED IMAGE -->
 
-<?php the_post_thumbnail('thumbnail'); ?>
+		<div class="entry-content">
+			<p><?php //the_content('Continue reading <span class="meta-nav">&rarr;</span>'); ?></p>
+			<?php // wp_link_pages( array( 'before' => '<div class="page-link"> Pages:', 'after' => '</div>' )); ?>
+		</div><!-- .entry-content -->
+	</article><!-- #post-## -->
 
-<!-- IMAGE -->
-
-			<div class="entry-content">
-				<p><?php the_content('Continue reading <span class="meta-nav">&rarr;</span>'); ?></p>
-				<?php wp_link_pages( array(
-          'before' => '<div class="page-link"> Pages:',
-          'after' => '</div>'
-        )); ?>
-			</div><!-- .entry-content -->
-		</article><!-- #post-## -->
-
-		<?php comments_template( '', true ); ?>
+	<?php //comments_template( '', true ); ?>
 
 
 <?php endwhile; // End the loop. Whew. ?>
 
 <?php // Display navigation to next/previous pages when applicable ?>
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
-  <p class="alignleft"><?php next_posts_link('<i class="fa fa-angle-double-left"></i> Older Entries'); ?></p>
-  <p class="alignright"><?php previous_posts_link('Newer Entries <i class="fa fa-angle-double-right"></i>'); ?></p>
+	<div class="blog-posts-navigation">
+		<p class="alignleft"><?php next_posts_link('<i class="fa fa-angle-double-left"></i> Older Posts'); ?></p>
+		<p class="alignright"><?php previous_posts_link('Newer Posts <i class="fa fa-angle-double-right"></i>'); ?></p>
+	</div>
 <?php endif; ?>
