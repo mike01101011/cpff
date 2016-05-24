@@ -1,5 +1,16 @@
 <?php //home.php main blog index page ?>
+
+<!-- website header - start -->
 <?php get_header(); ?>
+<!-- website header - end -->
+
+<!-- website navigation - start -->
+<?php include("navigation.php"); ?>
+<!-- website navigation - end -->
+
+<!-- carousel - start -->
+<? include("carousel.php"); ?>
+<!-- carousel - end -->
 
 <div class="main">
   <div class="container">
