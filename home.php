@@ -20,14 +20,14 @@
 <!-- website main content - start -->
 <main class="clearfix">
 	<div class="container">
-		<section class="blog">
+		<section class="blog-post-listing">
 			<div class="content">
-				<div class="blog-title bottom-border">
+				<div class="blog-title">
 					<h2>Blog Posts</h2>
-				</div>
+				</div> <!-- .blog-title -->
 				<?php get_template_part( 'loop', 'blog' );	?>
 			</div> <!--/.content -->
-		</section> <!-- .blog -->
+		</section> <!-- .blog-post-listing -->
     	<?php get_sidebar(); ?>
     </div> <!-- /.container -->
 </main> <!-- /.clearfix -->

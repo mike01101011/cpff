@@ -153,7 +153,7 @@
 <!-- 13 BLOG TEXT -->
 					<?php if( get_field('blog')):?> <!-- start loop -->	
 						<div class="facebook-event event-facebook-event">
-							<a href="<?php the_field('blog'); ?>" target="_blank"><i class="fa fa-rss-square"></i> blog post</a>
+							<a href="<?php the_field('blog'); ?>"><i class="fa fa-rss-square"></i> blog post</a>
 						</div> <!-- /.facebook-event -->
 					<?php endif; ?> <!-- end loop -->
 		 </div> <!-- .trailer-facebook-flex -->
