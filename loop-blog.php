@@ -1,4 +1,4 @@
-<?php // the blog loop ?>
+<?php // loop-blog.php, used by home.php 'the blog loop' ?>
 
 <?php if ( ! have_posts() ) : ?>
 
@@ -17,21 +17,33 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<div class="blog-post-listing-posts">
-			<h2 class="entry-title">
-				<a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
-					<?php the_title(); ?>
-				</a>
-			</2>
-		</div>
+		<div class="blog-posts-listing-posts">
+
+
+<!-- POST SUB-TITLE -->
+			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+
+
+<!-- IMAGE -->
+			<div class="blog-posts-listing-image">
+				<?php if( get_field('image')):?> <!-- start loop -->
+					<?php $image = get_field('image'); if( !empty($image) ): ?>
+
+<!-- TO PRINT ARRAY --> <!-- <pre><?php //print_r($image);?></pre> -->
+
+						<a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" /></a>
+					<?php endif; ?>
+				<?php endif; ?> <!-- end loop -->
+			</div> <!-- /.blog-posts-listing-image -->
+		</div> <!-- .blog-posts-listing-posts -->
 	</article><!-- #post-## -->
 
 <?php endwhile; // End the loop. Whew. ?>
 
 <!-- next-preview page navigation, if required -->
 	<?php if (  $wp_query->max_num_pages > 1 ) : ?>
-		<div class="blog-post-listing-navigation">
+		<div class="blog-posts-listing-navigation">
 			<p class="alignleft"><?php next_posts_link('<i class="fa fa-angle-double-left"></i> Older Posts'); ?></p>
 			<p class="alignright"><?php previous_posts_link('Newer Posts <i class="fa fa-angle-double-right"></i>'); ?></p>
-		</div>
+		</div> <!-- .blog-posts-listing-navigation -->
 	<?php endif; ?>

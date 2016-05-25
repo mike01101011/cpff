@@ -1,4 +1,4 @@
-<?php // single.php single blog page ?>
+<?php // home.php blog posts listing, uses loop-blog.php ?>
 
 <!-- Blog Post Page -->
 
@@ -20,14 +20,14 @@
 <!-- website main content - start -->
 <main class="clearfix">
 	<div class="container">
-		<section class="blog-post-listing">
+		<section class="blog-posts-listing">
 			<div class="content">
-				<div class="blog-title">
+				<div class="blog-posts-listing-title">
 					<h2>Blog Posts</h2>
 				</div> <!-- .blog-title -->
 				<?php get_template_part( 'loop', 'blog' );	?>
 			</div> <!--/.content -->
-		</section> <!-- .blog-post-listing -->
+		</section> <!-- .blog-posts-listing -->
     	<?php get_sidebar(); ?>
     </div> <!-- /.container -->
 </main> <!-- /.clearfix -->
