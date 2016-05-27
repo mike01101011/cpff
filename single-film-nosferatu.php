@@ -136,7 +136,7 @@
 		<div class="trailer-facebook-flex">
 					<?php if( get_field('trailer')):?> <!-- start loop -->
 						<div class="facebook-event event-facebook-event">
-							<a href="<?php the_field( 'trailer' ); ?>" target="_blank"><i class="fa fa-youtube-square "></i> Film Trailer</a>
+							<a href="<?php the_field( 'trailer' ); ?>" target="_blank"><i class="fa fa-youtube-play "></i> Film Trailer</a>
 						</div> <!-- /.facebook-event -->
 					<?php endif; ?> <!-- end loop -->
 
