@@ -2,8 +2,8 @@
 
 <?php if ( ! have_posts() ) : ?>
 
-	<article id="post-0" class="post error404 not-found">
-		<h1 class="entry-title">Coming Soon</h1>
+	<article id="post-0" class="post error404 not-found no-blog-posts">
+		<h2 class="entry-title">Coming Soon</h2>
 		<section class="entry-content">
 			<!-- <p>Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.</p> -->
 			<?php //get_search_form(); ?>

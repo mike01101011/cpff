@@ -1,5 +1,9 @@
 // blog-posts-listing
 
+.no-blog-posts {
+	text-align: center;	
+}
+
 .blog-posts-listing {
 	box-shadow: 1.5px 1.5px 3px #888;
 	text-shadow: .5px .5px .5px #333;
@@ -33,11 +37,12 @@
 
 // BLOG POST IMAGE - Start
 .blog-posts-listing-image img {
-	border: .2rem solid mediumseagreen;
+	// border: .2rem solid mediumseagreen;
+	// border: .2rem solid darkgreen;
 	transition: border-color 500ms;
 	margin-bottom: 15px;
 	&:hover {
-		border: .2rem solid darkgreen;
+		// border: .2rem solid darkgreen;
 	}
 }
 div.blog-posts-listing-image {

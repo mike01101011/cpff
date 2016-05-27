@@ -20,10 +20,8 @@
 		
 	
 		<!-- page title - start -->
-		<div class="container gallery-title">
-			<div class="bottom-border">
+		<div class="container gallery-title bottom-border">
 				<h2><?php the_title(); ?></h2>
-			</div> <!-- .bottom-border -->
 		</div> <!-- .container -->
 		<!-- page title - end -->
 		

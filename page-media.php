@@ -18,7 +18,7 @@
 	
 		
 		<div class="container">
-			<div class="bottom-border">
+			<div class="media-title bottom-border">
 				<!-- page title - start -->
 				<h2><?php the_title(); ?></h2>
 				<!-- page title - end -->
