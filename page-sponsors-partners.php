@@ -42,6 +42,7 @@
 					<div class="container sponsors-partners-container">
 						<?php if( get_field('type')):?>
 		                    <h3><?php the_field( 'type' ); ?></h3>
+		                    <p>Supported by Toronto Arts Council with funding from the City of Toronto</p>
 						<?php endif; ?>
 
 						<?php if( have_rows('large') ): ?>
